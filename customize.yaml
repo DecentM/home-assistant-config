@@ -1,0 +1,8 @@
+weather.dark_sky:
+  friendly_name: Weather
+
+device_tracker.decentm_phone:
+  friendly_name: Phone
+
+sensor.hacs:
+  unit_of_measurement: Updates

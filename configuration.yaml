@@ -1,0 +1,169 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_lat
+  longitude: !secret home_long
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: !secret home_elevation
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: !secret home_timezone
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables the frontend
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Enables configuration UI
+config:
+
+stream:
+  # mobile_app:
+
+system_health:
+
+recorder:
+  db_url: !secret postgres_url
+  purge_keep_days: 7
+
+google_assistant:
+  project_id: !secret google_project_id
+  api_key: !secret google_api_key
+  exposed_domains:
+    - switch
+    - light
+    - vacuum
+    - media_player
+    - group
+
+http:
+  # Need to define URL as HA is running behind a reverse proxy
+  base_url: !secret http_base_url
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  include_used_components: true
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+android_ip_webcam:
+  - host: !secret android_cam_host
+    port: !secret android_cam_port
+    name: huawei-cam
+    username: !secret android_cam_username
+    password: !secret android_cam_password
+    scan_interval: 1
+    sensors:
+      - audio_connections
+      - battery_level
+      - battery_temp
+      - battery_voltage
+      - light
+      - motion
+      - pressure
+      - proximity
+      - sound
+      - video_connections
+    switches:
+      - exposure_lock
+      - ffc
+      - focus
+      - gps_active
+      - night_vision
+      - overlay
+      - torch
+      - whitebalance_lock
+      - video_recording
+
+vacuum:
+  - platform: roomba
+    host: !secret vacuum_host
+    username: !secret vacuum_username
+    password: !secret vacuum_password
+
+hue:
+  bridges:
+    - host: !secret hue_bridge_ip
+
+device_tracker:
+  - platform: luci
+    host: !secret openwrt_host
+    username: !secret openwrt_username
+    password: !secret openwrt_password
+
+binary_sensor:
+  - platform: workday
+    country: !secret workday_country
+
+notify:
+  - name: speak
+    platform: llamalab_automate
+    api_key: !secret automate_api_key
+    to: !secret automate_speak_to
+    device: !secret automate_speak_device
+  - name: notify
+    platform: llamalab_automate
+    api_key: !secret automate_api_key
+    to: !secret automate_notify_to
+    device: !secret automate_notify_device
+
+rest_command:
+  phone_nightvision:
+    url: !secret android_cam_nightvision_url
+    method: GET
+    username: !secret android_cam_username
+    password: !secret android_cam_password
+
+sensor:
+  - platform: waqi
+    token: !secret waqi_token
+    locations:
+      - !secret waqi_location
+
+  - platform: seventeentrack
+    username: !secret seventeentrack_username
+    password: !secret seventeentrack_password
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky_api_key
+
+media_player:
+  - platform: emby
+    host: !secret jellyfin_host
+    ssl: true
+    port: !secret jellyfin_port
+    api_key: !secret jellyfin_api_key
+
+tts:
+  - platform: amazon_polly
+    aws_access_key_id: !secret polly_key_id
+    aws_secret_access_key: !secret polly_access_key
+    region_name: !secret polly_region
+    voice: Emma
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+zone: !include zone.yaml
