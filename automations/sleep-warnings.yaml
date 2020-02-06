@@ -1,0 +1,125 @@
+- alias: Speak - Waking up in 10 hours
+  description: ''
+  trigger:
+  - at: '23:00'
+    platform: time
+  condition:
+  - condition: state
+    entity_id: light.workstation
+    state: 'on'
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - data:
+      message: You're waking up in ten hours!
+    service: notify.speak
+
+- alias: Speak - Waking up in 9 hours
+  description: ''
+  trigger:
+  - at: 00:00
+    platform: time
+  condition:
+  - condition: state
+    entity_id: light.workstation
+    state: 'on'
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - data:
+      message: You're waking up in nine hours!
+    service: notify.speak
+
+- alias: Speak - Waking up in 8 hours
+  description: ''
+  trigger:
+  - at: 01:00
+    platform: time
+  condition:
+  - condition: state
+    entity_id: light.workstation
+    state: 'on'
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - data:
+      message: You're waking up in eight hours!
+    service: notify.speak
+
+- alias: Speak - Waking up in 7 hours
+  description: ''
+  trigger:
+  - at: 02:00
+    platform: time
+  condition:
+  - condition: state
+    entity_id: light.workstation
+    state: 'on'
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - data:
+      message: You're waking up in seven hours!
+    service: notify.speak
+
+- alias: Speak - Waking up in 6 hours
+  description: ''
+  trigger:
+  - at: 03:00
+    platform: time
+  condition:
+  - condition: state
+    entity_id: light.workstation
+    state: 'on'
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - data:
+      message: You're waking up in six hours!
+    service: notify.speak
+
+- alias: Speak - Waking up in 5 hours
+  description: ''
+  trigger:
+  - at: 04:00
+    platform: time
+  condition:
+  - condition: state
+    entity_id: light.workstation
+    state: 'on'
+  - condition: time
+    weekday:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
+  action:
+  - data:
+      message: You're waking up in five hours!
+    service: notify.speak

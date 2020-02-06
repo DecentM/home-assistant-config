@@ -1,0 +1,16 @@
+- alias: Autolight - All lights off when I leave home
+  trigger:
+  - entity_id: device_tracker.decentm_phone
+    event: leave
+    platform: zone
+    zone: zone.home
+  condition:
+  - condition: state
+    entity_id: group.all_lights
+    state: 'on'
+  action:
+  - service: light.turn_off
+    entity_id: group.all_lights
+  - data:
+      message: I turned off all lights because no presence was detected
+    service: notify.notify

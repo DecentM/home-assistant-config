@@ -1,0 +1,11 @@
+- alias: Vacuum every weekday
+  description: ''
+  trigger:
+  - at: '10:45'
+    platform: time
+  condition:
+  - condition: state
+    entity_id: binary_sensor.workday_sensor
+    state: 'on'
+  action:
+  - service: vacuum.start_pause

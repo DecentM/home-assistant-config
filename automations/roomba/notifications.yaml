@@ -1,0 +1,48 @@
+- alias: Notify - When vacuuming begins
+  description: ''
+  trigger:
+  - entity_id: vacuum.roomba
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: Vacuuming started
+    service: notify.notify
+
+- alias: Notify - When roomba is charging after being shut off
+  description: ''
+  trigger:
+  - entity_id: vacuum.roomba
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition: []
+  action:
+  - wait_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging'' }}'
+  - data:
+      message: Roomba is now charging
+    service: notify.notify
+
+- alias: Notify - When roomba bin is removed
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ state_attr(''vacuum.roomba'', ''bin_present'') == false }}'
+  condition: []
+  action:
+  - data:
+      message: Roomba bin removed
+    service: notify.notify
+
+- alias: Notify - When roomba bin is inserted
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ state_attr(''vacuum.roomba'', ''bin_present'') == true }}'
+  condition: []
+  action:
+  - data:
+      message: Roomba bin inserted
+    service: notify.notify

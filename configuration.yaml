@@ -112,9 +112,7 @@ device_tracker:
     username: !secret openwrt_username
     password: !secret openwrt_password
 
-binary_sensor:
-  - platform: workday
-    country: !secret workday_country
+binary_sensor: !include_dir_merge_list sensors_binary
 
 notify:
   - name: speak
@@ -135,15 +133,7 @@ rest_command:
     username: !secret android_cam_username
     password: !secret android_cam_password
 
-sensor:
-  - platform: waqi
-    token: !secret waqi_token
-    locations:
-      - !secret waqi_location
-
-  - platform: seventeentrack
-    username: !secret seventeentrack_username
-    password: !secret seventeentrack_password
+sensor: !include_dir_merge_list sensors
 
 weather:
   - platform: darksky
@@ -163,7 +153,6 @@ tts:
     region_name: !secret polly_region
     voice: Emma
 
-group: !include groups.yaml
-automation: !include automations.yaml
+automation: !include_dir_merge_list automations
 script: !include scripts.yaml
 zone: !include zone.yaml

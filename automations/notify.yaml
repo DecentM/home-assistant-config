@@ -1,0 +1,141 @@
+- alias: Notify - Service restart
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      message: Home Assistant startup complete
+    service: notify.notify
+
+- alias: Notify - Weather every morning when all lights are off for 30 seconds
+  description: ''
+  trigger:
+  - entity_id: group.all_lights
+    for: 00:00:30
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - after: 09:40
+    before: '10:30'
+    condition: time
+  action:
+  - data:
+      message: "It is {{ state_attr(\"weather.dark_sky\", \"temperature\") }}C outside.\
+        \  \n{% for  rainy_date in state_attr(\"weather.dark_sky\", \"forecast\")\
+        \ | selectattr(\"condition\", \"eq\", \"rainy\") | map(attribute=\"datetime\"\
+        ) %}Will rain at {{ rainy_date }}  \n{% endfor %}\n"
+    service: notify.notify
+
+- alias: Notify - When vacuuming is successful
+  description: ''
+  trigger:
+  - entity_id: vacuum.roomba
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: template
+    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging''
+      }}'
+  action:
+  - data:
+      message: Vacuuming successful
+    service: notify.notify
+
+- alias: Notify - When vacuuming is cancelled
+  description: ''
+  trigger:
+  - entity_id: vacuum.roomba
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: template
+    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''User Docking''
+      }}'
+  action:
+  - data:
+      message: Roomba was asked to return to station
+    service: notify.notify
+
+- alias: Notify - When camera battery gets hot or low
+  description: ''
+  trigger:
+  - above: '40'
+    entity_id: sensor.huawei_cam_battery_temperature
+    platform: numeric_state
+  - below: '40'
+    entity_id: sensor.huawei_cam_battery_level
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: "Phone battery temperature at {{\nstates('sensor.huawei_cam_battery_temperature')\
+        \ }}  \nPhone battery level at {{\nstates('sensor.huawei_cam_battery_level')\
+        \ }}\n"
+    service: notify.notify
+
+- alias: Notify - Movement in the light when not at home
+  description: Ignore when the roomba is running
+  trigger:
+  - above: '5'
+    entity_id: sensor.huawei_cam_motion
+    platform: numeric_state
+  condition:
+  - condition: template
+    value_template: '{{ not is_state("device_tracker.decentm_phone", "home") }}'
+  - condition: state
+    entity_id: vacuum.roomba
+    state: 'off'
+  - above: '2'
+    condition: numeric_state
+    entity_id: sensor.huawei_cam_light_level
+  action:
+  - data:
+      message: Movement detected
+    service: notify.notify
+
+- alias: Notify - When phone camera gets blocked
+  description: ''
+  trigger:
+  - below: '1'
+    entity_id: sensor.huawei_cam_proximity
+    platform: numeric_state
+  condition: []
+  action:
+  - data:
+      message: Camera lens blocked, video feed may be unreliable
+      title: Proximity detection triggered
+    service: notify.notify
+
+- alias: Notify - When vacuuming fails
+  description: ''
+  trigger:
+  - entity_id: vacuum.roomba
+    for: 00:01:00
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: template
+    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Stopped'' }}'
+  action:
+  - data:
+      message: Vacuuming failed
+    service: notify.notify
+
+- alias: Notify - Updates available
+  description: ''
+  trigger:
+  - entity_id: binary_sensor.updater
+    from: 'off'
+    platform: state
+    to: 'on'
+  condition: []
+  action:
+  - data:
+      message: An update is available!
+    service: notify.notify

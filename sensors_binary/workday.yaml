@@ -1,0 +1,6 @@
+- platform: workday
+  country: !secret workday_country
+- platform: workday
+  name: workday-tomorrow
+  country: !secret workday_country
+  days_offset: 1
