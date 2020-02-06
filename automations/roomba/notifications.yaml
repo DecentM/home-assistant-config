@@ -46,3 +46,51 @@
   - data:
       message: Roomba bin inserted
     service: notify.notify
+
+- alias: Notify - When vacuuming is successful
+  description: ''
+  trigger:
+  - entity_id: vacuum.roomba
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: template
+    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging''
+      }}'
+  action:
+  - data:
+      message: Vacuuming successful
+    service: notify.notify
+
+- alias: Notify - When vacuuming is cancelled
+  description: ''
+  trigger:
+  - entity_id: vacuum.roomba
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: template
+    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''User Docking''
+      }}'
+  action:
+  - data:
+      message: Roomba was asked to return to station
+    service: notify.notify
+
+- alias: Notify - When vacuuming fails
+  description: ''
+  trigger:
+  - entity_id: vacuum.roomba
+    for: 00:01:00
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: template
+    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Stopped'' }}'
+  action:
+  - data:
+      message: Vacuuming failed
+    service: notify.notify

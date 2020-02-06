@@ -32,16 +32,6 @@ recorder:
   db_url: !secret postgres_url
   purge_keep_days: 7
 
-google_assistant:
-  project_id: !secret google_project_id
-  api_key: !secret google_api_key
-  exposed_domains:
-    - switch
-    - light
-    - vacuum
-    - media_player
-    - group
-
 http:
   # Need to define URL as HA is running behind a reverse proxy
   base_url: !secret http_base_url
@@ -67,35 +57,6 @@ map:
 # Track the sun
 sun:
 
-android_ip_webcam:
-  - host: !secret android_cam_host
-    port: !secret android_cam_port
-    name: huawei-cam
-    username: !secret android_cam_username
-    password: !secret android_cam_password
-    scan_interval: 1
-    sensors:
-      - audio_connections
-      - battery_level
-      - battery_temp
-      - battery_voltage
-      - light
-      - motion
-      - pressure
-      - proximity
-      - sound
-      - video_connections
-    switches:
-      - exposure_lock
-      - ffc
-      - focus
-      - gps_active
-      - night_vision
-      - overlay
-      - torch
-      - whitebalance_lock
-      - video_recording
-
 vacuum:
   - platform: roomba
     host: !secret vacuum_host
@@ -120,38 +81,18 @@ notify:
     api_key: !secret automate_api_key
     to: !secret automate_speak_to
     device: !secret automate_speak_device
+
   - name: notify
     platform: llamalab_automate
     api_key: !secret automate_api_key
     to: !secret automate_notify_to
     device: !secret automate_notify_device
 
-rest_command:
-  phone_nightvision:
-    url: !secret android_cam_nightvision_url
-    method: GET
-    username: !secret android_cam_username
-    password: !secret android_cam_password
-
 sensor: !include_dir_merge_list sensors
 
 weather:
   - platform: darksky
     api_key: !secret darksky_api_key
-
-media_player:
-  - platform: emby
-    host: !secret jellyfin_host
-    ssl: true
-    port: !secret jellyfin_port
-    api_key: !secret jellyfin_api_key
-
-tts:
-  - platform: amazon_polly
-    aws_access_key_id: !secret polly_key_id
-    aws_secret_access_key: !secret polly_access_key
-    region_name: !secret polly_region
-    voice: Emma
 
 automation: !include_dir_merge_list automations
 script: !include scripts.yaml
