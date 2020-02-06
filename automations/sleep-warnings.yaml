@@ -7,13 +7,9 @@
   - condition: state
     entity_id: light.workstation
     state: 'on'
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
+  - condition: state
+    entity_id: binary_sensor.workday_tomorrow
+    state: 'on'
   action:
   - data:
       message: You're waking up in ten hours!
@@ -28,13 +24,9 @@
   - condition: state
     entity_id: light.workstation
     state: 'on'
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
+  - condition: state
+    entity_id: binary_sensor.workday_tomorrow
+    state: 'on'
   action:
   - data:
       message: You're waking up in nine hours!
@@ -49,13 +41,9 @@
   - condition: state
     entity_id: light.workstation
     state: 'on'
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
+  - condition: state
+    entity_id: binary_sensor.workday_tomorrow
+    state: 'on'
   action:
   - data:
       message: You're waking up in eight hours!
@@ -70,13 +58,9 @@
   - condition: state
     entity_id: light.workstation
     state: 'on'
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
+  - condition: state
+    entity_id: binary_sensor.workday_tomorrow
+    state: 'on'
   action:
   - data:
       message: You're waking up in seven hours!
@@ -91,13 +75,9 @@
   - condition: state
     entity_id: light.workstation
     state: 'on'
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
+  - condition: state
+    entity_id: binary_sensor.workday_tomorrow
+    state: 'on'
   action:
   - data:
       message: You're waking up in six hours!
@@ -112,13 +92,9 @@
   - condition: state
     entity_id: light.workstation
     state: 'on'
-  - condition: time
-    weekday:
-    - mon
-    - tue
-    - wed
-    - thu
-    - fri
+  - condition: state
+    entity_id: binary_sensor.workday_tomorrow
+    state: 'on'
   action:
   - data:
       message: You're waking up in five hours!
