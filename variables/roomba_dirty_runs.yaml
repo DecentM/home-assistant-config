@@ -1,0 +1,3 @@
+friendly_name: "Roomba runs with dirty tray"
+initial_value: 0
+icon: mdi:robot-vacuum

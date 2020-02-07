@@ -60,6 +60,9 @@ sun:
 # Enables running custom scripts
 python_script:
 
+# Custom variables
+var: !include_dir_named variables
+
 vacuum:
   - platform: roomba
     host: !secret vacuum_host
