@@ -11,6 +11,6 @@
   action:
   - service: light.turn_off
     entity_id: group.all_lights
-  - data:
+  - service: notify.notify
+    data:
       message: I turned off all lights because no presence was detected
-    service: notify.notify

@@ -57,6 +57,9 @@ map:
 # Track the sun
 sun:
 
+# Enables running custom scripts
+python_script:
+
 vacuum:
   - platform: roomba
     host: !secret vacuum_host
