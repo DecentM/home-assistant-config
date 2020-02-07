@@ -7,5 +7,30 @@
   - condition: state
     entity_id: binary_sensor.workday_sensor
     state: 'on'
+  - condition: numeric_state
+    entity_id: var.roomba_dirty_runs
+    below: 3
   action:
   - service: vacuum.start_pause
+
+- alias: Reset dirty runs counter after tray entry
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ state_attr(''vacuum.roomba'', ''bin_present'') == false }}'
+  # The template would fire on startup when it gets roomba state for the first
+  # time, so we check uptime.
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.uptime_minutes
+    above: 1
+  action:
+  # Wait for the bin to be reinserted
+  - wait_template: '{{ state_attr(''vacuum.roomba'', ''bin_present'') == true }}'
+  - service: var.set
+    data:
+      entity_id: var.roomba_dirty_runs
+      value: 0
+  - service: notify.speak
+    data:
+      message: Your roomba thanks you.
