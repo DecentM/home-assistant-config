@@ -1,0 +1,9 @@
+- name: Uptime (minutes)
+  platform: uptime
+  unit_of_measurement: minutes
+- name: Uptime (hours)
+  platform: uptime
+  unit_of_measurement: hours
+- name: Uptime (days)
+  platform: uptime
+  unit_of_measurement: days
