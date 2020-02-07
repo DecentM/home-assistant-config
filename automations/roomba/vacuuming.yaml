@@ -34,3 +34,20 @@
   - service: notify.speak
     data:
       message: Your roomba thanks you.
+
+- alias: Send Roomba back if started manually while not clean
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: vacuum.roomba
+    to: 'on'
+  condition:
+  - condition: numeric_state
+    entity_id: var.roomba_dirty_runs
+    above: 2
+  action:
+  - service: vacuum.start_pause
+    entity_id: vacuum.roomba
+  - service: notify.notify
+    data:
+      message: Sending roomba back as it's not been cleaned.
