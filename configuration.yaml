@@ -76,8 +76,7 @@ tts:
   aws_secret_access_key: !secret polly_access_key
   region_name: !secret polly_region
   voice: Emma
-  engine: standard
-  text_type: ssml
+  engine: neural
 
 vacuum:
   - platform: roomba

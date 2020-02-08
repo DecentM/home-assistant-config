@@ -31,9 +31,10 @@
     data:
       entity_id: var.roomba_dirty_runs
       value: 0
-  - service: notify.speak
+  - service: tts.amazon_polly_say
     data:
-      message: <amazon:auto-breaths frequency="low" volume="soft" duration="x-short">Your roomba thanks you.</amazon:auto-breaths>
+      entity_id: media_player.huawei_cam
+      message: Your roomba thanks you.
 
 - alias: Vacuum - Send Roomba back if started manually while not clean
   description: ''

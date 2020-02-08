@@ -13,7 +13,7 @@
   action:
   - data:
       message: You're waking up in ten hours!
-    service: notify.speak
+    service: tts.amazon_polly_say
 
 - alias: Speak - Waking up in 9 hours
   description: ''
@@ -30,7 +30,7 @@
   action:
   - data:
       message: You're waking up in nine hours!
-    service: notify.speak
+    service: tts.amazon_polly_say
 
 - alias: Speak - Waking up in 8 hours
   description: ''
@@ -47,7 +47,7 @@
   action:
   - data:
       message: You're waking up in eight hours!
-    service: notify.speak
+    service: tts.amazon_polly_say
 
 - alias: Speak - Waking up in 7 hours
   description: ''
@@ -64,7 +64,7 @@
   action:
   - data:
       message: You're waking up in seven hours!
-    service: notify.speak
+    service: tts.amazon_polly_say
 
 - alias: Speak - Waking up in 6 hours
   description: ''
@@ -81,7 +81,7 @@
   action:
   - data:
       message: You're waking up in six hours!
-    service: notify.speak
+    service: tts.amazon_polly_say
 
 - alias: Speak - Waking up in 5 hours
   description: ''
@@ -98,4 +98,4 @@
   action:
   - data:
       message: You're waking up in five hours!
-    service: notify.speak
+    service: tts.amazon_polly_say
