@@ -67,6 +67,13 @@ browser_mod:
 # Custom variables
 var: !include_dir_named variables
 
+tts:
+- platform: amazon_polly
+  aws_access_key_id: !secret polly_key_id
+  aws_secret_access_key: !secret polly_access_key
+  region_name: !secret polly_region
+  voice: Emma
+
 vacuum:
   - platform: roomba
     host: !secret vacuum_host
