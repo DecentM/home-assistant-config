@@ -13,7 +13,7 @@
     state: below_horizon
   action:
   - data:
-      name: midnight
+      name: Google Dark Theme
     service: frontend.set_theme
 
 - alias: Theme - Switch to light on sunrise
@@ -31,5 +31,5 @@
     state: above_horizon
   action:
   - data:
-      name: default
+      name: Google Light Theme
     service: frontend.set_theme
