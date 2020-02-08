@@ -1,4 +1,4 @@
-- alias: Vacuum every weekday
+- alias: Vacuum - Every weekday
   description: ''
   trigger:
   - at: '10:45'
@@ -13,7 +13,7 @@
   action:
   - service: vacuum.start_pause
 
-- alias: Reset dirty runs counter after tray entry
+- alias: Vacuum - Reset dirty runs counter after tray entry
   description: ''
   trigger:
   - platform: template
@@ -35,7 +35,7 @@
     data:
       message: Your roomba thanks you.
 
-- alias: Send Roomba back if started manually while not clean
+- alias: Vacuum - Send Roomba back if started manually while not clean
   description: ''
   trigger:
   - platform: state
@@ -54,3 +54,15 @@
   - service: notify.notify
     data:
       message: Sending roomba back as it's not been cleaned.
+
+- alias: Vacuum - Increment dirty runs counter when roomba turns off
+  description: ''
+  trigger:
+  - platform: state
+    entity_id: vacuum.roomba
+    from: 'on'
+    to: 'off'
+    for: '00:02:00'
+  action:
+  - service: var.update
+    entity_id: var.roomba_dirty_runs
