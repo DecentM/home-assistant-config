@@ -51,8 +51,7 @@
     to: 'off'
   condition:
   - condition: template
-    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging''
-      }}'
+    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging'' }}'
   action:
   - data:
       message: Vacuuming successful
@@ -67,8 +66,7 @@
     to: 'off'
   condition:
   - condition: template
-    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''User Docking''
-      }}'
+    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''User Docking'' }}'
   action:
   - data:
       message: Roomba was asked to return to station
