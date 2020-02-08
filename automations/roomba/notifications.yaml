@@ -9,7 +9,7 @@
     state: 'on'
   - condition: numeric_state
     entity_id: var.roomba_dirty_runs
-    above: 2
+    above: 4
   action:
   - service: notify.notify
     data:

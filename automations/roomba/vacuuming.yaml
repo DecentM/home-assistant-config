@@ -9,7 +9,7 @@
     state: 'on'
   - condition: numeric_state
     entity_id: var.roomba_dirty_runs
-    below: 3
+    below: 5
   action:
   - service: vacuum.start_pause
 
@@ -44,7 +44,7 @@
   condition:
   - condition: numeric_state
     entity_id: var.roomba_dirty_runs
-    above: 2
+    above: 4
   action:
   - service: vacuum.start_pause
     entity_id: vacuum.roomba
@@ -62,7 +62,8 @@
     entity_id: vacuum.roomba
     from: 'on'
     to: 'off'
-    for: '00:02:00'
   action:
+  - wait_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging'' }}'
+    continue_on_timeout: false
   - service: var.update
     entity_id: var.roomba_dirty_runs
