@@ -64,7 +64,7 @@ python_script:
 browser_mod:
   prefix: 'browser_'
   devices:
-    1d02a58d_23231dac:
+    61b2a237_9753b5c3:
       name: huawei-cam
 
 # Custom variables
