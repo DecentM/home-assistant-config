@@ -36,6 +36,23 @@
       entity_id: media_player.huawei_cam
       message: Your roomba thanks you.
 
+- alias: Vacuum - Confirm bin removal
+  description: ''
+  trigger:
+  - platform: template
+    value_template: '{{ state_attr(''vacuum.roomba'', ''bin_present'') == false }}'
+  # The template would fire on startup when it gets roomba state for the first
+  # time, so we check uptime.
+  condition:
+  - condition: numeric_state
+    entity_id: sensor.uptime_minutes
+    above: 1
+  action:
+  - service: tts.amazon_polly_say
+    data:
+      entity_id: media_player.huawei_cam
+      message: Roomba tray removed.
+
 - alias: Vacuum - Send Roomba back if started manually while not clean
   description: ''
   trigger:
@@ -55,6 +72,10 @@
   - service: notify.notify
     data:
       message: Sending roomba back as it's not been cleaned.
+  - service: tts.amazon_polly_say
+    data:
+      entity_id: media_player.huawei_cam
+      message: Roomba wasn't cleaned recently, returning to station.
 
 - alias: Vacuum - Increment dirty runs counter when roomba turns off
   description: ''
