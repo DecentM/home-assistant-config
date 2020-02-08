@@ -33,7 +33,7 @@
       value: 0
   - service: notify.speak
     data:
-      message: Your roomba thanks you.
+      message: <amazon:auto-breaths frequency="low" volume="soft" duration="x-short">Your roomba thanks you.</amazon:auto-breaths>
 
 - alias: Vacuum - Send Roomba back if started manually while not clean
   description: ''

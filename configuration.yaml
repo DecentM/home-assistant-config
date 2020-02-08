@@ -63,6 +63,9 @@ python_script:
 # Enable controlling client browsers as entities
 browser_mod:
   prefix: 'browser_'
+  devices:
+    1d02a58d_23231dac:
+      name: huawei-cam
 
 # Custom variables
 var: !include_dir_named variables
@@ -73,6 +76,8 @@ tts:
   aws_secret_access_key: !secret polly_access_key
   region_name: !secret polly_region
   voice: Emma
+  engine: standard
+  text_type: ssml
 
 vacuum:
   - platform: roomba
