@@ -38,23 +38,9 @@
   condition: []
   action:
   - wait_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging'' }}'
+    continue_on_timeout: false
   - data:
       message: Roomba is now charging
-    service: notify.notify
-
-- alias: Notify - When vacuuming is successful
-  description: ''
-  trigger:
-  - entity_id: vacuum.roomba
-    from: 'on'
-    platform: state
-    to: 'off'
-  condition:
-  - condition: template
-    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging'' }}'
-  action:
-  - data:
-      message: Vacuuming successful
     service: notify.notify
 
 - alias: Notify - When vacuuming is cancelled

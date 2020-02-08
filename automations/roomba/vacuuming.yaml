@@ -48,6 +48,9 @@
   action:
   - service: vacuum.start_pause
     entity_id: vacuum.roomba
+  - delay: '00:00:02'
+  - service: vacuum.return_to_base
+    entity_id: vacuum.roomba
   - service: notify.notify
     data:
       message: Sending roomba back as it's not been cleaned.
