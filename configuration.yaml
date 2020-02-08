@@ -60,6 +60,10 @@ sun:
 # Enables running custom scripts
 python_script:
 
+# Enable controlling client browsers as entities
+browser_mod:
+  prefix: 'browser_'
+
 # Custom variables
 var: !include_dir_named variables
 
