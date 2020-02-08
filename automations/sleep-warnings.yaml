@@ -42,7 +42,7 @@
     entity_id: light.workstation
     state: 'on'
   - condition: state
-    entity_id: binary_sensor.workday_tomorrow
+    entity_id: binary_sensor.workday_sensor
     state: 'on'
   action:
   - data:
@@ -59,7 +59,7 @@
     entity_id: light.workstation
     state: 'on'
   - condition: state
-    entity_id: binary_sensor.workday_tomorrow
+    entity_id: binary_sensor.workday_sensor
     state: 'on'
   action:
   - data:
@@ -76,7 +76,7 @@
     entity_id: light.workstation
     state: 'on'
   - condition: state
-    entity_id: binary_sensor.workday_tomorrow
+    entity_id: binary_sensor.workday_sensor
     state: 'on'
   action:
   - data:
@@ -93,7 +93,7 @@
     entity_id: light.workstation
     state: 'on'
   - condition: state
-    entity_id: binary_sensor.workday_tomorrow
+    entity_id: binary_sensor.workday_sensor
     state: 'on'
   action:
   - data:
