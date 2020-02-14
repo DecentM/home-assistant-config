@@ -88,6 +88,12 @@ hue:
   bridges:
     - host: !secret hue_bridge_ip
 
+withings:
+  client_id: !secret withings_client_id
+  client_secret: !secret withings_client_secret
+  profiles:
+    - !secret withings_user_profile
+
 device_tracker:
   - platform: luci
     host: !secret openwrt_host
