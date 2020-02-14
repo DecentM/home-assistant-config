@@ -88,6 +88,15 @@ hue:
   bridges:
     - host: !secret hue_bridge_ip
 
+# Example configuration.yaml entry
+light:
+  - platform: group
+    name: All lights
+    entities:
+      - light.bed
+      - light.kitchen_wall
+      - light.workstation
+
 withings:
   client_id: !secret withings_client_id
   client_secret: !secret withings_client_secret
