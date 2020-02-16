@@ -14,12 +14,3 @@
   - service: notify.notify
     data:
       message: I turned off all lights because no presence was detected
-
-- alias: Lights - All lights off when I enter the bed
-  trigger:
-  - platform: state
-    entity_id: sensor.withings_sleep_state_barnabas
-    to: 'on'
-  action:
-  - service: light.turn_off
-    entity_id: group.all_lights
