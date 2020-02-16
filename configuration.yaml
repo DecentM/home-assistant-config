@@ -6,6 +6,7 @@ homeassistant:
     roomba: !include packages/roomba/index.yaml
     plugins: !include packages/plugins/index.yaml
     time: !include packages/time/index.yaml
+    weather: !include packages/weather/index.yaml
 
 # Enables the frontend
 frontend:
