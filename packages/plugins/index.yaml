@@ -1,0 +1,32 @@
+# Custom variables
+var: !include_dir_named variables
+
+# Enable controlling client browsers as entities
+browser_mod:
+  prefix: 'browser_'
+  devices:
+    61b2a237_9753b5c3:
+      name: huawei-cam
+
+sensor: !include_dir_merge_list sensors
+
+tts:
+- platform: amazon_polly
+  aws_access_key_id: !secret polly_key_id
+  aws_secret_access_key: !secret polly_access_key
+  region_name: !secret polly_region
+  voice: Emma
+  engine: neural
+
+device_tracker:
+  - platform: luci
+    host: !secret openwrt_host
+    username: !secret openwrt_username
+    password: !secret openwrt_password
+
+notify:
+  - name: notify
+    platform: llamalab_automate
+    api_key: !secret automate_api_key
+    to: !secret automate_notify_to
+    device: !secret automate_notify_device

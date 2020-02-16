@@ -1,0 +1,14 @@
+hue:
+  bridges:
+    - host: !secret hue_bridge_ip
+
+# Example configuration.yaml entry
+light:
+  - platform: group
+    name: All lights
+    entities:
+      - light.bed
+      - light.kitchen_wall
+      - light.workstation
+
+automation: !include_dir_merge_list automations

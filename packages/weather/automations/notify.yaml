@@ -1,14 +1,3 @@
-- alias: Notify - Service restart
-  description: ''
-  trigger:
-  - event: start
-    platform: homeassistant
-  condition: []
-  action:
-  - data:
-      message: Home Assistant startup complete
-    service: notify.notify
-
 - alias: Notify - Weather every morning when all lights are off for 30 seconds
   description: ''
   trigger:

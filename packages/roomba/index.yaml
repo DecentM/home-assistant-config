@@ -1,0 +1,7 @@
+vacuum:
+  - platform: roomba
+    host: !secret vacuum_host
+    username: !secret vacuum_username
+    password: !secret vacuum_password
+
+automation: !include_dir_merge_list automations

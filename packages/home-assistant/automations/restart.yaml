@@ -1,0 +1,10 @@
+- alias: Notify - Service restart
+  description: ''
+  trigger:
+  - event: start
+    platform: homeassistant
+  condition: []
+  action:
+  - data:
+      message: Home Assistant startup complete
+    service: notify.notify
