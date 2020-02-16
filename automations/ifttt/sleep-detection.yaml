@@ -11,18 +11,21 @@
       entity_id: light.all_lights
       transition: 10
 
-- alias: Lights - Turn some lights on when I get ouf of bed
+- alias: Lights - Turn some lights on when I get ouf of bed in the dark
   trigger:
   - event_data:
       action: sleep_status_off
     event_type: ifttt_webhook_received
     platform: event
-  condition: []
+  condition:
+  - condition: sun
+    before: sunrise
+    after: sunset
   action:
   - service: light.turn_on
     data:
       entity_id:
         - light.bed
-        - light.workstation
-      transition: 10
-      brightness: 255
+        - light.kitchen_wall
+      transition: 3
+      brightness: 20
