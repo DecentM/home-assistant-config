@@ -9,7 +9,7 @@
   - service: light.turn_off
     data:
       entity_id: light.all_lights
-      transition: 10
+      transition: 5
 
 - alias: Lights - Turn some lights on when I get ouf of bed in the dark
   trigger:
@@ -27,5 +27,5 @@
       entity_id:
         - light.bed
         - light.kitchen_wall
-      transition: 3
+      transition: 2
       brightness: 20
