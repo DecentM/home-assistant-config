@@ -2,7 +2,7 @@ homeassistant:
   packages:
     health: !include packages/health/index.yaml
     lights: !include packages/lights/index.yaml
-    home-assistant: !include packages/home-assistant/index.yaml
+    home_assistant: !include packages/home_assistant/index.yaml
     roomba: !include packages/roomba/index.yaml
     plugins: !include packages/plugins/index.yaml
     time: !include packages/time/index.yaml
