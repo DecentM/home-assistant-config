@@ -27,5 +27,5 @@
       entity_id:
         - light.bed
         - light.kitchen_wall
-      transition: 2
+      transition: 10
       brightness: 20
