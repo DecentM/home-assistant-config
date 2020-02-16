@@ -18,9 +18,9 @@
     event_type: ifttt_webhook_received
     platform: event
   condition:
-  - condition: sun
-    before: sunrise
-    after: sunset
+  - condition: state
+    entity_id: sun.sun
+    state: below_horizon
   action:
   - service: light.turn_on
     data:
