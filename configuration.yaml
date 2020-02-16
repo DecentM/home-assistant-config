@@ -1,10 +1,11 @@
-packages:
-  health: !include packages/health/index.yaml
-  lights: !include packages/lights/index.yaml
-  home-assistant: !include packages/home-assistant/index.yaml
-  roomba: !include packages/roomba/index.yaml
-  plugins: !include packages/plugins/index.yaml
-  time: !include packages/time/index.yaml
+homeassistant:
+  packages:
+    health: !include packages/health/index.yaml
+    lights: !include packages/lights/index.yaml
+    home-assistant: !include packages/home-assistant/index.yaml
+    roomba: !include packages/roomba/index.yaml
+    plugins: !include packages/plugins/index.yaml
+    time: !include packages/time/index.yaml
 
 # Enables the frontend
 frontend:
