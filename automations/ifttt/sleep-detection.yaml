@@ -7,8 +7,9 @@
   condition: []
   action:
   - service: light.turn_off
-    entity_id: light.all_lights
-    transition: 10
+    data:
+      entity_id: light.all_lights
+      transition: 10
 
 - alias: Lights - Turn some lights on when I get ouf of bed
   trigger:
@@ -19,8 +20,9 @@
   condition: []
   action:
   - service: light.turn_on
-    entity_id:
-      - light.bed
-      - light.workstation
-    transition: 10
-    brightness: 255
+    data:
+      entity_id:
+        - light.bed
+        - light.workstation
+      transition: 10
+      brightness: 255
