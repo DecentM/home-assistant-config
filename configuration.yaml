@@ -20,6 +20,7 @@ homeassistant:
     plugins: !include packages/plugins/index.yaml
     time: !include packages/time/index.yaml
     weather: !include packages/weather/index.yaml
+    youtube: !include packages/youtube/index.yaml
 
   auth_mfa_modules:
     - type: totp
