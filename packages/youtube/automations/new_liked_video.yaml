@@ -1,7 +1,7 @@
 - alias: Notify - On new liked video
   trigger:
   - event_data:
-      action: sleep_status_off
+      action: new_liked_video
     event_type: ifttt_webhook_received
     platform: event
   condition: []
