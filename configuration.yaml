@@ -5,8 +5,8 @@ homeassistant:
   latitude: !secret home_lat
   longitude: !secret home_long
   elevation: !secret home_elevation
-  # metric for Metric, imperial for Imperial
 
+  # metric or imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: !secret home_timezone
@@ -20,6 +20,10 @@ homeassistant:
     plugins: !include packages/plugins/index.yaml
     time: !include packages/time/index.yaml
     weather: !include packages/weather/index.yaml
+
+  auth_mfa_modules:
+    - type: totp
+      name: Authenticator app
 
 # Enables the frontend
 frontend:
