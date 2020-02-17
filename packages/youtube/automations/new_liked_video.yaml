@@ -1,4 +1,4 @@
-- alias: Notify - On new liked video
+- alias: Youtube - Record new liked video
   trigger:
   - event_data:
       action: new_liked_video
@@ -14,4 +14,4 @@
     data_template:
       entity_id: var.last_liked_video
       value: >
-        {{trigger.event.data.embedCode}}
+        {{trigger.event.data.url}}
