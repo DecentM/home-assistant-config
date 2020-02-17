@@ -1,1 +1,7 @@
+var:
+  last_liked_video:
+    friendly_name: "Last liked video"
+    initial_value: ""
+    icon: mdi:youtube-subscription
+
 automation: !include_dir_merge_list automations

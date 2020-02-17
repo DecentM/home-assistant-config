@@ -7,5 +7,9 @@
   condition: []
   action:
   - service: notify.notify
-    data:
-      message: New liked video!
+    data_template:
+      message: 'New liked video: {{trigger.event.data.title}}'
+  - service: var.set
+    data_template:
+      entity_id: last_liked_video
+      value: '{{trigger.event.data.embedCode}}'
