@@ -1,0 +1,43 @@
+icon: 'mdi:heart'
+title: Health
+
+cards:
+  - entity: !secret sensor_withings_systolic
+    max: 180
+    min: 120
+    name: Systolic
+    severity:
+      green: 120
+      red: 140
+      yellow: 130
+    theme: default
+    type: gauge
+    unit: ' '
+  - entity: !secret sensor_withings_systolic
+    max: 110
+    min: 80
+    name: Diastolic
+    severity:
+      green: 80
+      red: 90
+      yellow: 85
+    theme: default
+    type: gauge
+    unit: ' '
+  - entities:
+      - entity: !secret sensor_withings_weight
+        name: Weight
+      - entity: !secret sensor_withings_hyrdation
+        name: Hydration
+      - entity: !secret sensor_withings_hr_avg
+        name: Sleeping pulse
+      - entity: !secret sensor_withings_systolic
+        name: Systolic blood pressure
+      - entity: !secret sensor_withings_diastolic
+        name: Diastolic blood pressure
+      - entity: !secret sensor_withings_pulse
+        name: Pulse
+    type: entities
+  - type: 'custom:mini-graph-card'
+    entities:
+      - null
