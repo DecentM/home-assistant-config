@@ -1,5 +1,5 @@
 type: 'custom:mini-graph-card'
-name: Blood pressure
+name: Weight
 animate: true
 
 show:
