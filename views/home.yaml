@@ -1,0 +1,20 @@
+icon: 'mdi:lightbulb'
+panel: false
+path: home
+title: Home
+
+badges:
+  - entity: device_tracker.decentm_phone
+  - entity: sensor.hacs
+  - entity: binary_sensor.updater
+
+cards:
+  - !include cards/roomba-runs-gauge.yaml
+  - !include cards/lights-toggle-quick.yaml
+  - !include cards/roomba-entity.yaml
+  - !include cards/environment-glance.yaml
+  - !include cards/tiny-dashboard-optional.yaml
+  - !include cards/weather-large.yaml
+  - !include cards/history-graph-cloud-services.yaml
+  - !include cards/package-tracking.yaml
+  - !include cards/youtube-last-liked.yaml

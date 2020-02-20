@@ -1,0 +1,14 @@
+type: entities
+entities:
+  - entity: !secret sensor_withings_weight
+    name: Weight
+  - entity: !secret sensor_withings_hyrdation
+    name: Hydration
+  - entity: !secret sensor_withings_hr_avg
+    name: Sleeping pulse
+  - entity: !secret sensor_withings_systolic
+    name: Systolic blood pressure
+  - entity: !secret sensor_withings_diastolic
+    name: Diastolic blood pressure
+  - entity: !secret sensor_withings_pulse
+    name: Pulse

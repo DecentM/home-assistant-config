@@ -1,0 +1,15 @@
+columns: 3
+entities:
+  - entity: light.bed
+    tap_action:
+      action: toggle
+  - entity: light.workstation
+    tap_action:
+      action: toggle
+  - entity: light.kitchen_wall
+    tap_action:
+      action: toggle
+show_icon: true
+show_name: true
+show_state: false
+type: glance

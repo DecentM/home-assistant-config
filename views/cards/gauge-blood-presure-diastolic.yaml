@@ -1,0 +1,11 @@
+type: gauge
+entity: !secret sensor_withings_diastolic
+max: 110
+min: 80
+name: Diastolic
+theme: default
+unit: ' '
+severity:
+  green: 80
+  red: 90
+  yellow: 85

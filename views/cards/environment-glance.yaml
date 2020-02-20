@@ -1,0 +1,8 @@
+type: glance
+show_icon: true
+show_name: false
+show_state: true
+entities:
+  - entity: !secret sensor_air_quality
+  - entity: sun.sun
+  - entity: sensor.uptime_days

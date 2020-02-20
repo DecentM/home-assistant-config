@@ -1,0 +1,5 @@
+type: entities
+entities:
+  - entity: sensor.seventeentrack_packages_in_transit
+  - entity: sensor.seventeentrack_packages_not_found
+  - entity: sensor.seventeentrack_packages_delivered

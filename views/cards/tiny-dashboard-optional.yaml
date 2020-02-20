@@ -1,0 +1,9 @@
+type: conditional
+conditions:
+  - entity: light.huawei_cam
+    state_not: unavailable
+card:
+  entities:
+    - entity: light.huawei_cam
+      name: Huawei cam
+  type: entities

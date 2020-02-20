@@ -1,0 +1,11 @@
+type: gauge
+entity: !secret sensor_withings_systolic
+max: 180
+min: 120
+name: Systolic
+theme: default
+unit: ' '
+severity:
+  green: 120
+  red: 140
+  yellow: 130

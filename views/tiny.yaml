@@ -3,13 +3,4 @@ path: tiny-dashboard
 title: Tiny dashboard
 
 cards:
-  - entity: var.roomba_dirty_runs
-    max: 4
-    min: 0
-    name: Dirty runs
-    severity:
-      green: 0
-      red: 4
-      yellow: 3
-    theme: default
-    type: gauge
+  - !include cards/roomba-runs-gauge.yaml
