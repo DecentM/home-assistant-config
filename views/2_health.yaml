@@ -5,4 +5,6 @@ title: Health
 
 cards:
   - !include cards/mini-graph/blood-pressure.yaml
-  - !include cards/entities/health-overview.yaml
+  - !include cards/mini-graph/weight.yaml
+  - !include cards/mini-graph/hydration.yaml
+  - !include cards/mini-graph/pulse.yaml

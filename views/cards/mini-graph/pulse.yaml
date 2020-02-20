@@ -1,0 +1,12 @@
+type: 'custom:mini-graph-card'
+name: Pulse
+animate: true
+
+show:
+  average: true
+  extrema: true
+
+entities:
+  - entity: !secret sensor_withings_pulse
+    name: Pulse
+    show_state: true

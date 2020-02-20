@@ -1,0 +1,12 @@
+type: 'custom:mini-graph-card'
+name: Hydration
+animate: true
+
+show:
+  average: true
+  extrema: true
+
+entities:
+  - entity: !secret sensor_withings_hydration
+    name: Hydration
+    show_state: true
