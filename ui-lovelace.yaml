@@ -29,4 +29,7 @@ resources:
 
 title: Home
 
-views: !include_dir_list views
+views:
+  - !include views/1_home.yaml
+  - !include views/2_health.yaml
+  - !include views/3_tiny.yaml
