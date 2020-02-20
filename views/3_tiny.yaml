@@ -1,6 +1,7 @@
 icon: 'mdi:view-dashboard'
+panel: false
 path: tiny-dashboard
 title: Tiny dashboard
 
 cards:
-  - !include cards/roomba-runs-gauge.yaml
+  - !include cards/gauge/roomba-runs.yaml

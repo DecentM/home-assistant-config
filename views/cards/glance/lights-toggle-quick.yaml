@@ -1,4 +1,9 @@
+type: glance
 columns: 3
+show_icon: true
+show_name: true
+show_state: false
+
 entities:
   - entity: light.bed
     tap_action:
@@ -9,7 +14,3 @@ entities:
   - entity: light.kitchen_wall
     tap_action:
       action: toggle
-show_icon: true
-show_name: true
-show_state: false
-type: glance

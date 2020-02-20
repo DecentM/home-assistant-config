@@ -9,12 +9,12 @@ badges:
   - entity: binary_sensor.updater
 
 cards:
-  - !include cards/roomba-runs-gauge.yaml
-  - !include cards/lights-toggle-quick.yaml
-  - !include cards/roomba-entity.yaml
-  - !include cards/environment-glance.yaml
-  - !include cards/tiny-dashboard-optional.yaml
+  - !include cards/gauge/roomba-runs.yaml
+  - !include cards/glance/lights-toggle-quick.yaml
+  - !include cards/entities/roomba.yaml
+  - !include cards/glance/environment.yaml
+  - !include cards/entities/tiny-dashboard-screen.yaml
   - !include cards/weather-large.yaml
-  - !include cards/history-graph-cloud-services.yaml
-  - !include cards/package-tracking.yaml
+  - !include cards/history-graph/cloud-services.yaml
+  - !include cards/entities/package-tracking.yaml
   - !include cards/youtube-last-liked.yaml
