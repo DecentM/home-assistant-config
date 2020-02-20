@@ -4,9 +4,5 @@ path: health
 title: Health
 
 cards:
-  - !include cards/gauge/blood-pressure-systolic.yaml
-  - !include cards/gauge/blood-pressure-diastolic.yaml
+  - !include cards/mini-graph/blood-pressure.yaml
   - !include cards/entities/health-overview.yaml
-  - type: 'custom:mini-graph-card'
-    entities:
-      - null

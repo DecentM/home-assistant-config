@@ -1,0 +1,9 @@
+type: 'custom:mini-graph-card'
+entities:
+  - entity: !secret sensor_withings_diastolic
+    name: Diastolic blood pressure
+    show_state: true
+  - entity: !secret sensor_withings_systolic
+    name: Systolic blood pressure
+    show_state: true
+animate: true
