@@ -4,9 +4,9 @@ path: home
 title: Home
 
 badges:
-  - entity: device_tracker.decentm_phone
-  - entity: sensor.hacs
-  - entity: binary_sensor.updater
+  - device_tracker.decentm_phone
+  - sensor.hacs
+  - binary_sensor.updater
 
 cards:
   - !include cards/gauge/roomba-runs.yaml
