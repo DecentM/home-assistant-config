@@ -4,4 +4,4 @@ path: tiny-dashboard
 title: Tiny dashboard
 
 cards:
-  - !include cards/gauge/roomba-runs.yaml
+  - !include cards/youtube-last-liked.yaml
