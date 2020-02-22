@@ -13,5 +13,10 @@ light:
       - light.bed
       - light.kitchen_wall
       - light.workstation
+      - light.bathroom
+      - light.hall
+      - light.kitchen_spot_1
+      - light.kitchen_spot_2
+      - light.kitchen_spot_3
 
 automation: !include_dir_merge_list automations
