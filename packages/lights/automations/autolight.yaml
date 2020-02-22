@@ -1,16 +1,16 @@
 - alias: Lights - All lights off when I leave home
   trigger:
-  - entity_id: device_tracker.decentm_phone
-    event: leave
-    platform: zone
-    zone: zone.home
+    - platform: state
+      entity_id: device_tracker.decentm_phone
+      from: home
+      to: away
   condition:
   - condition: state
-    entity_id: group.all_lights
+    entity_id: light.all_lights
     state: 'on'
   action:
   - service: light.turn_off
-    entity_id: group.all_lights
+    entity_id: light.all_lights
   - service: notify.notify
     data:
-      message: I turned off all lights because no presence was detected
+      message: Some lights have been turned off after you left.
