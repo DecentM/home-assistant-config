@@ -19,4 +19,11 @@ light:
       - light.kitchen_spot_2
       - light.kitchen_spot_3
 
+  - platform: group
+    name: Kitchen
+    entities:
+      - light.kitchen_spot_1
+      - light.kitchen_spot_2
+      - light.kitchen_spot_3
+
 automation: !include_dir_merge_list automations

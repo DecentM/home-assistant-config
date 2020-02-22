@@ -14,3 +14,12 @@ entities:
   - entity: light.kitchen_wall
     tap_action:
       action: toggle
+  - entity: light.bathroom
+    tap_action:
+      action: toggle
+  - entity: light.hall
+    tap_action:
+      action: toggle
+  - entity: light.kitchen
+    tap_action:
+      action: toggle
