@@ -4,3 +4,6 @@ entity: sensor.trakt_upcoming_calendar
 title: Upcoming TV shows
 date: mmdd
 clock: 24
+image_style: fanart
+all_shadows: false
+line_color: "#5F9BEA"
