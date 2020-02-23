@@ -4,4 +4,5 @@ path: tiny-dashboard
 title: Tiny dashboard
 
 cards:
+  - !include cards/picture/unsplash/light_washed_tones.yaml
   - !include cards/youtube-last-liked.yaml

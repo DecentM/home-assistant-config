@@ -4,4 +4,5 @@ path: entertainment
 title: Entertainment
 
 cards:
+  - !include cards/picture/unsplash/dark_and_moody.yaml
   - !include cards/upcoming-media/trakt.yaml
