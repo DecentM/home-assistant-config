@@ -1,5 +1,5 @@
 - conditions:
-    user: guest
+    user: Guest
   config:
     kiosk_mode: true
     default_tab: home
