@@ -4,6 +4,7 @@ resources: !include lovelace/resources.yaml
 
 views:
   - !include lovelace/views/home.yaml
+  - !include lovelace/views/time.yaml
   - !include lovelace/views/entertainment.yaml
   - !include lovelace/views/health.yaml
   - !include lovelace/views/tiny.yaml
