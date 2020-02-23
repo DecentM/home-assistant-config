@@ -1,6 +1,0 @@
-type: custom:upcoming-media-card
-entity: sensor.radarr_upcoming_media
-
-title: Upcoming movies
-date: mmdd
-clock: 24

@@ -1,6 +1,6 @@
 type: custom:upcoming-media-card
-entity: sensor.upcoming_calendar
+entity: sensor.trakt_upcoming_calendar
 
-title: Upcoming TV shows (Trakt)
+title: Upcoming TV shows
 date: mmdd
 clock: 24

@@ -1,9 +1,0 @@
-- platform: radarr_upcoming_media
-  api_key: !secret radarr_api_key
-  host: !secret radarr_host
-  port: !secret radarr_port
-  ssl: !secret radarr_ssl
-  urlbase: !secret radarr_url_base
-  theaters: true
-  days: 30
-  max: 5
