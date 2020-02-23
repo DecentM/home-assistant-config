@@ -1,0 +1,7 @@
+icon: 'mdi:shovel'
+panel: false
+path: sandbox
+title: Sandbox
+
+cards:
+  - type: custom:gui-sandbox
