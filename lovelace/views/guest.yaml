@@ -1,5 +1,5 @@
 icon: 'mdi:account-supervisor'
-panel: true
+panel: false
 path: guest
 title: Guest dashboard
 
