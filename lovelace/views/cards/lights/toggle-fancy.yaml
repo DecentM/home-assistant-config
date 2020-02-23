@@ -2,8 +2,10 @@ type: horizontal-stack
 cards:
   - type: custom:button-card
     color_type: card
+    show_name: false
+    color: rgb(255, 182, 109)
     entity: light.kitchen_wall
-    icon: mdi:silverware-fork-knife
+    icon: mdi:wall-sconce
     aspect_ratio: 1/1
     tap_action:
       action: toggle
@@ -12,6 +14,8 @@ cards:
 
   - type: custom:button-card
     color_type: card
+    show_name: false
+    color: rgb(255, 182, 109)
     entity: light.bathroom
     icon: mdi:toilet
     aspect_ratio: 1/1
@@ -22,8 +26,10 @@ cards:
 
   - type: custom:button-card
     color_type: card
+    color: rgb(255, 182, 109)
+    show_name: false
     entity: light.kitchen
-    icon: mdi:chef-hat
+    icon: mdi:stove
     aspect_ratio: 1/1
     tap_action:
       action: toggle
@@ -32,6 +38,8 @@ cards:
 
   - type: custom:button-card
     color_type: card
+    color: rgb(255, 182, 109)
+    show_name: false
     entity: light.hall
     icon: mdi:coat-rack
     aspect_ratio: 1/1
