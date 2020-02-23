@@ -1,7 +1,11 @@
 - conditions:
     user: Guest
   config:
-    kiosk_mode: true
+    hide_config: true
+    hide_help: false
+    hide_raw: true
+    footer_mode: false
+
     default_tab: home
     show_tabs:
       - home
