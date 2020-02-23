@@ -1,6 +1,7 @@
 type: horizontal-stack
 cards:
   - type: custom:button-card
+    color_type: card
     entity: light.kitchen_wall
     icon: mdi:silverware-fork-knife
     aspect_ratio: 1/1
@@ -10,6 +11,7 @@ cards:
       action: more-info
 
   - type: custom:button-card
+    color_type: card
     entity: light.bathroom
     icon: mdi:toilet
     aspect_ratio: 1/1
@@ -19,6 +21,7 @@ cards:
       action: more-info
 
   - type: custom:button-card
+    color_type: card
     entity: light.kitchen
     icon: mdi:chef-hat
     aspect_ratio: 1/1
@@ -28,6 +31,7 @@ cards:
       action: more-info
 
   - type: custom:button-card
+    color_type: card
     entity: light.hall
     icon: mdi:coat-rack
     aspect_ratio: 1/1
