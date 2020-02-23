@@ -1,6 +1,7 @@
 title: Home
 
 resources: !include lovelace/resources.yaml
+custom_header: !include lovelace/custom_header/index.yaml
 
 views:
   - !include lovelace/views/home.yaml

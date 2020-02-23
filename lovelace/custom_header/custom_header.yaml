@@ -1,0 +1,6 @@
+header_text: Home Assistant
+# compact_mode: true
+split_mode: true
+hide_help: true
+hide_config: true
+exceptions: !include_dir_merge_list exceptions

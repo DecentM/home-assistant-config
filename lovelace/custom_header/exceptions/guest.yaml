@@ -1,0 +1,7 @@
+- conditions:
+    user: guest
+  config:
+    kiosk_mode: true
+    default_tab: home
+    show_tabs:
+      - home
