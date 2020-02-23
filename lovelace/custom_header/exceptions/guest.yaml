@@ -1,10 +1,7 @@
 - conditions:
     user: Guest
   config:
-    hide_config: true
-    hide_help: false
-    hide_raw: true
-    hide_unused: true
+    hide_header: true
 
     default_tab: home
     show_tabs:
