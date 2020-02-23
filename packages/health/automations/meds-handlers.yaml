@@ -14,7 +14,7 @@
   trigger:
     platform: time
     at: '09:50:00'
-  conditions:
+  condition:
     - condition: state
       entity_id: input_boolean.meds_taken
       state: 'off'
