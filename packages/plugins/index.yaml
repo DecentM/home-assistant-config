@@ -30,3 +30,22 @@ notify:
     api_key: !secret automate_api_key
     to: !secret automate_notify_to
     device: !secret automate_notify_device
+
+camera:
+  - platform: unsplash
+    name: Unsplash - Light-Washed Tones
+    api_key: !secret unsplash_api_key
+    collection_id: 1020268
+    interval: 360
+
+  - platform: unsplash
+    name: Unsplash - Dark and Moody
+    api_key: !secret unsplash_api_key
+    collection_id: 762960
+    interval: 360
+
+  - platform: unsplash
+    name: Unsplash - Winter
+    api_key: !secret unsplash_api_key
+    collection_id: 3178572
+    interval: 360
