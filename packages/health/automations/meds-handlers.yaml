@@ -4,7 +4,7 @@
     entity_id: input_boolean.meds_taken
     to: 'on'
     for:
-      seconds: 15
+      hours: 2
   action:
     - service: input_boolean.turn_off
       data:
