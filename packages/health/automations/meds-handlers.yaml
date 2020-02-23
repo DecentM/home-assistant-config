@@ -1,0 +1,24 @@
+- alias: Health - Reset meds taken
+  trigger:
+    platform: state
+    entity_id: input_boolean.meds_taken
+    to: 'on'
+    for:
+      seconds: 15
+  action:
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.meds_taken
+
+- alias: Notify - When meds have not been taken
+  trigger:
+    platform: time
+    at: '09:50:00'
+  conditions:
+    - condition: state
+      entity_id: input_boolean.meds_taken
+      state: 'off'
+  action:
+    service: notify.notify
+    data:
+      message: Meds have not been taken yet!

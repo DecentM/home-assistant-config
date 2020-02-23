@@ -1,0 +1,9 @@
+type: "custom:button-card"
+color_type: card
+entity: input_boolean.meds_taken
+icon: mdi:pill
+tap_action:
+  action: call-service
+  service: input_boolean.turn_on
+  service_data:
+    entity_id: input_boolean.meds_taken

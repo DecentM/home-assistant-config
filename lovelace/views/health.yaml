@@ -4,6 +4,7 @@ path: health
 title: Health
 
 cards:
+  - !include cards/meds-taken.yaml
   - !include cards/mini-graph/blood-pressure.yaml
   - !include cards/mini-graph/weight.yaml
   - !include cards/mini-graph/hydration.yaml

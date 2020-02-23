@@ -6,3 +6,5 @@ withings:
 
 automation: !include_dir_merge_list automations
 sensor: !include_dir_merge_list sensors
+
+input_boolean: !include_dir_named boolean-inputs
