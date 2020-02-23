@@ -1,0 +1,29 @@
+  ### Module resources ###
+  - type: module
+    url: /community_plugin/lovelace-animated-background/animated-background.js
+  - type: module
+    url: /community_plugin/button-card/button-card.js
+  - type: module
+    url: /community_plugin/radial-menu/radial-menu.js
+  - type: module
+    url: /community_plugin/swipe-card/swipe-card.js
+  - type: module
+    url: /community_plugin/lovelace-gui-sandbox/gui-sandbox.js
+  - type: module
+    url: /community_plugin/lovelace-card-mod/card-mod.js
+  - type: module
+    url: /community_plugin/button-entity-row/button-entity-row.js
+  - type: module
+    url: /community_plugin/circle-sensor-card/circle-sensor-card.js
+  - type: module
+    url: /community_plugin/swipe-glance-card/swipe-glance-card.js
+  - type: module
+    url: /community_plugin/config-template-card/config-template-card.js
+  - type: module
+    url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+
+  ### Javascript resources ###
+  - type: js
+    url: /community_plugin/upcoming-media-card/upcoming-media-card.js
+  - type: js
+    url: /community_plugin/username-element/username-element.js

@@ -1,0 +1,9 @@
+icon: 'mdi:cinema'
+panel: false
+path: entertainment
+title: Entertainment
+
+cards:
+  - !include cards/upcoming-media/trakt.yaml
+  - !include cards/upcoming-media/sonarr.yaml
+  - !include cards/upcoming-media/radarr.yaml

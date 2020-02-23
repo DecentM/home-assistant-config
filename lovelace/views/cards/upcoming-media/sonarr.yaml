@@ -1,0 +1,6 @@
+type: custom:upcoming-media-card
+entity: sensor.sonarr_upcoming_media
+
+title: Upcoming TV shows
+date: mmdd
+clock: 24

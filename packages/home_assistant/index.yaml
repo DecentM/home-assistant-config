@@ -10,6 +10,9 @@ stream:
 
 system_health:
 
+# Enable generating a readme file
+readme:
+
 recorder:
   db_url: !secret postgres_url
   purge_keep_days: 7
