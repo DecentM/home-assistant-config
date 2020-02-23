@@ -33,8 +33,3 @@
     - 36
     - 255
     - 36
-- transition: 2
-  rgb_color: # Orange
-    - 255
-    - 191
-    - 0
