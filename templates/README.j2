@@ -34,8 +34,7 @@ Number of sensors | {{states.sensor | count}}
 {% if custom_components %}
 ## Custom components I use:
 {% for integration in custom_components %}
-### [{{integration.name}}]({{integration.documentation}})
-{% endfor -%}
+- [{{integration.name}}]({{integration.documentation}}){% endfor -%}
 {% endif %}
 
 ***
