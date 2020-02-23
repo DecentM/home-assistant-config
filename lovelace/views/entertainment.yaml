@@ -1,5 +1,5 @@
 icon: 'mdi:movie'
-panel: false
+panel: true
 path: entertainment
 title: Entertainment
 

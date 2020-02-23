@@ -18,7 +18,3 @@ cards:
   - !include cards/weather-large.yaml
   - !include cards/history-graph/cloud-services.yaml
   - !include cards/entities/package-tracking.yaml
-
-  - !include cards/mini-graph/memory-use.yaml
-  - !include cards/mini-graph/processor-use.yaml
-  - !include cards/mini-graph/system-load.yaml
