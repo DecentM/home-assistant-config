@@ -6,7 +6,10 @@
 .storage
 .cloud
 
-# Store managed files
+### Sensitive files ###
+.trakt.conf
+
+### Store managed files ###
 appdaemon/
 themes/
 
