@@ -3,6 +3,6 @@
   config:
     hide_header: true
 
-    default_tab: home
+    default_tab: guest
     show_tabs:
-      - home
+      - guest

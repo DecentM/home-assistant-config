@@ -1,0 +1,11 @@
+icon: 'mdi:account-supervisor'
+panel: false
+path: guest
+title: Guest dashboard
+
+cards:
+  - type: vertical-stack
+    cards:
+      - !include cards/glance/lights-toggle-quick.yaml
+      - !include cards/entities/roomba.yaml
+      - !include cards/picture/unsplash/winter.yaml
