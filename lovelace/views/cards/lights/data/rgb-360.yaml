@@ -1,0 +1,40 @@
+- transition: 2
+  rgb_color: # Normal, warm
+    - 255
+    - 149
+    - 50
+- transition: 2
+  rgb_color: # Normal, cold
+    - 182
+    - 236
+    - 255
+- transition: 2
+  rgb_color: # Red
+    - 255
+    - 36
+    - 36
+- transition: 2
+  rgb_color: # Pink
+    - 255
+    - 36
+    - 200
+- transition: 2
+  rgb_color: # Purple
+    - 127
+    - 0
+    - 255
+- transition: 2
+  rgb_color: # Blue
+    - 36
+    - 36
+    - 255
+- transition: 2
+  rgb_color: # Green
+    - 36
+    - 255
+    - 36
+- transition: 2
+  rgb_color: # Orange
+    - 255
+    - 191
+    - 0

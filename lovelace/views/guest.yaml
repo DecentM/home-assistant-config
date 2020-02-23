@@ -6,6 +6,7 @@ title: Guest dashboard
 cards:
   - type: vertical-stack
     cards:
-      - !include cards/glance/lights-toggle-quick.yaml
+      - !include cards/lights/toggle-colourful.yaml
+      - !include cards/lights/toggle-fancy.yaml
       - !include cards/entities/roomba.yaml
       - !include cards/picture/unsplash/winter.yaml
