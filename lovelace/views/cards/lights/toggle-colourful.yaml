@@ -1,11 +1,23 @@
 type: vertical-stack
 cards:
-  - type: custom:rgb-light-card
-    entity: light.workstation
-    colors: !include data/rgb-360.yaml
-    justify: between
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - light.workstation
+      - type: custom:rgb-light-card
+        entity: light.workstation
+        colors: !include data/rgb-360.yaml
+        justify: between
 
-  - type: custom:rgb-light-card
-    entity: light.bed
-    colors: !include data/rgb-360.yaml
-    justify: between
+  - type: vertical-stack
+    cards:
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - light.bed
+      - type: custom:rgb-light-card
+        entity: light.bed
+        colors: !include data/rgb-360.yaml
+        justify: between
