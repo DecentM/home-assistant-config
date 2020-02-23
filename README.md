@@ -28,8 +28,8 @@ useful!
 
 Description | value
 -- | --
-Number of entities | 140
-Number of sensors | 71
+Number of entities | 159
+Number of sensors | 75
 
 
 ## Custom components I use:
