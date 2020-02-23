@@ -34,26 +34,14 @@ Number of sensors | 71
 
 ## Custom components I use:
 
-### [Healthchecks.io](https://github.com/custom-components/healthchecksio)
-
-### [Variable](https://github.com/snarky-snark/home-assistant-variables/blob/master/README.md)
-
-### [Trakt](https://github.com/custom-components/sensor.trakt/blob/master/README.md)
-
-### [Unsplash](https://github.com/custom-components/unsplash)
-
-### [HACS (Home Assistant Community Store)](https://hacs.xyz)
-
-### [Sonarr Upcoming Media](https://github.com/custom-components/sensor.sonarr_upcoming_media)
-
-### [Radarr Upcoming Media](https://github.com/custom-components/sensor.radarr_upcoming_media)
-
-### [Generate readme](https://github.com/custom-components/readme)
-
-### [Anniversaries](https://github.com/pinkywafer/Anniversaries)
-
-### [Browser mod]()
-
+- [Healthchecks.io](https://github.com/custom-components/healthchecksio)
+- [Variable](https://github.com/snarky-snark/home-assistant-variables/blob/master/README.md)
+- [Trakt](https://github.com/custom-components/sensor.trakt/blob/master/README.md)
+- [Unsplash](https://github.com/custom-components/unsplash)
+- [HACS (Home Assistant Community Store)](https://hacs.xyz)
+- [Generate readme](https://github.com/custom-components/readme)
+- [Anniversaries](https://github.com/pinkywafer/Anniversaries)
+- [Browser mod]()
 
 ***
 
