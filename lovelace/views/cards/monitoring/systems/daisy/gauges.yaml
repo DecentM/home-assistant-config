@@ -1,0 +1,43 @@
+- type: 'custom:mini-graph-card'
+  style: !include styles/mini-graph.yaml
+  name: System load
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.load_15m
+      name: 15m
+      show_state: true
+    - entity: sensor.load_5m
+      name: 5m
+      show_state: true
+    - entity: sensor.load_1m
+      name: 1m
+      show_state: true
+
+- type: 'custom:mini-graph-card'
+  style: !include styles/mini-graph.yaml
+  name: CPU used
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.daisy_cpu_used
+
+- type: 'custom:mini-graph-card'
+  style: !include styles/mini-graph.yaml
+  name: RAM used
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.daisy_ram_used_percent

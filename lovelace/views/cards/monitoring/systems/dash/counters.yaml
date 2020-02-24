@@ -1,0 +1,23 @@
+- type: 'custom:mini-graph-card'
+  style: !include styles/mini-graph.yaml
+  name: Container count
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.dash_containers_active
+
+- type: 'custom:mini-graph-card'
+  style: !include styles/mini-graph.yaml
+  name: Thread count
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.dash_thread

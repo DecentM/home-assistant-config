@@ -1,0 +1,35 @@
+- type: 'custom:mini-graph-card'
+  style: !include styles/mini-graph.yaml
+  name: Disk usage
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.pinkie_disk_used_percent
+
+- type: 'custom:mini-graph-card'
+  style: !include styles/mini-graph.yaml
+  name: CPU used
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.pinkie_cpu_used
+
+- type: 'custom:mini-graph-card'
+  style: !include styles/mini-graph.yaml
+  name: RAM used
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.pinkie_ram_used_percent
