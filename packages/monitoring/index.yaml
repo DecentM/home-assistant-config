@@ -26,3 +26,7 @@ glances:
     ssl: !secret glances_4_ssl
     username: !secret glances_username
     password: !secret glances_password
+
+sensor:
+  - platform: openhardwaremonitor
+    host: !secret windows_vm_host
