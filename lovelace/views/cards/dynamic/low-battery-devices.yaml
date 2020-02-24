@@ -1,6 +1,7 @@
 type: custom:auto-entities
 card:
-  type: history-graph
+  type: entities
+  show_header_toggle: false
   title: Devices with low battery
 filter:
   include:

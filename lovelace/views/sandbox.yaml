@@ -11,7 +11,7 @@ cards:
       - type: vertical-stack
         cards:
           - type: custom:gui-sandbox
-          - !include cards/dynamic/low-battery-graph.yaml
-          - !include cards/dynamic/any-battery-graph.yaml
+          - !include cards/dynamic/low-battery-devices.yaml
+          - !include cards/dynamic/any-battery-devices.yaml
 
       - !include cards/dynamic/unknown-state.yaml
