@@ -4,11 +4,12 @@
       value_template: !secret accuweather_url
 
 - platform: command_line
-  name: Active warnings
+  name: Active weather warnings
   # https://community.home-assistant.io/t/using-secrets-yaml-with-shell-commands/4478/9
-  command: bash /config/shell_scripts/accuweather_alerts.sh {{states.sensor.accuweather_url.state}} warnings
+  command: 'bash /config/shell_scripts/accuweather_alerts.sh {{states.sensor.accuweather_url.state}} warnings'
   command_timeout: 30
   scan_interval: 3600 # 3600 seconds = 1 hour
+  value_template: '{{value_json.warning1}}, {{value_json.warning2}}'
   json_attributes:
     - warning1
     - warning2
