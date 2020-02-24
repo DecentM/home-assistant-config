@@ -8,6 +8,6 @@ cards:
     cards:
       - !include cards/lights/toggle-colourful.yaml
       - !include cards/lights/toggle-fancy.yaml
-      - !include cards/entities/roomba.yaml
+      - !include cards/roomba/roomba-entity.yaml
       - !include cards/environment/weather-large.yaml
       - !include cards/picture/unsplash/winter.yaml
