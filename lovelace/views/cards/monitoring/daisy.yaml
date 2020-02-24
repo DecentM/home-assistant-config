@@ -1,64 +1,68 @@
-type: horizontal-stack
-cards:
-  - type: 'custom:mini-graph-card'
-    name: System load
-    animate: true
+type: entities
+title: Daisy
+show_header_toggle: false
+entities:
+  - type: horizontal-stack
+    cards:
+      - type: 'custom:mini-graph-card'
+        name: System load
+        animate: true
 
-    show:
-      average: true
-      extrema: true
+        show:
+          average: true
+          extrema: true
 
-    entities:
-      - entity: sensor.load_15m
-        name: 15m
-        show_state: true
-      - entity: sensor.load_5m
-        name: 5m
-        show_state: true
-      - entity: sensor.load_1m
-        name: 1m
-        show_state: true
+        entities:
+          - entity: sensor.load_15m
+            name: 15m
+            show_state: true
+          - entity: sensor.load_5m
+            name: 5m
+            show_state: true
+          - entity: sensor.load_1m
+            name: 1m
+            show_state: true
 
-  - type: 'custom:mini-graph-card'
-    name: Container count
-    animate: true
+      - type: 'custom:mini-graph-card'
+        name: Container count
+        animate: true
 
-    show:
-      average: true
-      extrema: true
+        show:
+          average: true
+          extrema: true
 
-    entities:
-      - entity: sensor.daisy_containers_active
+        entities:
+          - entity: sensor.daisy_containers_active
 
-  - type: 'custom:mini-graph-card'
-    name: Thread count
-    animate: true
+      - type: 'custom:mini-graph-card'
+        name: Thread count
+        animate: true
 
-    show:
-      average: true
-      extrema: true
+        show:
+          average: true
+          extrema: true
 
-    entities:
-      - entity: sensor.daisy_thread
+        entities:
+          - entity: sensor.daisy_thread
 
-  - type: 'custom:mini-graph-card'
-    name: CPU used
-    animate: true
+      - type: 'custom:mini-graph-card'
+        name: CPU used
+        animate: true
 
-    show:
-      average: true
-      extrema: true
+        show:
+          average: true
+          extrema: true
 
-    entities:
-      - entity: sensor.daisy_cpu_used
+        entities:
+          - entity: sensor.daisy_cpu_used
 
-  - type: 'custom:mini-graph-card'
-    name: RAM used
-    animate: true
+      - type: 'custom:mini-graph-card'
+        name: RAM used
+        animate: true
 
-    show:
-      average: true
-      extrema: true
+        show:
+          average: true
+          extrema: true
 
-    entities:
-      - entity: sensor.daisy_ram_used_percent
+        entities:
+          - entity: sensor.daisy_ram_used_percent
