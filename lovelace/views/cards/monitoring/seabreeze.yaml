@@ -1,0 +1,5 @@
+type: custom:vertical-stack-in-card
+title: !secret glances_4_name
+cards:
+  - type: horizontal-stack
+    cards: !include_dir_merge_list systems/seabreeze

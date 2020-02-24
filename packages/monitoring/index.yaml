@@ -19,3 +19,10 @@ glances:
     ssl: !secret glances_3_ssl
     username: !secret glances_username
     password: !secret glances_password
+
+  - host: !secret glances_4_host
+    port: !secret glances_4_port
+    name: !secret glances_4_name
+    ssl: !secret glances_4_ssl
+    username: !secret glances_username
+    password: !secret glances_password
