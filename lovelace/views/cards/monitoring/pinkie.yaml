@@ -1,28 +1,8 @@
 type: custom:vertical-stack-in-card
-title: !secret glances_1_name
+title: !secret glances_3_name
 cards:
   - type: horizontal-stack
     cards:
-      - type: 'custom:mini-graph-card'
-        style: !include styles/mini-graph.yaml
-        name: System load
-        animate: true
-
-        show:
-          average: true
-          extrema: true
-
-        entities:
-          - entity: sensor.load_15m
-            name: 15m
-            show_state: true
-          - entity: sensor.load_5m
-            name: 5m
-            show_state: true
-          - entity: sensor.load_1m
-            name: 1m
-            show_state: true
-
       - type: 'custom:mini-graph-card'
         style: !include styles/mini-graph.yaml
         name: Container count
@@ -33,7 +13,7 @@ cards:
           extrema: true
 
         entities:
-          - entity: sensor.daisy_containers_active
+          - entity: sensor.pinkie_containers_active
 
       - type: 'custom:mini-graph-card'
         style: !include styles/mini-graph.yaml
@@ -45,7 +25,7 @@ cards:
           extrema: true
 
         entities:
-          - entity: sensor.daisy_thread
+          - entity: sensor.pinkie_thread
 
       - type: 'custom:mini-graph-card'
         style: !include styles/mini-graph.yaml
@@ -57,7 +37,7 @@ cards:
           extrema: true
 
         entities:
-          - entity: sensor.daisy_cpu_used
+          - entity: sensor.pinkie_cpu_used
 
       - type: 'custom:mini-graph-card'
         style: !include styles/mini-graph.yaml
@@ -69,4 +49,4 @@ cards:
           extrema: true
 
         entities:
-          - entity: sensor.daisy_ram_used_percent
+          - entity: sensor.pinkie_ram_used_percent

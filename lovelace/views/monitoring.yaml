@@ -8,3 +8,5 @@ cards:
     cards:
       - !include cards/monitoring/cloud-services.yaml
       - !include cards/monitoring/daisy.yaml
+      - !include cards/monitoring/pinkie.yaml
+      - !include cards/monitoring/dash.yaml

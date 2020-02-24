@@ -2,6 +2,20 @@ glances:
   - host: !secret glances_1_host
     port: !secret glances_1_port
     name: !secret glances_1_name
-    username: !secret glances_1_username
-    password: !secret glances_1_password
-    ssl: true
+    ssl: !secret glances_1_ssl
+    username: !secret glances_username
+    password: !secret glances_password
+
+  - host: !secret glances_2_host
+    port: !secret glances_2_port
+    name: !secret glances_2_name
+    ssl: !secret glances_2_ssl
+    username: !secret glances_username
+    password: !secret glances_password
+
+  - host: !secret glances_3_host
+    port: !secret glances_3_port
+    name: !secret glances_3_name
+    ssl: !secret glances_3_ssl
+    username: !secret glances_username
+    password: !secret glances_password
