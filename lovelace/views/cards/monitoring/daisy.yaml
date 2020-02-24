@@ -1,5 +1,3 @@
-type: custom:vertical-stack-in-card
+type: entities
 title: !secret glances_1_name
-cards:
-  - type: horizontal-stack
-    cards: !include_dir_merge_list systems/daisy
+entities: !include_dir_merge_list systems/daisy
