@@ -4,6 +4,6 @@ cards:
   - type: vertical-stack
     cards:
       - type: horizontal-stack
-        cards: systems/shining/gpu
+        cards: !include systems/shining/gpu.yaml
       - type: horizontal-stack
-        cards: systems/shining/gauges
+        cards: !include systems/shining/gauges.yaml
