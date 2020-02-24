@@ -13,6 +13,8 @@ weatherAlert () {
   local TARGET
   TARGET=$2
 
+  printf "URL: %s, TARGET: %s\n" "$URL" "$TARGET" >> debug.log
+
   if [ -z "$URL" ] | [ -z "$TARGET" ]; then
     printf "Usage: %s %s %s\n\n" "$0" "<url>" "<target>"
     printf "\tThe URL should be an AccuWeather city page. It should have the following format: https://www.accuweather.com/<language>/<country>/<city>/<city_id>/weather-forecast/<city_id>\n"
