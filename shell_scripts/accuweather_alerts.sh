@@ -7,13 +7,24 @@ set +e
 USER_AGENT="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.116 Safari/537.36"
 
 weatherAlert () {
-  local URL
-  URL=$1
+  local SECRETS_KEY
+  SECRETS_KEY=$1
 
   local TARGET
   TARGET=$2
 
-  printf "URL: %s, TARGET: %s\n" "$URL" "$TARGET" >> debug.log
+  local DEBUG
+  DEBUG=$3
+
+  local URL
+  URL=$(grep "$SECRETS_KEY" ../secrets.yaml | cut -d ":" -f2 | xargs)
+
+  if [ -n "$DEBUG" ]; then
+    local DEBUG_FILENAME
+    DEBUG_FILENAME="$0-debug.log"
+
+    printf "SECRETS_KEY: %s, URL: %s, TARGET: %s\n" "$SECRETS_KEY" "$URL" "$TARGET" >> "$DEBUG_FILENAME"
+  fi
 
   if [ -z "$URL" ] | [ -z "$TARGET" ]; then
     printf "Usage: %s %s %s\n\n" "$0" "<url>" "<target>"
@@ -55,4 +66,4 @@ weatherAlert () {
   esac
 }
 
-weatherAlert "$1" "$2"
+weatherAlert "$1" "$2" "$3"
