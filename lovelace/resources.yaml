@@ -5,8 +5,6 @@
 - type: module
   url: /community_plugin/custom-header/custom-header.js
 - type: module
-  url: /community_plugin/lovelace-animated-background/animated-background.js
-- type: module
   url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
 - type: js
   url: /community_plugin/rgb-light-card/card.js
