@@ -6,5 +6,6 @@ card:
 filter:
   include:
     - state: "unknown"
+    - state: "unavailable"
   exclude:
     - entity_id: group.*

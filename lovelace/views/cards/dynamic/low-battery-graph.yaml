@@ -10,3 +10,6 @@ filter:
         battery: '< 20'
     - attributes:
         battery_level: '< 20'
+    - attributes:
+        device_class: battery
+        state: '< 20'
