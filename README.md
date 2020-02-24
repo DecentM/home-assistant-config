@@ -28,8 +28,8 @@ useful!
 
 Description | value
 -- | --
-Number of entities | 159
-Number of sensors | 75
+Number of entities | 254
+Number of sensors | 174
 
 
 ## Custom components I use:
@@ -38,10 +38,10 @@ Number of sensors | 75
 - [Variable](https://github.com/snarky-snark/home-assistant-variables/blob/master/README.md)
 - [Trakt](https://github.com/custom-components/sensor.trakt/blob/master/README.md)
 - [Unsplash](https://github.com/custom-components/unsplash)
-- [HACS (Home Assistant Community Store)](https://hacs.xyz)
 - [Generate readme](https://github.com/custom-components/readme)
 - [Anniversaries](https://github.com/pinkywafer/Anniversaries)
 - [Browser mod]()
+- [HACS (Home Assistant Community Store)](https://hacs.xyz)
 
 ***
 
