@@ -4,27 +4,32 @@ path: sandbox
 title: Sandbox
 
 cards:
-  - type: custom:gui-sandbox
+  - type: horizontal-stack
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: custom:gui-sandbox
 
-  - type: custom:auto-entities
-    card:
-      type: entities
-      title: Devices that need attention
-    filter:
-      include:
-        - entity_id: "*battery*"
-          state: '< 20'
-        - attributes:
-            battery: '< 20'
-        - attributes:
-            battery_level: '< 20'
+          - type: custom:auto-entities
+            card:
+              type: history-graph
+              title: Devices with low battery
+            filter:
+              include:
+                - entity_id: "*battery*"
+                  state: '< 20'
+                - attributes:
+                    battery: '< 20'
+                - attributes:
+                    battery_level: '< 20'
 
-  - type: custom:auto-entities
-    card:
-      type: entities
-      title: Probably broken things
-    filter:
-      include:
-        - state: "unknown"
-      exclude:
-        - entity_id: group.*
+      - type: custom:auto-entities
+        card:
+          type: entities
+          show_header_toggle: false
+          title: Probably broken things
+        filter:
+          include:
+            - state: "unknown"
+          exclude:
+            - entity_id: group.*
