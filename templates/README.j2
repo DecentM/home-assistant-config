@@ -28,8 +28,15 @@ useful!
 
 Description | value
 -- | --
-Number of entities | {{states | count}}
-Number of sensors | {{states.sensor | count}}
+Automations | {{states.automation | count}}
+Binary sensors | {{states.binary_sensor | count}}
+Cameras | {{states.camera | count}}
+Tracked devices | {{states.device_tracker | count}}
+Boolean inputs | {{states.input_boolean | count}}
+Lights | {{states.light | count}}
+Media players | {{states.media_player | count}}
+Sensors | {{states.sensor | count}}
+Custom variables | {{states.var | count}}
 
 {% if custom_components %}
 ## Custom components I use:
