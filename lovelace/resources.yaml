@@ -19,4 +19,6 @@
 - type: module
   url: /community_plugin/lovelace-auto-entities/auto-entities.js
 - type: module
+  url: /community_plugin/lovelace-card-mod/card-mod.js
+- type: module
   url: /community_plugin/lovelace-gui-sandbox/gui-sandbox.js

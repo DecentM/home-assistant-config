@@ -2,6 +2,11 @@ type: custom:vertical-stack-in-card
 title: Daisy
 cards:
   - type: horizontal-stack
+    style: |
+      ha-card {
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
     cards:
       - type: 'custom:mini-graph-card'
         name: System load
