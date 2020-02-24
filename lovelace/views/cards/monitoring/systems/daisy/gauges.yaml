@@ -1,5 +1,5 @@
 - type: 'custom:mini-graph-card'
-  style: !include styles/mini-graph.yaml
+  style: !include ../../styles/mini-graph.yaml
   name: System load
   animate: true
 
@@ -19,7 +19,7 @@
       show_state: true
 
 - type: 'custom:mini-graph-card'
-  style: !include styles/mini-graph.yaml
+  style: !include ../../styles/mini-graph.yaml
   name: CPU used
   animate: true
 
@@ -31,7 +31,7 @@
     - entity: sensor.daisy_cpu_used
 
 - type: 'custom:mini-graph-card'
-  style: !include styles/mini-graph.yaml
+  style: !include ../../styles/mini-graph.yaml
   name: RAM used
   animate: true
 

@@ -1,5 +1,5 @@
 - type: 'custom:mini-graph-card'
-  style: !include styles/mini-graph.yaml
+  style: !include ../../styles/mini-graph.yaml
   name: Container count
   animate: true
 
@@ -11,7 +11,7 @@
     - entity: sensor.pinkie_containers_active
 
 - type: 'custom:mini-graph-card'
-  style: !include styles/mini-graph.yaml
+  style: !include ../../styles/mini-graph.yaml
   name: Thread count
   animate: true
 
