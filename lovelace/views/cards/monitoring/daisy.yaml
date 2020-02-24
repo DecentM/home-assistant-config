@@ -1,7 +1,6 @@
-type: entities
+type: custom:vertical-stack-in-card
 title: Daisy
-show_header_toggle: false
-entities:
+cards:
   - type: horizontal-stack
     cards:
       - type: 'custom:mini-graph-card'

@@ -14,6 +14,8 @@
   url: /community_plugin/radial-menu/radial-menu.js
 - type: js
   url: /community_plugin/upcoming-media-card/upcoming-media-card.js
+- type: js
+  url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
 - type: module
   url: /community_plugin/lovelace-auto-entities/auto-entities.js
 - type: module
