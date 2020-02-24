@@ -2,13 +2,12 @@ type: custom:vertical-stack-in-card
 title: Daisy
 cards:
   - type: horizontal-stack
-    style: |
-      ha-card {
-        margin-left: 1rem;
-        margin-right: 1rem;
-      }
     cards:
       - type: 'custom:mini-graph-card'
+        style: |
+          ha-card {
+            margin-left: 1rem;
+          }
         name: System load
         animate: true
 
@@ -28,6 +27,11 @@ cards:
             show_state: true
 
       - type: 'custom:mini-graph-card'
+        style: |
+          ha-card {
+            margin-left: 1rem;
+            margin-right: 1rem;
+          }
         name: Container count
         animate: true
 
@@ -39,6 +43,11 @@ cards:
           - entity: sensor.daisy_containers_active
 
       - type: 'custom:mini-graph-card'
+        style: |
+          ha-card {
+            margin-left: 1rem;
+            margin-right: 1rem;
+          }
         name: Thread count
         animate: true
 
@@ -50,6 +59,11 @@ cards:
           - entity: sensor.daisy_thread
 
       - type: 'custom:mini-graph-card'
+        style: |
+          ha-card {
+            margin-left: 1rem;
+            margin-right: 1rem;
+          }
         name: CPU used
         animate: true
 
@@ -61,6 +75,10 @@ cards:
           - entity: sensor.daisy_cpu_used
 
       - type: 'custom:mini-graph-card'
+        style: |
+          ha-card {
+            margin-left: 1rem;
+          }
         name: RAM used
         animate: true
 
