@@ -1,5 +1,9 @@
 type: custom:vertical-stack-in-card
 title: Shining
 cards:
-  - type: horizontal-stack
-    cards: !include_dir_merge_list systems/shining
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards: systems/shining/gpu
+      - type: horizontal-stack
+        cards: systems/shining/gauges
