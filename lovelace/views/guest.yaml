@@ -6,8 +6,11 @@ title: Guest dashboard
 cards:
   - type: vertical-stack
     cards:
+      - !include cards/environment/weather-active-warnings.yaml
+      - !include cards/environment/weather-banner.yaml
       - !include cards/lights/toggle-colourful.yaml
       - !include cards/lights/toggle-fancy.yaml
       - !include cards/roomba/roomba-entity.yaml
+      - !include cards/environment/weather-forecast.yaml
       - !include cards/environment/weather-large.yaml
       - !include cards/picture/unsplash/winter.yaml

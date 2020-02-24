@@ -1,0 +1,13 @@
+type: vertical-stack
+cards:
+  - type: markdown
+    style: |
+      ha-card {
+        background-color: #d32f2f !important;
+        color: white !important;
+      }
+    content: >
+      {{state_attr('sensor.active_weather_warnings', 'warning1')}}
+  - type: markdown
+    content: >
+      {{state_attr('sensor.active_weather_warnings', 'warning2')}}
