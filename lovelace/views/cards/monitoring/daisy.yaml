@@ -4,10 +4,7 @@ cards:
   - type: horizontal-stack
     cards:
       - type: 'custom:mini-graph-card'
-        style: |
-          ha-card {
-            border-radius: var(--ha-card-border-radius) !important;
-          }
+        style: !include styles/mini-graph.yaml
         name: System load
         animate: true
 
@@ -27,10 +24,7 @@ cards:
             show_state: true
 
       - type: 'custom:mini-graph-card'
-        style: |
-          ha-card {
-            border-radius: var(--ha-card-border-radius) !important;
-          }
+        style: !include styles/mini-graph.yaml
         name: Container count
         animate: true
 
@@ -42,10 +36,7 @@ cards:
           - entity: sensor.daisy_containers_active
 
       - type: 'custom:mini-graph-card'
-        style: |
-          ha-card {
-            border-radius: var(--ha-card-border-radius) !important;
-          }
+        style: !include styles/mini-graph.yaml
         name: Thread count
         animate: true
 
@@ -57,10 +48,7 @@ cards:
           - entity: sensor.daisy_thread
 
       - type: 'custom:mini-graph-card'
-        style: |
-          ha-card {
-            border-radius: var(--ha-card-border-radius) !important;
-          }
+        style: !include styles/mini-graph.yaml
         name: CPU used
         animate: true
 
@@ -72,10 +60,7 @@ cards:
           - entity: sensor.daisy_cpu_used
 
       - type: 'custom:mini-graph-card'
-        style: |
-          ha-card {
-            border-radius: var(--ha-card-border-radius) !important;
-          }
+        style: !include styles/mini-graph.yaml
         name: RAM used
         animate: true
 
