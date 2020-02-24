@@ -1,0 +1,7 @@
+glances:
+  - host: !secret glances_1_host
+    port: !secret glances_1_port
+    name: !secret glances_1_name
+    username: !secret glances_1_username
+    password: !secret glances_1_password
+    ssl: true

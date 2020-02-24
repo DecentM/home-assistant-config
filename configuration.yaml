@@ -22,6 +22,7 @@ homeassistant:
     weather: !include packages/weather/index.yaml
     youtube: !include packages/youtube/index.yaml
     theater: !include packages/theater/index.yaml
+    monitoring: !include packages/monitoring/index.yaml
 
   auth_mfa_modules:
     - type: totp
