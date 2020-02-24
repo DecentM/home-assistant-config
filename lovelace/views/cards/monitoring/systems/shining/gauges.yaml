@@ -1,0 +1,90 @@
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: System load
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_total
+
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: GPU load
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_load_gpu_core
+
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: GPU memory used
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_load_gpu_memory
+
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: GPU clock
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_clocks_gpu_core
+
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: Disk usage
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.decentm_vm_wind_p_load_used_space
+
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: CPU used
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_1
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_2
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_3
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_4
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_5
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_6
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_7
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_8
+
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: RAM used
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.decentm_vm_wind_generic_memory_load_memory

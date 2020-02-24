@@ -11,3 +11,4 @@ cards:
       - !include cards/monitoring/pinkie.yaml
       - !include cards/monitoring/dash.yaml
       - !include cards/monitoring/seabreeze.yaml
+      - !include cards/monitoring/shining.yaml

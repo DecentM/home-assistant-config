@@ -1,0 +1,11 @@
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: GPU temperature
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_temperatures_gpu_core
