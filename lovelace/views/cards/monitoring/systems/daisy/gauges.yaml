@@ -11,12 +11,18 @@
     - entity: sensor.load_15m
       name: 15m
       show_state: true
-    - entity: sensor.load_5m
-      name: 5m
-      show_state: true
-    - entity: sensor.load_1m
-      name: 1m
-      show_state: true
+
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: Disk usage
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.daisy_disk_used_percent
 
 - type: 'custom:mini-graph-card'
   style: !include ../../styles/mini-graph.yaml

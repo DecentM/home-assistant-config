@@ -1,5 +1,17 @@
 - type: 'custom:mini-graph-card'
   style: !include ../../styles/mini-graph.yaml
+  name: System load
+  animate: true
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.pinkie_cpu_load
+
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
   name: Disk usage
   animate: true
 

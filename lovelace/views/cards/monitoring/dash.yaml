@@ -1,5 +1,5 @@
 type: custom:vertical-stack-in-card
-title: !secret glances_2_name
+title: !secret glances_3_name
 cards:
   - type: horizontal-stack
     cards: !include_dir_merge_list systems/dash
