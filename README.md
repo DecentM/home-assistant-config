@@ -28,8 +28,15 @@ useful!
 
 Description | value
 -- | --
-Number of entities | 254
-Number of sensors | 174
+Automations | 27
+Binary sensors | 6
+Cameras | 3
+Tracked devices | 18
+Boolean inputs | 2
+Lights | 13
+Media players | 3
+Sensors | 177
+Custom variables | 2
 
 
 ## Custom components I use:
