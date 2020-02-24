@@ -5,6 +5,7 @@
 
   show:
     average: true
+    extrema: true
 
   entities:
     - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_total
@@ -16,6 +17,7 @@
 
   show:
     average: true
+    extrema: true
 
   entities:
     - entity: sensor.decentm_vm_wind_p_load_used_space
@@ -27,6 +29,7 @@
 
   show:
     average: true
+    extrema: true
     legend: false
 
   entities:
@@ -46,6 +49,7 @@
 
   show:
     average: true
+    extrema: true
 
   entities:
     - entity: sensor.decentm_vm_wind_generic_memory_load_memory

@@ -5,6 +5,7 @@
 
   show:
     average: true
+    extrema: true
 
   entities:
     - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_load_gpu_core
@@ -28,6 +29,7 @@
 
   show:
     average: true
+    extrema: true
 
   entities:
     - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_load_gpu_memory
@@ -39,6 +41,7 @@
 
   show:
     average: true
+    extrema: true
 
   entities:
     - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_clocks_gpu_core
