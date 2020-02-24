@@ -1,28 +1,16 @@
 - transition: 2 # Mood - Everyday
   brightness: 203
-  hs_color:
-    - 29.812
-    - 65.252
   rgb_color:
     - 255
     - 171
     - 88
-  xy_color:
-    - 0.52
-    - 0.392
 
 - transition: 2 # Mood - Focus
   brightness: 254
-  hs_color:
-    - 31.861
-    - 37.369
   rgb_color:
     - 255
     - 210
     - 159
-  xy_color:
-    - 0.423
-    - 0.377
 
 - transition: 2
   rgb_color: # Red
