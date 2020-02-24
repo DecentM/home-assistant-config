@@ -1,0 +1,11 @@
+type: custom:auto-entities
+card:
+  type: history-graph
+  title: Devices equipped with a battery
+filter:
+  include:
+    - entity_id: "*battery*"
+    - attributes:
+        battery:
+    - attributes:
+        battery_level:

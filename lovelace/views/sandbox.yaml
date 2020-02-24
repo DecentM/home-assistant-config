@@ -1,35 +1,17 @@
 icon: 'mdi:shovel'
-panel: false
+panel: true
 path: sandbox
 title: Sandbox
 
 cards:
   - type: horizontal-stack
     cards:
+      - !include cards/picture/unsplash/dark_and_moody.yaml
+
       - type: vertical-stack
         cards:
           - type: custom:gui-sandbox
+          - !include cards/dynamic/any-battery-graph.yaml
+          - !include cards/dynamic/low-battery-graph.yaml
 
-          - type: custom:auto-entities
-            card:
-              type: history-graph
-              title: Devices with low battery
-            filter:
-              include:
-                - entity_id: "*battery*"
-                  state: '< 20'
-                - attributes:
-                    battery: '< 20'
-                - attributes:
-                    battery_level: '< 20'
-
-      - type: custom:auto-entities
-        card:
-          type: entities
-          show_header_toggle: false
-          title: Probably broken things
-        filter:
-          include:
-            - state: "unknown"
-          exclude:
-            - entity_id: group.*
+      - !include cards/dynamic/unknown-state.yaml

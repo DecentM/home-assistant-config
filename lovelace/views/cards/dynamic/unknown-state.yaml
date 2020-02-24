@@ -1,0 +1,10 @@
+type: custom:auto-entities
+card:
+  type: entities
+  show_header_toggle: false
+  title: Probably broken things
+filter:
+  include:
+    - state: "unknown"
+  exclude:
+    - entity_id: group.*

@@ -1,0 +1,12 @@
+type: custom:auto-entities
+card:
+  type: history-graph
+  title: Devices with low battery
+filter:
+  include:
+    - entity_id: "*battery*"
+      state: '< 20'
+    - attributes:
+        battery: '< 20'
+    - attributes:
+        battery_level: '< 20'
