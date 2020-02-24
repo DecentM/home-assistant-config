@@ -1,5 +1,5 @@
 icon: 'mdi:server-network'
-panel: false
+panel: true
 path: monitoring
 title: Monitoring
 
@@ -7,4 +7,4 @@ cards:
   - type: vertical-stack
     cards:
       - !include cards/monitoring/cloud-services.yaml
-      - !include cards/monitoring/daisy-local.yaml
+      - !include cards/monitoring/daisy.yaml
