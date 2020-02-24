@@ -2,6 +2,8 @@
   style: !include ../../styles/mini-graph.yaml
   name: System load
   animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
   show:
     average: true
@@ -16,6 +18,8 @@
   style: !include ../../styles/mini-graph.yaml
   name: Disk usage
   animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
   show:
     average: true
@@ -28,6 +32,8 @@
   style: !include ../../styles/mini-graph.yaml
   name: CPU used
   animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
   show:
     average: true
@@ -40,6 +46,8 @@
   style: !include ../../styles/mini-graph.yaml
   name: RAM used
   animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
   show:
     average: true

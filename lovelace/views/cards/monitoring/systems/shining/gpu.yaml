@@ -2,6 +2,8 @@
   style: !include ../../styles/mini-graph.yaml
   name: GPU load
   animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
   show:
     average: true
@@ -14,6 +16,8 @@
   style: !include ../../styles/mini-graph.yaml
   name: GPU temperature
   animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
   show:
     average: true
@@ -26,6 +30,8 @@
   style: !include ../../styles/mini-graph.yaml
   name: GPU memory used
   animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
   show:
     average: true
@@ -38,6 +44,8 @@
   style: !include ../../styles/mini-graph.yaml
   name: GPU clock
   animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
   show:
     average: true

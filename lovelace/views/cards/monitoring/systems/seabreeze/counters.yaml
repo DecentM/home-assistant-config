@@ -2,6 +2,8 @@
   style: !include ../../styles/mini-graph.yaml
   name: Container count
   animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
   show:
     average: true
@@ -14,6 +16,8 @@
   style: !include ../../styles/mini-graph.yaml
   name: Thread count
   animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
   show:
     average: true
