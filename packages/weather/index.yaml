@@ -3,3 +3,4 @@ weather:
     api_key: !secret darksky_api_key
 
 automation: !include_dir_merge_list automations
+sensor: !include_dir_merge_list sensors
