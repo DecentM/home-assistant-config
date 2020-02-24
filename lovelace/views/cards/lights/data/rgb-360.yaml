@@ -10,10 +10,6 @@
   xy_color:
     - 0.52
     - 0.392
-  rgb_color:
-    - 255
-    - 149
-    - 50
 
 - transition: 2 # Mood - Focus
   brightness: 254
