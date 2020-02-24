@@ -1,6 +1,5 @@
 - platform: command_line
   name: Active weather warnings
-  # https://community.home-assistant.io/t/using-secrets-yaml-with-shell-commands/4478/9
   command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url warnings
   command_timeout: 30
   scan_interval: 3600 # 3600 seconds = 1 hour
@@ -8,3 +7,17 @@
   json_attributes:
     - warning1
     - warning2
+
+- platform: command_line
+  name: Weather banner
+  command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url banner
+  command_timeout: 30
+  scan_interval: 3600 # 3600 seconds = 1 hour
+  value_template: '{{value_json.banner}}'
+
+- platform: command_line
+  name: Weather forecast
+  command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url forecast
+  command_timeout: 30
+  scan_interval: 3600 # 3600 seconds = 1 hour
+  value_template: '{{value_json.forecast}}'

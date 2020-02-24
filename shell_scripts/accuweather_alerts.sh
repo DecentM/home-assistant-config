@@ -16,6 +16,7 @@ weatherAlert () {
   local DEBUG
   DEBUG=$3
 
+  # This will only work if the secret you provided is in the ***REMOVED*** secrets.yaml file
   local URL
   URL=$(grep "$SECRETS_KEY" secrets.yaml | cut -d ":" -f2- | xargs)
 
