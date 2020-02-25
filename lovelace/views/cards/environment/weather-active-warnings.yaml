@@ -4,8 +4,6 @@ cards:
     conditions:
       - entity: sensor.active_weather_warning_left
         state_not: "unknown"
-      - entity: sensor.active_weather_warning_left
-        state_not: ""
     card:
       type: markdown
       style: !include styles/bg-red.yaml
@@ -16,8 +14,6 @@ cards:
     conditions:
       - entity: sensor.active_weather_warning_right
         state_not: "unknown"
-      - entity: sensor.active_weather_warning_right
-        state_not: ""
     card:
       type: markdown
       style: !include styles/bg-red.yaml
