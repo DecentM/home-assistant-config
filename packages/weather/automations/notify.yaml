@@ -35,6 +35,9 @@
   trigger:
     - platform: state
       entity_id: sensor.accuweather_active_alert_left
+  condition:
+    - condition: template
+      value_template: "{{states('sensor.accuweather_active_alert_left') != 'unknown'}}"
   action:
     - service: notify.notify
       data:
@@ -45,6 +48,9 @@
   trigger:
     - platform: state
       entity_id: sensor.accuweather_active_alert_right
+  condition:
+    - condition: template
+      value_template: "{{states('sensor.accuweather_active_alert_right') != 'unknown'}}"
   action:
     - service: notify.notify
       data:
