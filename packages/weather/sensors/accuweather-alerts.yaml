@@ -1,12 +1,16 @@
 - platform: command_line
-  name: Active weather warnings
+  name: Active weather warning - left
   command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url warnings
   command_timeout: 30
   scan_interval: 3600 # 3600 seconds = 1 hour
-  value_template: '{{value_json.warning1}}, {{value_json.warning2}}'
-  json_attributes:
-    - warning1
-    - warning2
+  value_template: '{{value_json.warning1}}'
+
+- platform: command_line
+  name: Active weather warning - right
+  command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url warnings
+  command_timeout: 30
+  scan_interval: 3600 # 3600 seconds = 1 hour
+  value_template: '{{value_json.warning2}}'
 
 - platform: command_line
   name: Weather banner
