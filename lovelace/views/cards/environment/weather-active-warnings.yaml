@@ -1,16 +1,25 @@
-type: conditional
-conditions:
-  - entity: sensor.active_weather_warnings
-    state_not: "unknown"
-card:
-  type: vertical-stack
-  cards:
-    - type: markdown
+type: vertical-stack
+cards:
+  - type: conditional
+    conditions:
+      - entity: sensor.active_weather_warning_left
+        state_not: "unknown"
+      - entity: sensor.active_weather_warning_left
+        state_not: ""
+    card:
+      type: markdown
       style: !include styles/bg-red.yaml
       content: >
-        {{state_attr('sensor.active_weather_warnings', 'warning1')}}
+        {{states('sensor.active_weather_warning_left')}}
 
-    - type: markdown
+  - type: conditional
+    conditions:
+      - entity: sensor.active_weather_warning_right
+        state_not: "unknown"
+      - entity: sensor.active_weather_warning_right
+        state_not: ""
+    card:
+      type: markdown
       style: !include styles/bg-red.yaml
       content: >
-        {{state_attr('sensor.active_weather_warnings', 'warning2')}}
+        {{states('sensor.active_weather_warning_right')}}
