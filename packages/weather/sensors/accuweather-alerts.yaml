@@ -1,27 +1,26 @@
 - platform: command_line
-  name: Active weather warning - left
-  command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url warnings
+  name: Accuweather
+  command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url
   command_timeout: 30
-  scan_interval: 3600 # 3600 seconds = 1 hour
-  value_template: '{{value_json.warning1 | default("unknown", true)}}'
+  scan_interval: 900 # = 15 minutes
+  json_attributes:
+    - alert1
+    - alert2
+    - topBanner
+    - midBanner
+    - forecast
+    - countdown
+    - timestamp
 
-- platform: command_line
-  name: Active weather warning - right
-  command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url warnings
-  command_timeout: 30
-  scan_interval: 3600 # 3600 seconds = 1 hour
-  value_template: '{{value_json.warning2 | default("unknown", true)}}'
 
-- platform: command_line
-  name: Weather banner
-  command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url banner
-  command_timeout: 30
-  scan_interval: 3600 # 3600 seconds = 1 hour
-  value_template: '{{value_json.banner | default("unknown", true)}}'
-
-- platform: command_line
-  name: Weather forecast
-  command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url forecast
-  command_timeout: 30
-  scan_interval: 3600 # 3600 seconds = 1 hour
-  value_template: '{{value_json.forecast | default("unknown", true)}}'
+- platform: template
+  sensors:
+    accuweather_active_alert_left:
+      friendly_name: AccuWeather - Active alert - left
+      value_template: "{{state_attr('sensor.accuweather', 'alert1')}}"
+    accuweather_active_alert_right:
+      friendly_name: AccuWeather - Active alert - right
+      value_template: "{{state_attr('sensor.accuweather', 'alert2')}}"
+    accuweather_forecast:
+      friendly_name: AccuWeather - Forecast
+      value_template: "{{state_attr('sensor.accuweather', 'forecast')}}"
