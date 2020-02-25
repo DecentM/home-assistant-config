@@ -30,3 +30,23 @@
   - data:
       message: An update is available!
     service: notify.notify
+
+- alias: Notify - When a new weather alert is published (left)
+  trigger:
+    - platform: state
+      entity_id: sensor.accuweather_active_alert_left
+  action:
+    - service: notify.notify
+      data:
+        message: >
+          {{states.sensor.accuweather_active_alert_left.state}}
+
+- alias: Notify - When a new weather alert is published (right)
+  trigger:
+    - platform: state
+      entity_id: sensor.accuweather_active_alert_right
+  action:
+    - service: notify.notify
+      data:
+        message: >
+          {{states.sensor.accuweather_active_alert_right.state}}
