@@ -1,2 +1,5 @@
-type: weather-forecast
-entity: weather.dark_sky
+type: custom:vertical-stack-in-card
+cards:
+  - !include weather-forecast.yaml
+  - type: weather-forecast
+    entity: weather.dark_sky

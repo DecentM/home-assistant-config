@@ -1,4 +1,5 @@
 type: markdown
 content: >
   **{{states('sensor.accuweather_banner_top')}}**
+
   {{states('sensor.accuweather_banner_middle')}}

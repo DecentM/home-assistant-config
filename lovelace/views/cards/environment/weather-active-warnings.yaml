@@ -2,20 +2,20 @@ type: vertical-stack
 cards:
   - type: conditional
     conditions:
-      - entity: sensor.active_weather_warning_left
+      - entity: sensor.accuweather_active_alert_left
         state_not: "unknown"
     card:
       type: markdown
       style: !include styles/bg-red.yaml
       content: >
-        {{states('sensor.active_weather_warning_left')}}
+        {{states('sensor.accuweather_active_alert_left')}}
 
   - type: conditional
     conditions:
-      - entity: sensor.active_weather_warning_right
+      - entity: sensor.accuweather_active_alert_right
         state_not: "unknown"
     card:
       type: markdown
       style: !include styles/bg-red.yaml
       content: >
-        {{states('sensor.active_weather_warning_right')}}
+        {{states('sensor.accuweather_active_alert_right')}}
