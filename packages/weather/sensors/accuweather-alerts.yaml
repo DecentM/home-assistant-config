@@ -4,23 +4,26 @@
   command_timeout: 30
   scan_interval: 900 # = 15 minutes
   json_attributes:
-    - alert1
-    - alert2
-    - topBanner
-    - midBanner
-    - forecast
-    - countdown
-    - timestamp
-
+    - a1
+    - a2
+    - b1
+    - b2
+    - f
 
 - platform: template
   sensors:
     accuweather_active_alert_left:
       friendly_name: AccuWeather - Active alert - left
-      value_template: "{{state_attr('sensor.accuweather', 'alert1')}}"
+      value_template: "{{state_attr('sensor.accuweather', 'a1')}}"
     accuweather_active_alert_right:
       friendly_name: AccuWeather - Active alert - right
-      value_template: "{{state_attr('sensor.accuweather', 'alert2')}}"
+      value_template: "{{state_attr('sensor.accuweather', 'a2')}}"
     accuweather_forecast:
       friendly_name: AccuWeather - Forecast
-      value_template: "{{state_attr('sensor.accuweather', 'forecast')}}"
+      value_template: "{{state_attr('sensor.accuweather', 'f')}}"
+    accuweather_banner_top:
+      friendly_name: AccuWeather - Top banner
+      value_template: "{{state_attr('sensor.accuweather', 'b1')}}"
+    accuweather_banner_top:
+      friendly_name: AccuWeather - Middle banner
+      value_template: "{{state_attr('sensor.accuweather', 'b2')}}"

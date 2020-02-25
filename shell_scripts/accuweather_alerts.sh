@@ -53,38 +53,29 @@ weatherAlert () {
     RESPONSE_HTML=$(curl -A "$USER_AGENT" -s "$URL")
   fi
 
-  local TIMESTAMP
-  TIMESTAMP=$(date)
-
   local ALERT1
   ALERT1=$(echo "$RESPONSE_HTML" | pup '.alert-banner:nth-child(1) text{}' | xargs)
   local ALERT2
   ALERT2=$(echo "$RESPONSE_HTML" | pup '.alert-banner:nth-child(2) text{}' | xargs)
   local TOP_BANNER
-  TOP_BANNER=$(echo "$RESPONSE_HTML" | pup '.banner-weather-alert:nth-of-type(1) .banner-content > div json{}')
+  TOP_BANNER=$(echo "$RESPONSE_HTML" | pup '.banner-weather-alert:nth-of-type(1) .banner-content > div json{}' | jq '[.[1] | .text][0]')
   local MID_BANNER
-  MID_BANNER=$(echo "$RESPONSE_HTML" | pup '.banner-weather-alert:nth-of-type(2) .banner-content json{}')
+  MID_BANNER=$(echo "$RESPONSE_HTML" | pup '.banner-weather-alert:nth-of-type(2) .banner-content json{}' | jq '[.[] | .children[1] | .text][0]')
   local FORECAST
   FORECAST=$(echo "$RESPONSE_HTML" | pup '.forecast-summary-text text{}' | xargs)
-  local COUNTDOWN
-  COUNTDOWN=$(echo "$RESPONSE_HTML" | grep -i "starting in" | xargs)
 
   printf '{
-    "alert1": "%s",
-    "alert2": "%s",
-    "topBanner": %s,
-    "midBanner": %s,
-    "forecast": "%s",
-    "countdown": "%s",
-    "timestamp": "%s"
+    "a1": "%s",
+    "a2": "%s",
+    "b1": %s,
+    "b2": %s,
+    "f": "%s"
   }\n' \
     "${ALERT1:-"unknown"}" \
     "${ALERT2:-"unknown"}" \
     "$TOP_BANNER" \
     "$MID_BANNER" \
-    "${FORECAST:-"unknown"}" \
-    "${COUNTDOWN:-"unknown"}" \
-    "$TIMESTAMP" | jq
+    "${FORECAST:-"unknown"}" | jq -c
 }
 
 weatherAlert "$1" "$2" "$3"
