@@ -24,6 +24,6 @@
     accuweather_banner_top:
       friendly_name: AccuWeather - Top banner
       value_template: "{{state_attr('sensor.accuweather', 'b1')}}"
-    accuweather_banner_top:
+    accuweather_banner_middle:
       friendly_name: AccuWeather - Middle banner
       value_template: "{{state_attr('sensor.accuweather', 'b2')}}"
