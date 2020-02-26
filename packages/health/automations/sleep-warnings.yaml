@@ -13,6 +13,7 @@
   action:
   - data:
       message: You're waking up in ten hours!
+      entity_id: media_player.huawei_cam
     service: tts.amazon_polly_say
 
 - alias: Speak - Waking up in 9 hours
@@ -30,6 +31,7 @@
   action:
   - data:
       message: You're waking up in nine hours!
+      entity_id: media_player.huawei_cam
     service: tts.amazon_polly_say
 
 - alias: Speak - Waking up in 8 hours
@@ -47,6 +49,7 @@
   action:
   - data:
       message: You're waking up in eight hours!
+      entity_id: media_player.huawei_cam
     service: tts.amazon_polly_say
 
 - alias: Speak - Waking up in 7 hours
@@ -64,6 +67,7 @@
   action:
   - data:
       message: You're waking up in seven hours!
+      entity_id: media_player.huawei_cam
     service: tts.amazon_polly_say
 
 - alias: Speak - Waking up in 6 hours
@@ -81,6 +85,7 @@
   action:
   - data:
       message: You're waking up in six hours!
+      entity_id: media_player.huawei_cam
     service: tts.amazon_polly_say
 
 - alias: Speak - Waking up in 5 hours
@@ -98,4 +103,5 @@
   action:
   - data:
       message: You're waking up in five hours!
+      entity_id: media_player.huawei_cam
     service: tts.amazon_polly_say
