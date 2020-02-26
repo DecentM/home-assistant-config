@@ -1,0 +1,10 @@
+type: 'custom:mini-graph-card'
+
+name: FTB Server players
+animate: true
+points_per_hour: 1
+hours_to_show: 24
+
+entities:
+  - sensor.ftb_revelation_server_players_max
+  - sensor.ftb_revelation_server_players_online

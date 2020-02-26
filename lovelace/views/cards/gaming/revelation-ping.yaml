@@ -1,0 +1,9 @@
+type: 'custom:mini-graph-card'
+
+name: FTB Server ping
+animate: true
+points_per_hour: 1
+hours_to_show: 24
+
+entities:
+  - sensor.ftb_revelation_server_latency_time

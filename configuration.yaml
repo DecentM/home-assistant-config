@@ -23,6 +23,7 @@ homeassistant:
     youtube: !include packages/youtube/index.yaml
     theater: !include packages/theater/index.yaml
     monitoring: !include packages/monitoring/index.yaml
+    gaming: !include packages/gaming/index.yaml
 
   auth_mfa_modules:
     - type: totp
