@@ -28,14 +28,14 @@ useful!
 
 Description | value
 -- | --
-Automations | 27
+Automations | 29
 Binary sensors | 6
 Cameras | 3
 Tracked devices | 18
 Boolean inputs | 2
-Lights | 13
-Media players | 3
-Sensors | 177
+Lights | 14
+Media players | 4
+Sensors | 181
 Custom variables | 2
 
 
