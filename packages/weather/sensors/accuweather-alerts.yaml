@@ -3,6 +3,7 @@
   command: bash /config/shell_scripts/accuweather_alerts.sh accuweather_url
   command_timeout: 30
   scan_interval: 900 # = 15 minutes
+  value_template: "{{value_json.ld}}"
   json_attributes:
     - a1
     - a2

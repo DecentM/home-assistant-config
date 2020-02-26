@@ -63,19 +63,23 @@ weatherAlert () {
   MID_BANNER=$(echo "$RESPONSE_HTML" | pup '.banner-weather-alert:nth-of-type(2) .banner-content json{}' | jq '[.[] | .children[1] | .text][0]')
   local FORECAST
   FORECAST=$(echo "$RESPONSE_HTML" | pup '.forecast-summary-text text{}' | xargs)
+  local LOCATION_DISPLAY
+  LOCATION_DISPLAY=$(echo "$RESPONSE_HTML" | pup '.recent-location-display text{}' | xargs)
 
   printf '{
     "a1": "%s",
     "a2": "%s",
     "b1": %s,
     "b2": %s,
-    "f": "%s"
+    "f": "%s",
+    "ld": "%s"
   }\n' \
     "${ALERT1:-"unknown"}" \
     "${ALERT2:-"unknown"}" \
     "$TOP_BANNER" \
     "$MID_BANNER" \
-    "${FORECAST:-"unknown"}" | jq -c
+    "${FORECAST:-"unknown"}" \
+    "$LOCATION_DISPLAY" | jq -c
 }
 
 weatherAlert "$1" "$2" "$3"
