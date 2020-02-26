@@ -1,6 +1,3 @@
-# Custom variables
-var: !include_dir_named variables
-
 # Enable controlling client browsers as entities
 browser_mod:
   prefix: 'browser_'

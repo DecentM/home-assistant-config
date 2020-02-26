@@ -1,4 +1,6 @@
 - type: module
+  url: /community_plugin/aftership-card/aftership-card.js
+- type: module
   url: /community_plugin/button-card/button-card.js
 - type: module
   url: /community_plugin/config-template-card/config-template-card.js

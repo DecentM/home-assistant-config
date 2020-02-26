@@ -17,7 +17,7 @@ homeassistant:
     lights: !include packages/lights/index.yaml
     home_assistant: !include packages/home_assistant/index.yaml
     roomba: !include packages/roomba/index.yaml
-    plugins: !include packages/plugins/index.yaml
+    miscellaneous: !include packages/miscellaneous/index.yaml
     time: !include packages/time/index.yaml
     weather: !include packages/weather/index.yaml
     youtube: !include packages/youtube/index.yaml

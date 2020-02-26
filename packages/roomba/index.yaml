@@ -5,3 +5,6 @@ vacuum:
     password: !secret vacuum_password
 
 automation: !include_dir_merge_list automations
+
+# Custom variables
+var: !include_dir_named variables
