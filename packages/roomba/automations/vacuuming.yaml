@@ -33,7 +33,7 @@
       value: 0
   - service: tts.amazon_polly_say
     data:
-      message: Your roomba thanks you.
+      message: Roomba tray inserted.
 
 - alias: Vacuum - Confirm bin removal
   description: ''

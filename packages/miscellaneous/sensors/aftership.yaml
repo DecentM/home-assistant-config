@@ -1,4 +1,3 @@
-sensor:
-  - platform: aftership
-    name: Aftership
-    api_key: !secret aftership_api_key
+- platform: aftership
+  name: Aftership
+  api_key: !secret aftership_api_key
