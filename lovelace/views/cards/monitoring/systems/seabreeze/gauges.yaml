@@ -24,7 +24,7 @@
     extrema: true
 
   entities:
-    - entity: sensor.seabreeze_disk_used_percent
+    - entity: sensor.seabreeze_used_percent
 
 - type: 'custom:mini-graph-card'
   style: !include ../../styles/mini-graph.yaml

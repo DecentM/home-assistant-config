@@ -26,7 +26,7 @@
     extrema: true
 
   entities:
-    - entity: sensor.daisy_disk_used_percent
+    - entity: sensor.daisy_etc_hostname_used_percent
 
 - type: 'custom:mini-graph-card'
   style: !include ../../styles/mini-graph.yaml
