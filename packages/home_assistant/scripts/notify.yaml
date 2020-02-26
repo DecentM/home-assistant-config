@@ -1,0 +1,29 @@
+description: Send a dynamic notification
+fields:
+  title:
+    description: The title of the notification
+    example: Uh oh!
+  message:
+    description: The body of the notification
+    example: A light went unavailable.
+  ongoing:
+    description: Sets if this notification represents a continuous event (1/0)
+    example: 1
+  icon:
+    description: The numerical ID of the icon to use for the notification
+    example: 61727
+  icon:
+    description: If specified, the notification will contain a progress bar (0-100)
+    example: 65
+sequence:
+  - service: notify.notify
+    data_template:
+      message: >
+        {
+          "title": "{{title || 'Home Assistant'}}",
+          "message": "{{message}}",
+          "cancellable": 1,
+          "ongoing": {{ongoing || 0}},
+          "icon": {{icon || 61727}},
+          "progress": {{progress}}
+        }
