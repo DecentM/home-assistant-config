@@ -1,11 +1,3 @@
-hue:
-  bridges:
-    - host: !secret hue_bridge_ip
-
-tradfri:
-  host: !secret tradfri_host
-
-# Example configuration.yaml entry
 light:
   - platform: group
     name: Kitchen
