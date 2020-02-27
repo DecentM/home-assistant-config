@@ -8,22 +8,10 @@ tradfri:
 # Example configuration.yaml entry
 light:
   - platform: group
-    name: All lights
-    entities:
-      - light.bed
-      - light.kitchen_wall
-      - light.workstation
-      - light.bathroom
-      - light.hall
-      - light.kitchen_spot_1
-      - light.kitchen_spot_2
-      - light.kitchen_spot_3
-
-  - platform: group
     name: Kitchen
     entities:
-      - light.kitchen_spot_1
-      - light.kitchen_spot_2
-      - light.kitchen_spot_3
+      - light.kitchen_ceiling_a
+      - light.kitchen_ceiling_b
+      - light.kitchen_ceiling_c
 
 automation: !include_dir_merge_list automations
