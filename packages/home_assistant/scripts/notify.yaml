@@ -20,10 +20,10 @@ sequence:
     data_template:
       message: >
         {
-          "title": "{{title || 'Home Assistant'}}",
-          "message": "{{message}}",
+          "title": "{{title | default('Home Assistant', true)}}",
+          "message": "{{message | default('', true)}}",
           "cancellable": 1,
-          "ongoing": {{ongoing || 0}},
-          "icon": {{icon || 61727}},
+          "ongoing": {{ongoing | default(0, true)}},
+          "icon": {{icon | default(61727, true)}},
           "progress": {{progress}}
         }
