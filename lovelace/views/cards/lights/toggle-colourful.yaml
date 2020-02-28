@@ -3,7 +3,7 @@ cards:
   - type: entities
     show_header_toggle: false
     entities:
-      - light.workstation
+      - light.living_room_ceiling
 
       - type: custom:rgb-light-card
         entity: light.workstation
@@ -13,7 +13,7 @@ cards:
   - type: entities
     show_header_toggle: false
     entities:
-      - light.bed
+      - light.bedroom_ceiling
 
       - type: custom:rgb-light-card
         entity: light.bed

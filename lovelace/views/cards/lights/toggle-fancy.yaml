@@ -16,7 +16,7 @@ cards:
     color_type: card
     show_name: false
     color: rgb(255, 182, 109)
-    entity: light.bathroom
+    entity: light.bathroom_ceiling
     icon: mdi:toilet
     aspect_ratio: 1/1
     tap_action:
@@ -40,7 +40,7 @@ cards:
     color_type: card
     color: rgb(255, 182, 109)
     show_name: false
-    entity: light.hall
+    entity: light.hall_ceiling
     icon: mdi:coat-rack
     aspect_ratio: 1/1
     tap_action:

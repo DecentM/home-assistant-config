@@ -5,7 +5,7 @@ show_name: true
 show_state: false
 
 entities:
-  - entity: light.bed
+  - entity: light.bedroom_ceiling
     tap_action:
       action: toggle
   - entity: light.living_room_ceiling
@@ -14,10 +14,10 @@ entities:
   - entity: light.kitchen_wall
     tap_action:
       action: toggle
-  - entity: light.bathroom
+  - entity: light.bathroom_ceiling
     tap_action:
       action: toggle
-  - entity: light.hall
+  - entity: light.hall_ceiling
     tap_action:
       action: toggle
   - entity: light.kitchen
