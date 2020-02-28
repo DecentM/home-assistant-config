@@ -1,0 +1,49 @@
+- alias: Light switches - Bathroom remote, middle button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: bathroom_remote
+      event: !include ../../constants/deconz-event/ikea-remote/middle.yaml
+  condition: []
+  action:
+    service: light.toggle
+    entity_id: light.bathroom_ceiling
+
+- alias: Light switches - Bathroom remote, up button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: bathroom_remote
+      event: !include ../../constants/deconz-event/ikea-remote/up.yaml
+  condition: []
+  action:
+    service: light.turn_on
+    entity_id: light.bathroom_ceiling
+    data_template:
+      brightness: >
+        {% if states.light.bathroom_ceiling.attributes.brightness %}
+          {{states.light.bathroom_ceiling.attributes.brightness + 25}}
+        {% else %}
+          25
+        {% endif %}
+
+- alias: Light switches - Bathroom remote, down button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: bathroom_remote
+      event: !include ../../constants/deconz-event/ikea-remote/down.yaml
+  condition: []
+  action:
+    service: light.turn_on
+    entity_id: light.bathroom_ceiling
+    data_template:
+      brightness: >
+        {% if states.light.bathroom_ceiling.attributes.brightness %}
+          {{states.light.bathroom_ceiling.attributes.brightness - 25}}
+        {% else %}
+          220
+        {% endif %}

@@ -1,0 +1,23 @@
+- alias: Light switches - Kitchen remote, up button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: kitchen_on_off_switch
+      event: !include ../../constants/deconz-event/ikea-remote/up.yaml
+  condition: []
+  action:
+    service: light.turn_on
+    entity_id: light.kitchen_ceiling
+
+- alias: Light switches - Kitchen remote, down button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: kitchen_on_off_switch
+      event: !include ../../constants/deconz-event/ikea-remote/down.yaml
+  condition: []
+  action:
+    service: light.turn_off
+    entity_id: light.kitchen_ceiling
