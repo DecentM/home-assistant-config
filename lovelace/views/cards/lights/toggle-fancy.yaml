@@ -28,7 +28,7 @@ cards:
     color_type: card
     color: rgb(255, 182, 109)
     show_name: false
-    entity: light.kitchen
+    entity: light.kitchen_ceiling
     icon: mdi:stove
     aspect_ratio: 1/1
     tap_action:
