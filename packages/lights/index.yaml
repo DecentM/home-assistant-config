@@ -6,6 +6,8 @@ light:
       - light.kitchen_ceiling_b
       - light.kitchen_ceiling_c
 
+circadian_lighting:
+
 switch:
   - platform: circadian_lighting
     lights_ct:
