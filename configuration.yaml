@@ -33,5 +33,10 @@ homeassistant:
 frontend:
   themes: !include_dir_merge_named themes
 
+# Take X-Forwarded-For from Traefik
+http:
+  use_x_forwarded_for: true
+  trusted_proxies: ***REMOVED***
+
 lovelace:
   mode: yaml
