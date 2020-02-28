@@ -1,9 +1,23 @@
 light:
   - platform: group
-    name: Kitchen
+    name: Kitchen ceiling
     entities:
       - light.kitchen_ceiling_a
       - light.kitchen_ceiling_b
       - light.kitchen_ceiling_c
+
+switch:
+  - platform: circadian_lighting
+    lights_ct:
+      - light.kitchen_ceiling_a
+      - light.kitchen_ceiling_b
+      - light.kitchen_ceiling_c
+    lights_rgb:
+      - light.living_room_ceiling
+      - light.bedroom_ceiling
+    lights_brightness:
+      - light.kitchen_wall
+      - light.bathroom_ceiling
+      - light.hall_ceiling
 
 automation: !include_dir_merge_list automations
