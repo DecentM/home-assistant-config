@@ -6,7 +6,7 @@ cards:
       - light.living_room_ceiling
 
       - type: custom:rgb-light-card
-        entity: light.workstation
+        entity: light.living_room_ceiling
         colors: !include data/rgb-360.yaml
         justify: around
 
@@ -16,6 +16,6 @@ cards:
       - light.bedroom_ceiling
 
       - type: custom:rgb-light-card
-        entity: light.bed
+        entity: light.bedroom_ceiling
         colors: !include data/rgb-360.yaml
         justify: around
