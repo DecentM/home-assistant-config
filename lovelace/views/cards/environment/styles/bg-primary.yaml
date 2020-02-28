@@ -1,0 +1,5 @@
+|
+  ha-card {
+    background-color: var(--material-primary-color) !important;
+    color: var(--material-primary-contrast-color) !important;
+  }

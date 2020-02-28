@@ -1,3 +1,10 @@
-type: markdown
-content: >
-  {{states('sensor.accuweather_forecast')}}
+type: conditional
+conditions:
+  - entity: sensor.accuweather_forecast
+    state_not: "unknown"
+  - entity: sensor.accuweather_forecast
+    state_not: "None"
+card:
+  type: markdown
+  content: >
+    {{states('sensor.accuweather_forecast')}}

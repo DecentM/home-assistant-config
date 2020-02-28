@@ -1,5 +1,16 @@
-type: markdown
-content: >
-  **{{states('sensor.accuweather_banner_top')}}** ({{relative_time(states.sensor.accuweather_banner_top.last_updated)}} ago)
+type: conditional
+conditions:
+  - entity: sensor.accuweather_banner_top
+    state_not: "unknown"
+  - entity: sensor.accuweather_banner_top
+    state_not: "None"
+  - entity: sensor.accuweather_banner_middle
+    state_not: "unknown"
+  - entity: sensor.accuweather_banner_middle
+    state_not: "None"
+card:
+  type: markdown
+  content: >
+    **{{states('sensor.accuweather_banner_top')}}** ({{relative_time(states.sensor.accuweather_banner_top.last_updated)}} ago)
 
-  {{states('sensor.accuweather_banner_middle')}}
+    {{states('sensor.accuweather_banner_middle')}}

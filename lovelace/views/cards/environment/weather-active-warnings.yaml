@@ -4,9 +4,11 @@ cards:
     conditions:
       - entity: sensor.accuweather_active_alert_left
         state_not: "unknown"
+      - entity: sensor.accuweather_active_alert_left
+        state_not: "None"
     card:
       type: markdown
-      style: !include styles/bg-red.yaml
+      style: !include styles/bg-primary.yaml
       content: >
         {{states('sensor.accuweather_active_alert_left')}}
 
@@ -14,8 +16,10 @@ cards:
     conditions:
       - entity: sensor.accuweather_active_alert_right
         state_not: "unknown"
+      - entity: sensor.accuweather_active_alert_right
+        state_not: "None"
     card:
       type: markdown
-      style: !include styles/bg-red.yaml
+      style: !include styles/bg-primary.yaml
       content: >
         {{states('sensor.accuweather_active_alert_right')}}
