@@ -5,9 +5,9 @@
   condition:
     - condition: template
       value_template: >
-        {{trigger.json.feedbackKey != None}}
+        {{trigger.json.feedback_script != None}}
   action:
     service_template: >
-      script.{{trigger.json.feedbackKey}}
+      script.{{trigger.json.feedback_script}}
     data_template:
       data: "{{trigger.json}}"

@@ -28,7 +28,7 @@ fields:
   pictureuri:
     description: If specified, the notification will show a picture (only on Android 4.1+)
     example: https://example.com/photo.png, content://sdcard/DCIM/IMG000001.jpeg
-  feedback_key:
+  feedback_script:
     description: >
       Distinguisges this notification from others when the Automate fiber sends
       feedback before stopping.
@@ -47,6 +47,6 @@ sequence:
           "icon": {{icon | default(61727, true)}},
           "progress": {{progress | default('null', true)}},
           "pictureUri": {{pictureuri | default('null', true)}},
-          "feedbackKey": {{feedback_key | tojson | default('null', true)}},
+          "feedback_script": {{feedback_script | tojson | default('null', true)}},
           "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
         }
