@@ -17,6 +17,6 @@ sequence:
       message: >
         {
           "type": "lock",
-          "feedback_script": {{feedback_script | default(0) | tojson | default('null', true)}},
+          "feedback_script": {{feedback_script | default(None) | tojson}},
           "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
         }
