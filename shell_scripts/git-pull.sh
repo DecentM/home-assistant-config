@@ -3,7 +3,7 @@
 # Quit on the first error
 set -e
 
-DATE=$(date --rfc-3339=seconds)
+DATE=$(date -Iseconds)
 
 cd /config
 
