@@ -1,0 +1,6 @@
+type: custom:mini-media-player
+entity: media_player.emby_jellyfin_web_chrome
+name: Jellyfin on Windows, Chrome
+icon: mdi:microsoft-windows
+
+artwork: full-cover

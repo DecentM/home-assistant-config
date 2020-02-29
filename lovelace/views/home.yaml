@@ -13,6 +13,7 @@ cards:
   - !include cards/environment/weather-banner.yaml
   - !include cards/lights/toggle-colourful.yaml
   - !include cards/lights/toggle-fancy.yaml
+  - !include cards/theater/emby-chrome-windows.yaml
   - !include cards/dynamic/available-media-players.yaml
   - !include cards/roomba/roomba-runs.yaml
   - !include cards/roomba/roomba-entity.yaml
