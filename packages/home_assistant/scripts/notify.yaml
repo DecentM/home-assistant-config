@@ -12,7 +12,7 @@ fields:
   icon:
     description: The numerical ID of the icon to use for the notification
     example: 61727
-  icon:
+  progress:
     description: If specified, the notification will contain a progress bar (0-100)
     example: 65
 sequence:

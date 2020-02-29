@@ -1,3 +1,1 @@
-sensor:
-  - platform: openhardwaremonitor
-    host: !secret windows_vm_host
+sensor: !include_dir_merge_list sensors

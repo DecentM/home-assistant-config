@@ -1,3 +1,5 @@
 groups:
   module: group_all
   class: GroupAll
+  domains: all
+  track_new_entities: true

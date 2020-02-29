@@ -1,0 +1,2 @@
+- platform: openhardwaremonitor
+  host: !secret windows_vm_host
