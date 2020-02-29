@@ -8,8 +8,9 @@
   action:
   - service: script.automate_notify
     data_template:
+      title: New liked video
       message: >
-        New liked video: {{trigger.event.data.title}}
+        {{trigger.event.data.title}}
   - service: var.set
     data_template:
       entity_id: var.last_liked_video
