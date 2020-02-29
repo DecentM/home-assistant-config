@@ -2,6 +2,8 @@ entities: []
 type: 'custom:config-template-card'
 variables:
   - 'states[''var.last_liked_video''].state'
+entities:
+  - var.last_liked_video
 card:
   aspect_ratio: 50%
   type: iframe
