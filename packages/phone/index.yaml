@@ -7,3 +7,4 @@ notify:
 
 script: !include_dir_named scripts
 sensor: !include_dir_merge_list sensors
+automation: !include_dir_merge_list automations

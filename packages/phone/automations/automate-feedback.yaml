@@ -1,0 +1,10 @@
+- alias: Automate - Receive feedback
+  trigger:
+    platform: webhook
+    webhook_id: !secret automate_webhook_id
+  action:
+    service: script.automate_notify
+    data_template:
+      title: Webhook received!
+      message: >
+        {{trigger.json}}
