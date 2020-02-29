@@ -21,7 +21,7 @@
   action:
     service: script.automate_notify
     data:
-      response_key: ack_meds_taken
+      feedback_key: ack_meds_taken
       title: Medication
       message: Pills have not been taken yet!
       icon: 61719
