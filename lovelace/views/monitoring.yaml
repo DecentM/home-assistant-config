@@ -3,6 +3,13 @@ panel: true
 path: monitoring
 title: Monitoring
 
+badges:
+  - device_tracker.decentm_phone
+  - device_tracker.miner
+  - device_tracker.starlight
+  - device_tracker.cadance
+  - device_tracker.daisy
+
 cards:
   - type: vertical-stack
     cards:
