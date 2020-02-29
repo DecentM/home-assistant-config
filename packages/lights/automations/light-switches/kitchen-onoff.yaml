@@ -4,7 +4,7 @@
     event_type: deconz_event
     event_data:
       id: kitchen_on_off_switch
-      event: !include ../../constants/deconz-event/ikea-remote/up.yaml
+      event: "{{states.sensor.deconz_event_type_ikea_remote_up_short}}"
   condition: []
   action:
     service: light.turn_on
@@ -16,7 +16,7 @@
     event_type: deconz_event
     event_data:
       id: kitchen_on_off_switch
-      event: !include ../../constants/deconz-event/ikea-remote/down.yaml
+      event: "{{states.sensor.deconz_event_type_ikea_remote_down_short}}"
   condition: []
   action:
     service: light.turn_off

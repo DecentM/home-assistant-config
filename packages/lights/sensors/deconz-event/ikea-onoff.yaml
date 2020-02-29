@@ -1,0 +1,39 @@
+- platform: template
+  sensors:
+    # On
+    deconz_event_type_ikea_switch_on_hold:
+      friendly_name: >
+        deCONZ event type for IKEA TRÅDFRI on/off switch - "on" state,
+        continuous hold
+      value_template: 1001
+
+    deconz_event_type_ikea_switch_on_short:
+      friendly_name: >
+        deCONZ event type for IKEA TRÅDFRI on/off switch - "on" state,
+        short release
+      value_template: 1002
+
+    deconz_event_type_ikea_switch_on_long:
+      friendly_name: >
+        deCONZ event type for IKEA TRÅDFRI on/off switch - "on" state,
+        long release
+      value_template: 1003
+
+    # Off
+    deconz_event_type_ikea_switch_off_hold:
+      friendly_name: >
+        deCONZ event type for IKEA TRÅDFRI on/off switch - "off" state,
+        continuous hold
+      value_template: 2001
+
+    deconz_event_type_ikea_switch_off_short:
+      friendly_name: >
+        deCONZ event type for IKEA TRÅDFRI on/off switch - "off" state,
+        short release
+      value_template: 2002
+
+    deconz_event_type_ikea_switch_off_long:
+      friendly_name: >
+        deCONZ event type for IKEA TRÅDFRI on/off switch - "off" state,
+        long release
+      value_template: 2003

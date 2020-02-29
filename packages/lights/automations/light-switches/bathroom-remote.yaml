@@ -4,7 +4,7 @@
     event_type: deconz_event
     event_data:
       id: bathroom_remote
-      event: ../../constants/deconz-event/ikea-remote/middle.yaml
+      event: "{{states.sensor.deconz_event_type_ikea_remote_middle_short}}"
   condition: []
   action:
     service: light.toggle
@@ -16,7 +16,7 @@
     event_type: deconz_event
     event_data:
       id: bathroom_remote
-      event: !include ../../constants/deconz-event/ikea-remote/up.yaml
+      event: "{{states.sensor.deconz_event_type_ikea_remote_up_short}}"
   condition: []
   action:
     service: light.turn_on
@@ -35,7 +35,7 @@
     event_type: deconz_event
     event_data:
       id: bathroom_remote
-      event: !include ../../constants/deconz-event/ikea-remote/down.yaml
+      event: "{{states.sensor.deconz_event_type_ikea_remote_down_short}}"
   condition: []
   action:
     service: light.turn_on
