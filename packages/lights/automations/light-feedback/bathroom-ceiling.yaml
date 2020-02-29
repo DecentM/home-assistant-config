@@ -2,7 +2,8 @@
   trigger:
     platform: numeric_state
     entity_id: light.bathroom_ceiling
-    value_template: {{state.attributes.brightness}}
+    value_template: >
+      {{state.attributes.brightness}}
     above: 254
   condition: []
   action:
