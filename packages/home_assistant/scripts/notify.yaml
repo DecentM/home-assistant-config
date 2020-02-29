@@ -25,5 +25,5 @@ sequence:
           "cancellable": 1,
           "ongoing": {{ongoing | default(0, true)}},
           "icon": {{icon | default(61727, true)}},
-          "progress": {{progress}}
+          "progress": {{progress | default('null', true)}}
         }
