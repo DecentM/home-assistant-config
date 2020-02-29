@@ -6,6 +6,7 @@ cards:
   - !include cards/settings/health/pills-reminder.yaml
   - !include cards/settings/health/reset-meds-taken-every-night.yaml
   - !include cards/settings/health/sleep-reminders.yaml
+  - !include cards/settings/home-assistant/auto-git-pull.yaml
   - !include cards/settings/lights/all-controllers.yaml
   - !include cards/settings/lights/bedroom-controllers.yaml
   - !include cards/settings/lights/kitchen-controllers.yaml

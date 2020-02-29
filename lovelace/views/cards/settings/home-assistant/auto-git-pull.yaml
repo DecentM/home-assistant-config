@@ -1,0 +1,6 @@
+type: entities
+title: Pull changes from GitHub automatically
+show_header_toggle: false
+
+entities:
+  - automation.ha_run_git_pull_on_incoming_webhook
