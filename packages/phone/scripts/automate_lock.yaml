@@ -1,12 +1,13 @@
 description: Lock a device
 fields:
   target:
-    description: An array of target devices to lock
-    example: ***REMOVED*** A6003
+    description: >
+      A target to send the command to. This target will be used in
+      the service name, like this: myphone -> notify.automate_myphone
+    example: myphone
 sequence:
-  - service: notify.automate
+  - service_template: >
+      notify.automate_{{target | default(states('sensor.automate_phone_name'), true)}}
     data_template:
-      target: >
-        {{target}}
       message: >
         {"type": "lock"}

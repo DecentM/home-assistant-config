@@ -1,8 +1,10 @@
 description: Show a notification
 fields:
   target:
-    description: An array of targets to send the notification to
-    example: ***REMOVED*** A6003
+    description: >
+      A target to send the command to. This target will be used in
+      the service name, like this: myphone -> notify.automate_myphone
+    example: myphone
   title:
     description: The title of the notification
     example: Uh oh!
@@ -13,10 +15,9 @@ fields:
     description: The text content of the dismiss button
     example: Okay
 sequence:
-  - service: notify.automate
+  - service_template: >
+      notify.automate_{{target | default(states('sensor.automate_phone_name'), true)}}
     data_template:
-      target: >
-        {{target}}
       message: >
         {
           "type": "notification",

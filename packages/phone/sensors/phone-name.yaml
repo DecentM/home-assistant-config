@@ -1,0 +1,5 @@
+- platform: template
+  sensors:
+    automate_phone_name:
+      friendly_name: Automate phone name
+      value_template: !secret automate_phone_name

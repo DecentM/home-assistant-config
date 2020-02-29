@@ -1,8 +1,9 @@
 notify:
-  - name: automate
+  - name: !secret automate_service_name_phone
     platform: llamalab_automate
     api_key: !secret automate_api_key
     to: !secret automate_notify_to
     device: !secret automate_notify_device
 
 script: !include_dir_named scripts
+sensor: !include_dir_merge_list sensors
