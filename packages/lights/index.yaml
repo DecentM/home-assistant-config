@@ -7,6 +7,8 @@ light:
       - light.kitchen_ceiling_c
 
 circadian_lighting:
+  min_colortemp: 2500
+  max_colortemp: 4500
 
 switch:
   - platform: circadian_lighting
