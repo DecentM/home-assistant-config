@@ -1,4 +1,12 @@
 description: Record the fact that meds have been taken
+fields:
+  data:
+    description: >
+      JSON data that has the user's response with a feedback_script
+      string. Due to the way this integration is set up, feedback_script will
+      always be the name of this script.
+    example: >
+      {"feedback_script": "ack_meds_taken", "response": "yes"}
 sequence:
   - service: input_boolean.turn_on
     entity_id: input_boolean.meds_taken
