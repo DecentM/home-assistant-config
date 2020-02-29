@@ -3,4 +3,16 @@
     platform: webhook
     webhook_id: !secret github_webhook_id
   action:
-    service: shell_command.git_pull
+    - service: shell_command.git_pull
+    - service: homeassistant.check_config
+    - service: browser_mod.lovelace_reload
+    - service: frontend.reload_themes
+    - service: homeassistant.reload_core_config
+    - service: automation.reload
+    - service: input_boolean.reload
+    - service: zone.reload
+    - service: script.reload
+    - service: scene.reload
+    - service: group.reload
+    - service: person.reload
+    - service: python_script.reload
