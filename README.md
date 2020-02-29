@@ -28,14 +28,14 @@ useful!
 
 Description | value
 -- | --
-Automations | 29
-Binary sensors | 6
+Automations | 38
+Binary sensors | 7
 Cameras | 3
 Tracked devices | 18
 Boolean inputs | 2
-Lights | 14
-Media players | 4
-Sensors | 181
+Lights | 15
+Media players | 5
+Sensors | 203
 Custom variables | 2
 
 
@@ -46,9 +46,10 @@ Custom variables | 2
 - [Trakt](https://github.com/custom-components/sensor.trakt/blob/master/README.md)
 - [Unsplash](https://github.com/custom-components/unsplash)
 - [Generate readme](https://github.com/custom-components/readme)
-- [Anniversaries](https://github.com/pinkywafer/Anniversaries)
 - [Browser mod]()
 - [HACS (Home Assistant Community Store)](https://hacs.xyz)
+- [Anniversaries](https://github.com/pinkywafer/Anniversaries)
+- [Circadian Lighting](https://github.com/claytonjn/hass-circadian_lighting)
 
 ***
 
