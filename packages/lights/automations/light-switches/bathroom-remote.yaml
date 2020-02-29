@@ -4,7 +4,7 @@
     event_type: deconz_event
     event_data:
       id: bathroom_remote
-      event: !include ../../constants/deconz-event/ikea-remote/middle.yaml
+      event: 1002
   condition: []
   action:
     service: light.toggle
