@@ -2,7 +2,7 @@ description: Show a notification
 fields:
   target:
     description: An array of targets to send the notification to
-    example:
+    example: ***REMOVED*** A6003
   title:
     description: The title of the notification
     example: Uh oh!

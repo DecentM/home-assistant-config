@@ -2,7 +2,7 @@ description: Lock a device
 fields:
   target:
     description: An array of target devices to lock
-    example:
+    example: ***REMOVED*** A6003
 sequence:
   - service: notify.automate
     data_template:
