@@ -21,13 +21,6 @@ device_tracker:
     username: !secret openwrt_username
     password: !secret openwrt_password
 
-notify:
-  - name: notify
-    platform: llamalab_automate
-    api_key: !secret automate_api_key
-    to: !secret automate_notify_to
-    device: !secret automate_notify_device
-
 camera:
   - platform: unsplash
     name: Unsplash - Light-Washed Tones

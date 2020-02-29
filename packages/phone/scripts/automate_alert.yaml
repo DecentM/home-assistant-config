@@ -1,0 +1,27 @@
+description: Show a notification
+fields:
+  target:
+    description: An array of targets to send the notification to
+    example:
+  title:
+    description: The title of the notification
+    example: Uh oh!
+  message:
+    description: The body of the notification
+    example: A light went unavailable.
+  dismiss:
+    description: The text content of the dismiss button
+    example: Okay
+sequence:
+  - service: notify.automate
+    data_template:
+      target: >
+        {{target}}
+      message: >
+        {
+          "type": "notification",
+          "title": "{{title | default('Home Assistant', true)}}",
+          "message": "{{message | default('', true)}}",
+          "dismiss": "{{dismiss | default('Okay', true)}}",
+          "timeout": {{timeout | default('null', true)}}
+        }

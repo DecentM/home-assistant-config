@@ -1,6 +1,6 @@
 module: ench
 class: EnCh
-notify: notify.notify
+notify: script.automate_notify
 battery:
   min_level: 15
 stale:

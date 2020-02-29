@@ -6,7 +6,7 @@
     platform: event
   condition: []
   action:
-  - service: notify.notify
+  - service: script.automate_notify
     data_template:
       message: >
         New liked video: {{trigger.event.data.title}}

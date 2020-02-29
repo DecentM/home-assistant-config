@@ -1,0 +1,12 @@
+description: Lock a device
+fields:
+  target:
+    description: An array of target devices to lock
+    example:
+sequence:
+  - service: notify.automate
+    data_template:
+      target: >
+        {{target}}
+      message: >
+        {"type": "lock"}

@@ -5,6 +5,7 @@
     platform: homeassistant
   condition: []
   action:
-  - data:
+  - service: script.automate_notify
+    data:
       message: Home Assistant startup complete
-    service: notify.notify
+

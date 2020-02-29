@@ -69,7 +69,7 @@
   - delay: '00:00:02'
   - service: vacuum.return_to_base
     entity_id: vacuum.roomba
-  - service: notify.notify
+  - service: script.automate_notify
     data:
       message: Sending roomba back as it's not been cleaned.
   - service: tts.amazon_polly_say

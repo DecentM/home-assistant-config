@@ -11,6 +11,8 @@
   action:
   - service: light.turn_off
     entity_id: light.all_lights
-  - service: notify.notify
+  - service: script.automate_notify
     data:
+      title: Lights turned off
       message: Some lights have been turned off after you left.
+      icon: 61518

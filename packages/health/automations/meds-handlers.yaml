@@ -19,6 +19,8 @@
       entity_id: input_boolean.meds_taken
       state: 'off'
   action:
-    service: notify.notify
+    service: script.automate_notify
     data:
-      message: Meds have not been taken yet!
+      title: Medication
+      message: Pills have not been taken yet!
+      icon: 61719

@@ -1,13 +1,21 @@
-description: Send a dynamic notification
+description: Show a notification
 fields:
+  target:
+    description: An array of targets to send the notification to
+    example:
   title:
     description: The title of the notification
     example: Uh oh!
   message:
     description: The body of the notification
     example: A light went unavailable.
+  cancellable:
+    description: >
+      Whether or not the notification can be dismissed (1/0, default: 1)
+    example: 1
   ongoing:
-    description: Sets if this notification represents a continuous event (1/0)
+    description: >
+      Sets if this notification represents a continuous event (1/0, default: 0)
     example: 1
   icon:
     description: The numerical ID of the icon to use for the notification
@@ -19,14 +27,16 @@ fields:
     description: If specified, the notification will show a picture (only on Android 4.1+)
     example: https://example.com/photo.png, content://sdcard/DCIM/IMG000001.jpeg
 sequence:
-  - service: notify.notify
+  - service: notify.automate
     data_template:
+      target: >
+        {{target}}
       message: >
         {
           "type": "notification",
           "title": "{{title | default('Home Assistant', true)}}",
           "message": "{{message | default('', true)}}",
-          "cancellable": 1,
+          "cancellable": {{cancellable | default('1', true)}},
           "ongoing": {{ongoing | default(0, true)}},
           "icon": {{icon | default(61727, true)}},
           "progress": {{progress | default('null', true)}},

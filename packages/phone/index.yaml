@@ -1,1 +1,8 @@
+notify:
+  - name: automate
+    platform: llamalab_automate
+    api_key: !secret automate_api_key
+    to: !secret automate_notify_to
+    device: !secret automate_notify_device
+
 script: !include_dir_named scripts

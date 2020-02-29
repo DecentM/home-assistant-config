@@ -11,8 +11,10 @@
     entity_id: var.roomba_dirty_runs
     above: 4
   action:
-  - service: notify.notify
+  - service: script.automate_notify
     data:
+      icon: 61624
+      title: Vacuuming
       message: Vacuuming skipped as the tray hasn't been cleaned in a while
 
 - alias: Notify - When vacuuming begins
@@ -24,9 +26,11 @@
     to: 'on'
   condition: []
   action:
-  - data:
+  - service: script.automate_notify
+    data:
+      icon: 61624
+      title: Vacuuming
       message: Vacuuming started
-    service: notify.notify
 
 - alias: Notify - When roomba is charging after being shut off
   description: ''
@@ -39,9 +43,11 @@
   action:
   - wait_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging'' }}'
     continue_on_timeout: false
-  - data:
+  - service: script.automate_notify
+    data:
+      icon: 61624
+      title: Vacuuming
       message: Roomba is now charging
-    service: notify.notify
 
 - alias: Notify - When vacuuming is cancelled
   description: ''
@@ -54,9 +60,11 @@
   - condition: template
     value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''User Docking'' }}'
   action:
-  - data:
+  - service: script.automate_notify
+    data:
+      icon: 61624
+      title: Vacuuming
       message: Roomba was asked to return to station
-    service: notify.notify
 
 - alias: Notify - When vacuuming fails
   description: ''
@@ -67,9 +75,16 @@
     platform: state
     to: 'off'
   condition:
-  - condition: template
-    value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Stopped'' }}'
+  - condition: or
+    conditions:
+    - condition: template
+      value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Stopped'' }}'
+    - condition: template
+      value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Stuck'' }}'
   action:
-  - data:
-      message: Vacuuming failed
-    service: notify.notify
+  - service: script.automate_notify
+    data:
+      icon: 61624
+      title: Vacuuming
+      message: >
+        Vacuuming failed, status: state_attr('vacuum.roomba', 'status')
