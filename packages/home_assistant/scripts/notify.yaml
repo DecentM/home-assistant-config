@@ -15,6 +15,9 @@ fields:
   progress:
     description: If specified, the notification will contain a progress bar (0-100)
     example: 65
+  pictureuri:
+    description: If specified, the notification will show a picture (only on Android 4.1+)
+    example: https://images.unsplash.com/photo-1445543949571-ffc3e0e2f55e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjIxMTIzfQ&auto=format&fit=crop&w=1350&q=80
 sequence:
   - service: notify.notify
     data_template:
@@ -25,5 +28,6 @@ sequence:
           "cancellable": 1,
           "ongoing": {{ongoing | default(0, true)}},
           "icon": {{icon | default(61727, true)}},
-          "progress": {{progress | default('null', true)}}
+          "progress": {{progress | default('null', true)}},
+          "pictureUri": "{{pictureuri | default('null', true)}}"
         }
