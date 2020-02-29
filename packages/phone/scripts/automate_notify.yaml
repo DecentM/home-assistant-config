@@ -31,7 +31,7 @@ fields:
   feedback_key:
     description: >
       Distinguisges this notification from others when the Automate fiber sends
-      feedback before stopping
+      feedback before stopping. NB! You must put double quotes around your input!
     example: medication_reminder
 sequence:
   - service_template: >
@@ -41,12 +41,12 @@ sequence:
         {
           "type": "notification",
           "title": "{{title | default('Home Assistant', true)}}",
-          "message": "{{message | default('', true)}}",
-          "cancellable": {{cancellable | default('1', true)}},
-          "ongoing": {{ongoing | default(0, true)}},
+          "message": "{{message | default('')}}",
+          "cancellable": "{{cancellable | default(1)}}"",
+          "ongoing": {{ongoing | default(0)}},
           "icon": {{icon | default(61727, true)}},
           "progress": {{progress | default('null', true)}},
           "pictureUri": "{{pictureuri | default('null', true)}}",
-          "feedbackKey": "{{feedback_key | default('null', true)}}",
+          "feedbackKey": {{feedback_key | default('null')}},
           "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
         }
