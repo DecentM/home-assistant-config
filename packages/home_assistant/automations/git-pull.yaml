@@ -7,7 +7,6 @@
     - service: homeassistant.check_config
     - service: browser_mod.lovelace_reload
     - service: frontend.reload_themes
-    - service: homeassistant.reload_core_config
     - service: automation.reload
     - service: input_boolean.reload
     - service: zone.reload
