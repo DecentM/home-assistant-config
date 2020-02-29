@@ -42,11 +42,11 @@ sequence:
           "type": "notification",
           "title": "{{title | default('Home Assistant', true)}}",
           "message": "{{message | default('')}}",
-          "cancellable": "{{cancellable | default(1)}}"",
+          "cancellable": {{cancellable | default(1)}},
           "ongoing": {{ongoing | default(0)}},
           "icon": {{icon | default(61727, true)}},
           "progress": {{progress | default('null', true)}},
-          "pictureUri": "{{pictureuri | default('null', true)}}",
+          "pictureUri": {{pictureuri | default('null', true)}},
           "feedbackKey": {{feedback_key | default('null')}},
           "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
         }
