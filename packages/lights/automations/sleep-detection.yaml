@@ -8,7 +8,7 @@
   action:
   - service: light.turn_off
     data:
-      entity_id: group.all_lights
+      entity_id: light.all_lights
       transition: 5
 
 - alias: Lights - Turn some lights on when I get ouf of bed in the dark
