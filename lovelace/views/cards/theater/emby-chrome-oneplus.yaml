@@ -1,0 +1,13 @@
+type: custom:mini-media-player
+entity: media_player.emby_jellyfin_web_chrome_android
+name: Jellyfin on Oneplus 6, Chrome
+icon: mdi:android
+
+artwork: cover
+hide:
+  volume: true
+  power: true
+
+idle_view:
+  when_idle: false
+  after: 10

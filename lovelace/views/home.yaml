@@ -14,7 +14,9 @@ cards:
   - !include cards/lights/toggle-colourful.yaml
   - !include cards/lights/toggle-fancy.yaml
   - !include cards/theater/emby-chrome-windows.yaml
-  - !include cards/dynamic/available-media-players.yaml
+  - !include cards/theater/emby-chrome-manjaro.yaml
+  - !include cards/theater/emby-chrome-***REMOVED***.yaml
+  - !include cards/theater/available-media-players.yaml
   - !include cards/roomba/roomba-runs.yaml
   - !include cards/roomba/roomba-entity.yaml
   - !include cards/environment/outside.yaml

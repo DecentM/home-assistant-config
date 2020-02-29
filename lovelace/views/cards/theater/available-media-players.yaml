@@ -10,3 +10,7 @@ filter:
     - state: "unavailable"
     - state: "unknown"
     - state: "None"
+    - entity_id: media_player.emby_jellyfin_web_chrome
+    - entity_id: media_player.emby_jellyfin_web_chrome_2
+    - entity_id: media_player.emby_jellyfin_web_chrome_android
+    - entity_id: media_player.huawei_cam
