@@ -2,9 +2,12 @@
   trigger:
     platform: webhook
     webhook_id: !secret automate_webhook_id
+  condition:
+    condition: template
+    value_template: >
+      {{trigger.json.response == "no"}}
   action:
     service: script.automate_notify
     data_template:
-      title: Webhook received!
-      message: >
-        {{trigger.json}}
+      title: Webhook
+      message: How dare you!
