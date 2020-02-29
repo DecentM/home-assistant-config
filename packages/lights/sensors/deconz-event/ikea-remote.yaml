@@ -13,7 +13,7 @@
         short release
       value_template: 1002
 
-    deconz_event_type_ikea_remote_middle_short:
+    deconz_event_type_ikea_remote_middle_long:
       friendly_name: >
         deCONZ event type for IKEA TRÅDFRI five-button remote - middle button,
         long release
@@ -32,7 +32,7 @@
         short release
       value_template: 2002
 
-    deconz_event_type_ikea_remote_up_short:
+    deconz_event_type_ikea_remote_up_long:
       friendly_name: >
         deCONZ event type for IKEA TRÅDFRI five-button remote - up button,
         long release
@@ -51,7 +51,7 @@
         short release
       value_template: 3002
 
-    deconz_event_type_ikea_remote_down_short:
+    deconz_event_type_ikea_remote_down_long:
       friendly_name: >
         deCONZ event type for IKEA TRÅDFRI five-button remote - down button,
         long release
@@ -70,7 +70,7 @@
         short release
       value_template: 4002
 
-    deconz_event_type_ikea_remote_left_short:
+    deconz_event_type_ikea_remote_left_long:
       friendly_name: >
         deCONZ event type for IKEA TRÅDFRI five-button remote - left button,
         long release
@@ -89,7 +89,7 @@
         short release
       value_template: 5002
 
-    deconz_event_type_ikea_remote_right_short:
+    deconz_event_type_ikea_remote_right_long:
       friendly_name: >
         deCONZ event type for IKEA TRÅDFRI five-button remote - right button,
         long release
