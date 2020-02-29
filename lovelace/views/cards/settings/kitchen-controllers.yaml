@@ -1,9 +1,0 @@
-type: custom:auto-entities
-
-filter:
-  include:
-    - entity_id: automation.light_switches_bedroom_*
-
-card:
-  type: entities
-  title: All remotes controlling the bedroom

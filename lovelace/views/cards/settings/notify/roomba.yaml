@@ -1,0 +1,11 @@
+type: entities
+title: Send notifications about the roomba
+
+entities:
+  - automation.notify_when_roomba_is_charging_after_being_shut_off
+  - automation.notify_when_vacuuming_begins
+  - automation.notify_when_vacuuming_fails
+  - automation.notify_when_vacuuming_is_cancelled
+  - automation.notify_when_vacuuming_is_skipped_due_to_dirty_tray
+
+  - automation.vacuum_confirm_bin_removal

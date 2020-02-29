@@ -1,0 +1,6 @@
+type: entities
+title: Send notifications about Home Assistant events
+
+entities:
+  - automation.notify_service_restart
+  - automation.notify_updates_available

@@ -1,0 +1,6 @@
+type: entities
+title: Turn lights on/off based on mattress sensor
+
+entities:
+  - automation.lights_turn_all_lights_off_when_i_get_in_bed
+  - automation.lights_turn_some_lights_on_when_i_get_ouf_of_bed_in_the_dark

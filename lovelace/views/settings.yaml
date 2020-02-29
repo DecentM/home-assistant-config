@@ -3,7 +3,19 @@ path: settings
 title: Settings
 
 cards:
-  - !include cards/settings/all-controllers.yaml
-  - !include cards/settings/bedroom-controllers.yaml
-  - !include cards/settings/kitchen-controllers.yaml
-  - !include cards/settings/bathroom-controllers.yaml
+  - !include cards/settings/health/pills-reminder.yaml
+  - !include cards/settings/health/reset-meds-taken-every-night.yaml
+  - !include cards/settings/health/sleep-reminders.yaml
+  - !include cards/settings/lights/all-controllers.yaml
+  - !include cards/settings/lights/bedroom-controllers.yaml
+  - !include cards/settings/lights/kitchen-controllers.yaml
+  - !include cards/settings/lights/bathroom-controllers.yaml
+  - !include cards/settings/notify/home-assistant.yaml
+  - !include cards/settings/notify/roomba.yaml
+  - !include cards/settings/notify/weather.yaml
+  - !include cards/settings/phone/accept-notify-feedback.yaml
+  - !include cards/settings/roomba/prevent-many-dirty-runs.yaml
+  - !include cards/settings/roomba/vacuum-schedule.yaml
+  - !include cards/settings/sleep-detection/manage-lights.yaml
+  - !include cards/settings/theme/switch-themes-for-sun.yaml
+  - !include cards/settings/youtube/record-liked-video.yaml

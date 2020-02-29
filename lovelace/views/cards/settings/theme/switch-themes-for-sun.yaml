@@ -1,0 +1,6 @@
+type: entities
+title: Change themes based on sun state
+
+entities:
+  - automation.theme_switch_to_dark_on_sunset
+  - automation.theme_switch_to_light_on_sunrise

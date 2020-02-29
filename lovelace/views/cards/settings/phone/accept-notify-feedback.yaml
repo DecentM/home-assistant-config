@@ -1,0 +1,6 @@
+type: entities
+title: Accept notification feedback from Llamalab Automate
+show_header_toggle: false
+
+entities:
+  - automation.automate_receive_feedback_and_route_to_service

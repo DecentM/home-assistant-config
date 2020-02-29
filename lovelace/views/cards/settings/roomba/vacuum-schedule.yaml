@@ -1,0 +1,6 @@
+type: entities
+title: Vacuum every workday
+show_header_toggle: false
+
+entities:
+  - automation.vacuum_every_weekday

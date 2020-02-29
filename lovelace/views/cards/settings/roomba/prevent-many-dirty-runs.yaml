@@ -1,0 +1,7 @@
+type: entities
+title: Prevent running with non-cleaned tray
+
+entities:
+  - automation.vacuum_reset_dirty_runs_counter_after_tray_entry
+  - automation.vacuum_send_roomba_back_if_started_manually_while_not_clean
+  - automation.vacuum_increment_dirty_runs_counter_when_roomba_turns_off

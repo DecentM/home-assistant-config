@@ -1,0 +1,6 @@
+type: entities
+title: Record latest liked video on YouTube
+show_header_toggle: false
+
+entities:
+  - automation.youtube_record_new_liked_video

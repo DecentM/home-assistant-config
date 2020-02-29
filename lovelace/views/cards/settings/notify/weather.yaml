@@ -1,0 +1,7 @@
+type: entities
+title: Send notifications about the weather
+
+entities:
+  - automation.notify_weather_every_morning_when_all_lights_are_off_for_30_seconds
+  - automation.notify_when_a_new_weather_alert_is_published_left
+  - automation.notify_when_a_new_weather_alert_is_published_right

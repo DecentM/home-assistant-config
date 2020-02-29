@@ -1,0 +1,6 @@
+type: entities
+title: Reset meds taken variable every night
+show_header_toggle: false
+
+entities:
+  - automation.health_reset_meds_taken
