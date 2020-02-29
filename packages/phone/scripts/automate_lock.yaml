@@ -10,4 +10,8 @@ sequence:
       notify.automate_{{target | default(states('sensor.automate_phone_name'), true)}}
     data_template:
       message: >
-        {"type": "lock"}
+        {
+          "type": "lock",
+          "feedbackKey": "{{feedback_key | default('null', true)}}",
+          "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
+        }

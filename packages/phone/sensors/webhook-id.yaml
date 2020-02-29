@@ -1,0 +1,9 @@
+- platform: template
+  sensors:
+    automate_webhook_id:
+      friendly_name: Automate webhook ID
+      value_template: !secret automate_webhook_id
+
+    automate_base_url:
+      friendly_name: Automate base URL
+      value_template: !secret http_base_url

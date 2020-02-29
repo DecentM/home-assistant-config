@@ -24,5 +24,7 @@ sequence:
           "title": "{{title | default('Home Assistant', true)}}",
           "message": "{{message | default('', true)}}",
           "dismiss": "{{dismiss | default('Okay', true)}}",
-          "timeout": {{timeout | default('null', true)}}
+          "timeout": {{timeout | default('null', true)}},
+          "feedbackKey": "{{feedback_key | default('null', true)}}",
+          "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
         }
