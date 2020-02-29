@@ -44,3 +44,7 @@ sun:
 
 # Enables running custom scripts
 python_script:
+
+# Register the git hook script
+shell_command:
+  git_pull: bash /config/shell_scripts/git_pull.sh

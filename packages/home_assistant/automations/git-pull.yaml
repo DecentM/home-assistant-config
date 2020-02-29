@@ -1,0 +1,6 @@
+- alias: HA - Run git pull on incoming webhook
+  trigger:
+    platform: webhook
+    webhook_id: !secret github_webhook_id
+  action:
+    service: shell_command.git_pull
