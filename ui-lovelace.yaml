@@ -11,4 +11,5 @@ views:
   - !include lovelace/views/health.yaml
   - !include lovelace/views/tiny.yaml
   - !include lovelace/views/guest.yaml
+  - !include lovelace/views/settings.yaml
   - !include lovelace/views/sandbox.yaml

@@ -1,0 +1,9 @@
+icon: 'mdi:cogs'
+path: settings
+title: Settings
+
+cards:
+  - !include cards/settings/all-controllers.yaml
+  - !include cards/settings/bedroom-controllers.yaml
+  - !include cards/settings/kitchen-controllers.yaml
+  - !include cards/settings/bathroom-controllers.yaml
