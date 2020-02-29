@@ -1,7 +1,7 @@
 - alias: Lights - All lights off when I leave home
   trigger:
     - platform: state
-      entity_id: device_tracker.decentm_phone
+      entity_id: person.decentm
       from: home
       to: away
   condition:
