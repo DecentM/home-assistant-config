@@ -1,0 +1,12 @@
+type: custom:auto-entities
+card:
+  type: entities
+  title: Available media players
+  show_header_toggle: false
+filter:
+  include:
+    - entity_id: media_player.*
+  exclude:
+    - state: "unavailable"
+    - state: "unknown"
+    - state: "None"
