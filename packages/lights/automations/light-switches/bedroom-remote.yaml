@@ -4,7 +4,7 @@
     event_type: deconz_event
     event_data:
       id: bedroom_remote
-      event: "{{states.sensor.deconz_event_type_ikea_remote_middle_short}}"
+      event: 1002
   condition: []
   action:
     service: light.toggle
@@ -16,7 +16,7 @@
     event_type: deconz_event
     event_data:
       id: bedroom_remote
-      event: "{{states.sensor.deconz_event_type_ikea_remote_up_short}}"
+      event: 2002
   condition: []
   action:
     service: light.turn_on
@@ -35,7 +35,7 @@
     event_type: deconz_event
     event_data:
       id: bedroom_remote
-      event: "{{states.sensor.deconz_event_type_ikea_remote_down_short}}"
+      event: 3002
   condition: []
   action:
     service: light.turn_on
