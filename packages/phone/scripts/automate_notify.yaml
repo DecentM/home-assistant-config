@@ -31,7 +31,7 @@ fields:
   feedback_key:
     description: >
       Distinguisges this notification from others when the Automate fiber sends
-      feedback before stopping. NB! You must put double quotes around your input!
+      feedback before stopping.
     example: medication_reminder
 sequence:
   - service_template: >
@@ -47,6 +47,6 @@ sequence:
           "icon": {{icon | default(61727, true)}},
           "progress": {{progress | default('null', true)}},
           "pictureUri": {{pictureuri | default('null', true)}},
-          "feedbackKey": {{feedback_key | default('null')}},
+          "feedbackKey": {{feedback_key | tojson | default('null', true)}},
           "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
         }
