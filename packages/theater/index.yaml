@@ -1,1 +1,6 @@
 sensor: !include_dir_merge_list sensors
+
+media_player:
+  - platform: emby
+    host: !secret emby_host
+    api_key: !secret emby_api_key
