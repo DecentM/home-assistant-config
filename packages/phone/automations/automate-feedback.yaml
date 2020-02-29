@@ -1,13 +1,13 @@
-- alias: Automate - Receive feedback
+- alias: Automate - Receive feedback and route to service
   trigger:
     platform: webhook
     webhook_id: !secret automate_webhook_id
   condition:
-    condition: template
-    value_template: >
-      {{trigger.json.response == "no"}}
+    - condition: template
+      value_template: >
+        {{trigger.json.responseKey != None}}
   action:
-    service: script.automate_notify
+    service_template: >
+      script.{{trigger.json.responseKey}}
     data_template:
-      title: Webhook
-      message: How dare you!
+      data: "{{trigger.json}}"
