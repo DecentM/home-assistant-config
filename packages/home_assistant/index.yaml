@@ -44,5 +44,3 @@ sun:
 
 # Enables running custom scripts
 python_script:
-
-script: !include_dir_named scripts
