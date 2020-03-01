@@ -78,8 +78,9 @@
   action:
     - service: tts.amazon_polly_say
       data_template:
+        entity_id: media_player.huawei_cam
         message: >
-          1 - {{state_attr(states('input_select.remote_binding_2'), 'friendly_name')}}
+          2 - {{state_attr(states('input_select.remote_binding_2'), 'friendly_name')}}
     - service: script.blink_light
       data_template:
         entity_id: >
