@@ -9,10 +9,10 @@ light:
 circadian_lighting:
   min_colortemp: 2500
   max_colortemp: 4500
-  disable_brightness_adjust: true
 
 switch:
   - platform: circadian_lighting
+    disable_brightness_adjust: true
     lights_ct:
       - light.kitchen_ceiling_a
       - light.kitchen_ceiling_b
