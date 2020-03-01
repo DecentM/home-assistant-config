@@ -79,7 +79,7 @@
     - service: tts.amazon_polly_say
       data_template:
         message: >
-          1 - {{state_attr(input_select.remote_binding_1, 'friendly_name')}}
+          1 - {{state_attr(states('input_select.remote_binding_1'), 'friendly_name')}}
     - service: script.blink_light
       data_template:
         entity_id: >
