@@ -1,15 +1,3 @@
-- alias: Health - Reset meds taken
-  trigger:
-    platform: state
-    entity_id: input_boolean.meds_taken
-    to: 'on'
-    for:
-      hours: 2
-  action:
-    - service: input_boolean.turn_off
-      data:
-        entity_id: input_boolean.meds_taken
-
 - alias: Notify - When meds have not been taken
   trigger:
     platform: time
@@ -35,3 +23,9 @@
       data:
         id: pills-reminder-blink
         delay_seconds: 1
+    - service: light.turn_off
+      data:
+        entity_id: light.kitchen_wall
+    - service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.meds_taken
