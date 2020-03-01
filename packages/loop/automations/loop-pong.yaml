@@ -10,7 +10,7 @@
     - delay:
         seconds: >
           {{trigger.event.data.delay_seconds | default(1, true)}}
-    - service: script.loop_start
+    - service: script.loop_tick
       data_template:
         id: >
           {{trigger.event.data.id}}

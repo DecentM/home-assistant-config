@@ -10,6 +10,7 @@ cards:
   - !include cards/settings/lights/bedroom-controllers.yaml
   - !include cards/settings/lights/kitchen-controllers.yaml
   - !include cards/settings/lights/bathroom-controllers.yaml
+  - !include cards/settings/loop/loops.yaml
   - !include cards/settings/notify/home-assistant.yaml
   - !include cards/settings/notify/roomba.yaml
   - !include cards/settings/notify/weather.yaml

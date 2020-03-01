@@ -1,0 +1,30 @@
+alias: Run a finite-length loop
+icon: mdi:refresh
+
+fields:
+  id:
+    description: A unique string that will be used to identify your loop
+    example: roomba_clean_reminder_blink
+  delay_seconds:
+    description: How long is each cycle
+    example: 2
+  loop_seconds:
+    description: How long to loop for
+    example: 30
+
+sequence:
+  - service: script.loop_tick
+    data_template:
+      id: >
+        {{id}}
+      delay_seconds: >
+        {{delay_seconds}}
+  - delay:
+      seconds: >
+        {{loop_seconds}}
+  - service: script.loop_stop
+    data_template:
+      id: >
+        {{id}}
+      delay_seconds: >
+        {{delay_seconds}}
