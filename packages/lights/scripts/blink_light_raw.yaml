@@ -15,6 +15,8 @@ fields:
 sequence:
   - service: light.turn_on
     data_template:
+      entity_id: >
+        {{entity_id}}
       brightness: >
         {% if states(entity_id) == 'on' %}
           {{state_attr(entity_id, 'brightness') - 50}}
@@ -26,5 +28,7 @@ sequence:
   - service_template: >
       light.turn_{{original_state}}
     data_template:
+      entity_id: >
+        {{entity_id}}
       brightness: >
         {{original_brightness}}
