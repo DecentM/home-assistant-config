@@ -23,6 +23,8 @@
       data:
         id: pills-reminder-blink
         delay_seconds: 5
+    - delay:
+        seconds: 11
     - service: light.turn_off
       data:
         entity_id: light.kitchen_wall
