@@ -5,7 +5,7 @@
   condition:
     - condition: template
       value_template: >
-        {{states('var.last_loop_stop_id') == trigger.event.data.id}}
+        {{states('input_text.last_loop_stop_id') == trigger.event.data.id}}
   action:
     - delay:
         seconds: >
