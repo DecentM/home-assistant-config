@@ -25,3 +25,9 @@ sequence:
     data:
       entity_id: input_text.last_loop_stop_id
       value: unknown
+  - event: loop_stopped
+    event_data_template:
+      id: >
+        {{id}}
+      delay_seconds: >
+        {{delay_seconds}}
