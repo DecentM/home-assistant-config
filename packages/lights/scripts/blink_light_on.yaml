@@ -5,9 +5,6 @@ fields:
   entity_id:
     description: The full entity ID for the light
     example: light.kitchen
-  original_state:
-    description: The original state of the light (on/off)
-    example: on
   original_brightness:
     description: The original brightness of the light
     example: 254
@@ -18,15 +15,11 @@ sequence:
       entity_id: >
         {{entity_id}}
       brightness: >
-        {% if states(entity_id) == 'on' %}
-          {{state_attr(entity_id, 'brightness') - 50}}
-        {% else %}
-          50
-        {% endif %}
+        {{state_attr(entity_id, 'brightness') - 50}}
   - delay:
       seconds: 1
   - service_template: >
-      light.turn_{{original_state}}
+      light.turn_on
     data_template:
       entity_id: >
         {{entity_id}}

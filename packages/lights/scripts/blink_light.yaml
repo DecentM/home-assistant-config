@@ -7,11 +7,10 @@ fields:
     example: light.kitchen
 
 sequence:
-  - service: script.blink_light_raw
+  - service_template: >
+      script.blink_light_{{states(entity_id)}}
     data_template:
       entity_id: >
         {{entity_id}}
-      original_state: >
-        {{states(entity_id)}}
       original_brightness: >
         {{state_attr(entity_id, 'brightness')}}

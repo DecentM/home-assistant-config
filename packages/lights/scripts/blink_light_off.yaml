@@ -1,0 +1,24 @@
+alias: Blink a light for identification (raw implementation, use "blink_light" instead!)
+icon: mdi:lightbulb-on
+
+fields:
+  entity_id:
+    description: The full entity ID for the light
+    example: light.kitchen
+  original_brightness:
+    description: The original brightness of the light
+    example: 254
+
+sequence:
+  - service: light.turn_on
+    data_template:
+      entity_id: >
+        {{entity_id}}
+      brightness: 50
+  - delay:
+      seconds: 1
+  - service_template: >
+      light.turn_off
+    data_template:
+      entity_id: >
+        {{entity_id}}
