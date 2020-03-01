@@ -16,13 +16,13 @@
     - service: script.loop_tick
       data:
         id: pills-reminder-blink
-        delay_seconds: 1
+        delay_seconds: 5
     - wait_template: >
         {{states('input_boolean.meds_taken') == 'on'}}
     - service: script.loop_stop
       data:
         id: pills-reminder-blink
-        delay_seconds: 1
+        delay_seconds: 5
     - service: light.turn_off
       data:
         entity_id: light.kitchen_wall
