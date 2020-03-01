@@ -3,7 +3,7 @@
     platform: event
     event_type: deconz_event
     event_data:
-      id: bedroom_remote
+      id: remote_2
       event: 1002
   condition: []
   action:
@@ -15,7 +15,7 @@
     platform: event
     event_type: deconz_event
     event_data:
-      id: bedroom_remote
+      id: remote_2
       event: 2002
   condition: []
   action:
@@ -34,7 +34,7 @@
     platform: event
     event_type: deconz_event
     event_data:
-      id: bedroom_remote
+      id: remote_2
       event: 3002
   condition: []
   action:
