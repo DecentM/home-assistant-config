@@ -10,8 +10,12 @@
       entity_id: light.kitchen_wall
       transition: 4
       brightness: >
-        {% if state_attr('light.kitchen_wall', 'brightness') > 200 %}
-          70
+        {% if state_attr('light.kitchen_wall', 'brightness') %}
+          {% if state_attr('light.kitchen_wall', 'brightness') > 200 %}
+            70
+          {% else %}
+            254
+          {% endif %}
         {% else %}
-          254
+          70
         {% endif %}
