@@ -34,7 +34,7 @@
   - service: tts.amazon_polly_say
     data:
       message: Roomba tray inserted.
-      entity_id: all
+      entity_id: media_player.huawei_cam
 
 - alias: Vacuum - Confirm bin removal
   description: ''
@@ -51,7 +51,7 @@
   - service: tts.amazon_polly_say
     data:
       message: Roomba tray removed.
-      entity_id: all
+      entity_id: media_player.huawei_cam
 
 - alias: Vacuum - Send Roomba back if started manually while not clean
   description: ''
@@ -75,7 +75,7 @@
   - service: tts.amazon_polly_say
     data:
       message: Roomba wasn't cleaned recently, returning to station.
-      entity_id: all
+      entity_id: media_player.huawei_cam
 
 - alias: Vacuum - Increment dirty runs counter when roomba turns off
   description: ''
