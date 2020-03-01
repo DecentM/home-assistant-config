@@ -76,7 +76,11 @@
     platform: state
     entity_id: input_select.remote_binding_1
   action:
-    service: script.blink_light
-    data_template:
-      entity_id: >
-        {{states('input_select.remote_binding_1')}}
+    - service: tts.amazon_polly_say
+      data_template:
+        message: >
+          1 - {{state_attr(input_select.remote_binding_1, 'friendly_name')}}
+    - service: script.blink_light
+      data_template:
+        entity_id: >
+          {{states('input_select.remote_binding_1')}}
