@@ -1,0 +1,82 @@
+- alias: Light switches - Remote 1, middle button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_1
+      event: 1002
+  action:
+    service: light.toggle
+    data_template:
+      entity_id: >
+        {{states('input_select.remote_binding_1')}}
+
+- alias: Light switches - Remote 1, up button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_1
+      event: 2002
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: >
+        {{states('input_select.remote_binding_1')}}
+      brightness: >
+        {% if states.light.bathroom_ceiling.attributes.brightness %}
+          {{states.light.bathroom_ceiling.attributes.brightness + 25}}
+        {% else %}
+          25
+        {% endif %}
+
+- alias: Light switches - Remote 1, down button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_1
+      event: 3002
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: >
+        {{states('input_select.remote_binding_1')}}
+      brightness: >
+        {% if states.light.bathroom_ceiling.attributes.brightness %}
+          {{states.light.bathroom_ceiling.attributes.brightness - 25}}
+        {% else %}
+          220
+        {% endif %}
+
+- alias: Light switches - Remote 1, left button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_1
+      event: 4002
+  action:
+    service: input_select.select_previous
+    entity_id: input_select.remote_binding_1
+
+- alias: Light switches - Remote 1, right button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_1
+      event: 5002
+  action:
+    service: input_select.select_next
+    entity_id: input_select.remote_binding_1
+
+- alias: Speak - Announce light target changes for remote 1
+  trigger:
+    platform: state
+    entity_id: input_select.remote_binding_1
+  action:
+    service: tts.amazon_polly_say
+    data_template:
+      message: Remote 1, {{states('input_select.remote_binding_1')}}
+      entity_id: all
