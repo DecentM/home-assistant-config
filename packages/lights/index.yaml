@@ -9,6 +9,7 @@ light:
 circadian_lighting:
   min_colortemp: 2500
   max_colortemp: 4500
+  disable_brightness_adjust: true
 
 switch:
   - platform: circadian_lighting
