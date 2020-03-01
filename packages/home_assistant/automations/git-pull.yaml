@@ -9,9 +9,13 @@
     - service: frontend.reload_themes
     - service: automation.reload
     - service: input_boolean.reload
+    - service: input_select.reload
     - service: zone.reload
     - service: script.reload
     - service: scene.reload
     - service: group.reload
     - service: person.reload
     - service: python_script.reload
+
+    - service: automation.turn_on
+      entity_id: automation.ha_run_git_pull_on_incoming_webhook
