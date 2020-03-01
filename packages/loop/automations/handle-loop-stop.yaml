@@ -1,7 +1,7 @@
 - alias: Loop - Stop a loop on command
   trigger:
     - platform: event
-      event_type: custom_loop_start
+      event_type: loop_tick
   condition:
     - condition: template
       value_template: >

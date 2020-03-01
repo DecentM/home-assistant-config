@@ -1,7 +1,7 @@
-- alias: Loop - Reply to loop start event
+- alias: Loop - Reply to loop tick event
   trigger:
     - platform: event
-      event_type: custom_loop_start
+      event_type: loop_tick
   condition:
     - condition: template
       value_template: >

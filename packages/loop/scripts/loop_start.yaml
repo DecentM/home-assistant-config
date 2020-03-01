@@ -10,7 +10,7 @@ fields:
     example: 2
 
 sequence:
-  - event: custom_loop_start
+  - event: loop_tick
     event_data_template:
       id: >
         {{id}}
