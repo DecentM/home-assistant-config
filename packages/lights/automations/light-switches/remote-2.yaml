@@ -1,49 +1,50 @@
-- alias: Light switches - Bedroom remote, middle button
-  trigger:
-    platform: event
-    event_type: deconz_event
-    event_data:
-      id: remote_2
-      event: 1002
-  condition: []
-  action:
-    service: light.toggle
-    entity_id: light.bedroom_ceiling
-
-- alias: Light switches - Bedroom remote, up button
+- alias: Light switches - Remote 2, middle button
   trigger:
     platform: event
     event_type: deconz_event
     event_data:
       id: remote_2
       event: 2002
-  condition: []
+  action:
+    service: light.toggle
+    data_template:
+      entity_id: >
+        {{states('input_select.remote_binding_2')}}
+
+- alias: Light switches - Remote 2, up button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_2
+      event: 2002
   action:
     service: light.turn_on
-    entity_id: light.bedroom_ceiling
     data_template:
+      entity_id: >
+        {{states('input_select.remote_binding_2')}}
       brightness: >
-        {% if states.light.bedroom_ceiling.attributes.brightness %}
-          {{states.light.bedroom_ceiling.attributes.brightness + 25}}
+        {% if state_attr(states('input_select.remote_binding_2'), 'brightness') %}
+          {{state_attr(states('input_select.remote_binding_2'), 'brightness') + 25}}
         {% else %}
           25
         {% endif %}
 
-- alias: Light switches - Bedroom remote, down button
+- alias: Light switches - Remote 2, down button
   trigger:
     platform: event
     event_type: deconz_event
     event_data:
       id: remote_2
       event: 3002
-  condition: []
   action:
     service: light.turn_on
-    entity_id: light.bedroom_ceiling
     data_template:
+      entity_id: >
+        {{states('input_select.remote_binding_2')}}
       brightness: >
-        {% if states.light.bedroom_ceiling.attributes.brightness %}
-          {{states.light.bedroom_ceiling.attributes.brightness - 25}}
+        {% if state_attr(states('input_select.remote_binding_2'), 'brightness') %}
+          {{state_attr(states('input_select.remote_binding_2'), 'brightness') - 25}}
         {% else %}
           220
         {% endif %}

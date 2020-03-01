@@ -24,8 +24,8 @@
       entity_id: >
         {{states('input_select.remote_binding_1')}}
       brightness: >
-        {% if states.light.bathroom_ceiling.attributes.brightness %}
-          {{states.light.bathroom_ceiling.attributes.brightness + 25}}
+        {% if state_attr(states('input_select.remote_binding_1'), 'brightness') %}
+          {{state_attr(states('input_select.remote_binding_1'), 'brightness') + 25}}
         {% else %}
           25
         {% endif %}
@@ -43,8 +43,8 @@
       entity_id: >
         {{states('input_select.remote_binding_1')}}
       brightness: >
-        {% if states.light.bathroom_ceiling.attributes.brightness %}
-          {{states.light.bathroom_ceiling.attributes.brightness - 25}}
+        {% if state_attr(states('input_select.remote_binding_1'), 'brightness') %}
+          {{state_attr(states('input_select.remote_binding_1'), 'brightness') - 25}}
         {% else %}
           220
         {% endif %}
