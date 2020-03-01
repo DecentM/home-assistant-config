@@ -1,0 +1,18 @@
+alias: Start a loop
+icon: mdi:refresh
+
+fields:
+  id:
+    description: A unique string that will be used to identify your loop
+    example: roomba_clean_reminder
+  delay_seconds:
+    description: How long to wait before looping once
+    example: 2
+
+sequence:
+  - event: custom_loop_start
+    event_data_template:
+      id: >
+        {{id}}
+      delay_seconds: >
+        {{delay_seconds}}

@@ -1,0 +1,16 @@
+- alias: Loop - Stop a loop on command
+  trigger:
+    - platform: event
+      event_type: custom_loop_start
+  condition:
+    - condition: template
+      value_template: >
+        {{states('var.last_loop_stop_id') == trigger.event.data.id}}
+  action:
+    - delay:
+        seconds: >
+          {{trigger.event.data.delay_seconds | default(1, true) - 1}}
+    - service: input_text.set_value
+      data:
+        entity_id: input_text.last_loop_stop_id
+        value: unknown

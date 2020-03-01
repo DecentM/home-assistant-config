@@ -1,0 +1,14 @@
+alias: Start a loop
+icon: mdi:stop
+
+fields:
+  id:
+    description: A unique string that will be used to identify your loop
+    example: roomba_clean_reminder
+
+sequence:
+  - service: input_text.set_value
+    data_template:
+      entity_id: input_text.last_loop_stop_id
+      value: >
+        {{id}}

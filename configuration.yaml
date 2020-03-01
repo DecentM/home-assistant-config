@@ -25,6 +25,7 @@ homeassistant:
     monitoring: !include packages/monitoring/index.yaml
     gaming: !include packages/gaming/index.yaml
     phone: !include packages/phone/index.yaml
+    loop: !include packages/loop/index.yaml
 
   auth_mfa_modules:
     - type: totp

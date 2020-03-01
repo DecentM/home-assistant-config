@@ -1,0 +1,16 @@
+- alias: Loop - Reply to loop start event
+  trigger:
+    - platform: event
+      event_type: custom_loop_start
+  condition:
+    - condition: template
+      value_template: >
+        {{states('var.last_loop_stop_id') != trigger.event.data.id}}
+  action:
+    - delay:
+        seconds: >
+          {{trigger.event.data.delay_seconds | default(1, true)}}
+    - service: script.loop_start
+      data_template:
+        id: >
+          {{trigger.event.data.id}}
