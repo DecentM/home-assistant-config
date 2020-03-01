@@ -1,0 +1,16 @@
+- alias: Lights - Blink kitchen wall when pills haven't been taken
+  trigger:
+    platform: event
+    event_type: loop_tick
+    event_data:
+      id: pills-reminder-blink
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: light.kitchen_wall
+      brightness: >
+        {% if state_attr('light.kitchen_wall', 'brightness') > 200 %}
+          150
+        {% else %}
+          250
+        {% endif %}

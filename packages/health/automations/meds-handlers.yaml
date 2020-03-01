@@ -19,9 +19,19 @@
       entity_id: input_boolean.meds_taken
       state: 'off'
   action:
-    service: script.automate_notify
-    data:
-      feedback_script: ack_meds_taken
-      title: Medication
-      message: Pills have not been taken yet!
-      icon: 61719
+    - service: script.automate_notify
+      data:
+        feedback_script: ack_meds_taken
+        title: Medication
+        message: Pills have not been taken yet!
+        icon: 61719
+    - service: script.loop_tick
+      data:
+        id: pills-reminder-blink
+        delay_seconds: 1
+    - wait_template: >
+        {{states('input_boolean.meds_taken') == 'on'}}
+    - service: script.loop_stop
+      data:
+        id: pills-reminder-blink
+        delay_seconds: 1
