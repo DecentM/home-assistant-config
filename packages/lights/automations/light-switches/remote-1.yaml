@@ -81,7 +81,3 @@
         entity_id: media_player.huawei_cam
         message: >
           1 - {{state_attr(states('input_select.remote_binding_1'), 'friendly_name')}}
-    - service: script.blink_light
-      data_template:
-        entity_id: >
-          {{states('input_select.remote_binding_1')}}
