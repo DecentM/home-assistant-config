@@ -47,3 +47,35 @@
         {% else %}
           220
         {% endif %}
+
+- alias: Light switches - Remote 2, left button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_2
+      event: 4002
+  action:
+    service: input_select.select_previous
+    entity_id: input_select.remote_binding_2
+
+- alias: Light switches - Remote 2, right button
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_2
+      event: 5002
+  action:
+    service: input_select.select_next
+    entity_id: input_select.remote_binding_2
+
+- alias: Lights - Identify light target changes for remote 2
+  trigger:
+    platform: state
+    entity_id: input_select.remote_binding_2
+  action:
+    service: script.blink_light
+    data_template:
+      entity_id: >
+        {{states('input_select.remote_binding_2')}}

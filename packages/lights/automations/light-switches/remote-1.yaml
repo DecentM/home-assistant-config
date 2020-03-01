@@ -71,13 +71,12 @@
     service: input_select.select_next
     entity_id: input_select.remote_binding_1
 
-- alias: Speak - Announce light target changes for remote 1
+- alias: Lights - Identify light target changes for remote 1
   trigger:
     platform: state
     entity_id: input_select.remote_binding_1
   action:
-    service: tts.amazon_polly_say
+    service: script.blink_light
     data_template:
-      message: >
-        Remote 1, {{states('input_select.remote_binding_1')}}
-      entity_id: all
+      entity_id: >
+        {{states('input_select.remote_binding_1')}}
