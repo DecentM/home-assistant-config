@@ -1,0 +1,6 @@
+type: entities
+title: Run loops
+
+entities:
+  - automation.loop_reply_to_loop_tick_event
+  - automation.loop_stop_a_loop_on_command

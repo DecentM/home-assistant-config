@@ -14,3 +14,5 @@
       data_template:
         id: >
           {{trigger.event.data.id}}
+        delay_seconds: >
+          {{trigger.event.data.delay_seconds}}
