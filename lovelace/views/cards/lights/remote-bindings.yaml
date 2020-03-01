@@ -1,0 +1,6 @@
+type: entities
+show_header_toggle: false
+
+entities:
+  - input_select.remote_binding_1
+  - input_select.remote_binding_2

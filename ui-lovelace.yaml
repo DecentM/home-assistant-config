@@ -5,6 +5,7 @@ custom_header: !include lovelace/custom_header/index.yaml
 
 views:
   - !include lovelace/views/home.yaml
+  - !include lovelace/views/lights.yaml
   - !include lovelace/views/monitoring.yaml
   - !include lovelace/views/gaming.yaml
   - !include lovelace/views/time.yaml

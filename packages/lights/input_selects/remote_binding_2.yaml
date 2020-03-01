@@ -1,0 +1,8 @@
+name: Bindings for remote 1
+icon: mdi:remote
+options:
+  - light.bathroom_ceiling
+  - light.bedroom_ceiling
+  - light.kitchen_ceiling
+  - light.living_room_ceiling
+  - light.hall_ceiling

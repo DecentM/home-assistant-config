@@ -1,0 +1,8 @@
+icon: mdi:lightbulb
+name: Lights
+path: lights
+
+cards:
+  - !include cards/lights/toggle-colourful.yaml
+  - !include cards/lights/toggle-fancy.yaml
+  - !include cards/lights/remote-bindings.yaml

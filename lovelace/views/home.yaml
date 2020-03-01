@@ -1,4 +1,4 @@
-icon: 'mdi:lightbulb'
+icon: mdi:view-dashboard
 panel: false
 path: home
 title: Home
