@@ -20,7 +20,7 @@ sequence:
         {{id}}
   - delay:
       seconds: >
-        {{delay_seconds | default(1, true) + 1}}
+        {{delay_seconds | default(1, true) + 5}}
   - service: input_text.set_value
     data:
       entity_id: input_text.last_loop_stop_id
