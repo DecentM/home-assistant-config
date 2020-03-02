@@ -1,26 +1,24 @@
-- url: /community_plugin/aftership-card/aftership-card.js
+- url: /hacsfiles/aftership-card/aftership-card.js
   type: module
-- url: /community_plugin/button-card/button-card.js
+- url: /hacsfiles/button-card/button-card.js
   type: module
-- url: /community_plugin/config-template-card/config-template-card.js
+- url: /hacsfiles/config-template-card/config-template-card.js
   type: module
-- url: /community_plugin/custom-header/custom-header.js
+- url: /hacsfiles/custom-header/custom-header.js
   type: module
-- url: /community_plugin/mini-graph-card/mini-graph-card-bundle.js
+- url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
   type: module
-- url: /community_plugin/mini-media-player/mini-media-player-bundle.js
+- url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
   type: module
-- url: /community_plugin/rgb-light-card/card.js
+- url: /hacsfiles/rgb-light-card/card.js
   type: js
-- url: /community_plugin/radial-menu/radial-menu.js
-  type: module
-- url: /community_plugin/upcoming-media-card/upcoming-media-card.js
+- url: /hacsfiles/upcoming-media-card/upcoming-media-card.js
   type: js
-- url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
+- url: /hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js
   type: js
-- url: /community_plugin/lovelace-auto-entities/auto-entities.js
+- url: /hacsfiles/lovelace-auto-entities/auto-entities.js
   type: module
-- url: /community_plugin/lovelace-card-mod/card-mod.js
+- url: /hacsfiles/lovelace-card-mod/card-mod.js
   type: module
-- url: /community_plugin/lovelace-gui-sandbox/gui-sandbox.js
+- url: /hacsfiles/lovelace-gui-sandbox/gui-sandbox.js
   type: module
