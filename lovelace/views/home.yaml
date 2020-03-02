@@ -15,7 +15,7 @@ cards:
   - !include cards/lights/toggle-fancy.yaml
   - !include cards/theater/emby-chrome-windows.yaml
   - !include cards/theater/emby-chrome-manjaro.yaml
-  - !include cards/theater/emby-chrome-***REMOVED***.yaml
+  - !include cards/theater/emby-chrome-oneplus.yaml
   - !include cards/theater/available-media-players.yaml
   - !include cards/roomba/roomba-runs.yaml
   - !include cards/roomba/roomba-entity.yaml

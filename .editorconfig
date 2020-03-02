@@ -1,5 +1,5 @@
 # This file is the topmost EditorConfig file
-***REMOVED*** = true
+root = true
 
 # All Files
 [*]

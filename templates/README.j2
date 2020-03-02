@@ -19,7 +19,7 @@ useful!
 ## Preparing development with Python scripts
 
 0. Install `pip`
-1. cd into the repository ***REMOVED*** directory
+1. cd into the repository root directory
 2. Run `python3 -m venv .`
 3. Run `source bin/activate`
 4. Run `pip install -r requirements.txt`

@@ -25,7 +25,7 @@ weatherAlert () {
     exit 1
   fi
 
-  # This will only work if the secret you provided is in the ***REMOVED*** secrets.yaml file
+  # This will only work if the secret you provided is in the root secrets.yaml file
   local URL
   URL=$(grep -e "^$SECRETS_KEY: " "$FILENAME" | cut -d ":" -f2- | xargs)
 
