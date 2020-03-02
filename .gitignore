@@ -8,6 +8,7 @@
 
 ### Sensitive files ###
 .trakt.conf
+..bfg-report
 
 ### Store managed files ###
 appdaemon/
