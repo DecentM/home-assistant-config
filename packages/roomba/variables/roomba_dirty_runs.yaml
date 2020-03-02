@@ -1,4 +1,0 @@
-friendly_name: "Roomba runs with dirty tray"
-initial_value: 0
-icon: mdi:robot-vacuum
-value_template: "{{ (states('var.roomba_dirty_runs') | int) + 1 }}"

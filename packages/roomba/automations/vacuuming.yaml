@@ -8,7 +8,7 @@
     entity_id: binary_sensor.workday_sensor
     state: 'on'
   - condition: numeric_state
-    entity_id: var.roomba_dirty_runs
+    entity_id: input_number.roomba_dirty_runs
     below: 5
   action:
   - service: vacuum.start_pause
@@ -29,7 +29,7 @@
   - wait_template: '{{ state_attr(''vacuum.roomba'', ''bin_present'') == true }}'
   - service: var.set
     data:
-      entity_id: var.roomba_dirty_runs
+      entity_id: input_number.roomba_dirty_runs
       value: 0
   - service: tts.amazon_polly_say
     data:
@@ -61,7 +61,7 @@
     to: 'on'
   condition:
   - condition: numeric_state
-    entity_id: var.roomba_dirty_runs
+    entity_id: input_number.roomba_dirty_runs
     above: 4
   action:
   - service: vacuum.start_pause
@@ -87,5 +87,5 @@
   action:
   - wait_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging'' }}'
     continue_on_timeout: false
-  - service: var.update
-    entity_id: var.roomba_dirty_runs
+  - service: input_number.increment
+    entity_id: input_number.roomba_dirty_runs

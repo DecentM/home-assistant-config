@@ -1,4 +1,4 @@
-entity: var.roomba_dirty_runs
+entity: input_number.roomba_dirty_runs
 max: 4
 min: 0
 name: Dirty runs

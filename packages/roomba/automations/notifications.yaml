@@ -8,7 +8,7 @@
     entity_id: binary_sensor.workday_sensor
     state: 'on'
   - condition: numeric_state
-    entity_id: var.roomba_dirty_runs
+    entity_id: input_number.roomba_dirty_runs
     above: 4
   action:
   - service: script.automate_notify
