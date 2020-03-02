@@ -1,5 +1,10 @@
-groups:
-  module: group_all
-  class: GroupAll
-  domains: all
-  track_new_entities: true
+module: bbgax
+class: group_all_x
+domains:
+  - automation
+  - device_tracker
+  - light
+  - script
+  - switch
+  - vacuum
+  - person
