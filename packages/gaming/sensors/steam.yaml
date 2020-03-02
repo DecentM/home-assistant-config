@@ -1,18 +1,4 @@
 sensor:
   - platform: steam_online
     api_key: !secret steam_web_api_key
-    accounts:
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
-      - ***REMOVED***
+    accounts: !secret steam_accounts
