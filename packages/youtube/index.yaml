@@ -1,7 +1,6 @@
 input_text:
   last_liked_video:
     name: "Last liked video"
-    initial: ""
     icon: mdi:youtube-subscription
 
 automation: !include_dir_merge_list automations

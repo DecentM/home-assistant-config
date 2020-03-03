@@ -1,5 +1,4 @@
 - alias: Theme - Switch to dark on sunset
-  description: ''
   trigger:
   - entity_id: sun.sun
     from: above_horizon
@@ -17,7 +16,6 @@
     service: frontend.set_theme
 
 - alias: Theme - Switch to light on sunrise
-  description: ''
   trigger:
   - entity_id: sun.sun
     from: below_horizon

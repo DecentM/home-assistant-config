@@ -4,7 +4,6 @@ path: monitoring
 title: Monitoring
 
 badges:
-  - device_tracker.decentm_phone
   - device_tracker.miner
   - device_tracker.starlight
   - device_tracker.cadance

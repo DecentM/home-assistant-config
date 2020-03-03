@@ -1,5 +1,4 @@
 automation: !include_dir_merge_list automations
-sensor: !include_dir_merge_list sensors
 zone: !include zone.yaml
 
 # Enables configuration UI

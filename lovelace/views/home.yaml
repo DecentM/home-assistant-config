@@ -4,7 +4,6 @@ path: home
 title: Home
 
 badges:
-  - device_tracker.decentm_phone
   - sensor.hacs
   - binary_sensor.updater
 

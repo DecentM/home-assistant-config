@@ -80,4 +80,4 @@
       data_template:
         entity_id: media_player.huawei_cam
         message: >
-          2 - {{state_attr(states('input_select.remote_binding_2'), 'friendly_name')}}
+          {{state_attr(states('input_select.remote_binding_2'), 'friendly_name')}}

@@ -1,5 +1,4 @@
 - alias: Notify - Service restart
-  description: ''
   trigger:
   - event: start
     platform: homeassistant
@@ -7,6 +6,3 @@
   - service: script.automate_notify
     data:
       message: Home Assistant startup complete
-  - service: automation.turn_on
-    entity_id: automation.ha_run_git_pull_on_incoming_webhook
-

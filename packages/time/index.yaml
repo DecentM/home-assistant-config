@@ -1,4 +1,5 @@
 binary_sensor: !include_dir_merge_list binary_sensors
+sensor: !include_dir_merge_list sensors
 
 anniversaries:
   sensors: !secret anniversaries
