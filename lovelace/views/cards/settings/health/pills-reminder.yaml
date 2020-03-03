@@ -1,6 +1,6 @@
 type: entities
 title: Remind to take pills every morning unless already taken
+show_header_toggle: false
 
 entities:
   - automation.notify_when_meds_have_not_been_taken
-  - automation.health_reset_meds_taken
