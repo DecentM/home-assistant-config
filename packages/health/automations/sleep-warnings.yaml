@@ -1,107 +1,17 @@
-- alias: Speak - Waking up in 10 hours
-  description: ''
+- alias: Speak - Waking up soon warning
   trigger:
-  - at: '23:00'
-    platform: time
+    - platform: template
+      value_template: >
+        {{states('sensor.next_wakeup_in') < 10}}
   condition:
-  - condition: state
-    entity_id: light.workstation
-    state: 'on'
-  - condition: state
-    entity_id: binary_sensor.workday_tomorrow
-    state: 'on'
+    - condition: state
+      entity_id: light.workstation
+      state: 'on'
+    - condition: state
+      entity_id: binary_sensor.workday_tomorrow
+      state: 'on'
   action:
-  - data:
-      message: You're waking up in ten hours!
-      entity_id: media_player.huawei_cam
-    service: tts.amazon_polly_say
-
-- alias: Speak - Waking up in 9 hours
-  description: ''
-  trigger:
-  - at: 00:00
-    platform: time
-  condition:
-  - condition: state
-    entity_id: light.workstation
-    state: 'on'
-  - condition: state
-    entity_id: binary_sensor.workday_tomorrow
-    state: 'on'
-  action:
-  - data:
-      message: You're waking up in nine hours!
-      entity_id: media_player.huawei_cam
-    service: tts.amazon_polly_say
-
-- alias: Speak - Waking up in 8 hours
-  description: ''
-  trigger:
-  - at: 01:00
-    platform: time
-  condition:
-  - condition: state
-    entity_id: light.workstation
-    state: 'on'
-  - condition: state
-    entity_id: binary_sensor.workday_sensor
-    state: 'on'
-  action:
-  - data:
-      message: You're waking up in eight hours!
-      entity_id: media_player.huawei_cam
-    service: tts.amazon_polly_say
-
-- alias: Speak - Waking up in 7 hours
-  description: ''
-  trigger:
-  - at: 02:00
-    platform: time
-  condition:
-  - condition: state
-    entity_id: light.workstation
-    state: 'on'
-  - condition: state
-    entity_id: binary_sensor.workday_sensor
-    state: 'on'
-  action:
-  - data:
-      message: You're waking up in seven hours!
-      entity_id: media_player.huawei_cam
-    service: tts.amazon_polly_say
-
-- alias: Speak - Waking up in 6 hours
-  description: ''
-  trigger:
-  - at: 03:00
-    platform: time
-  condition:
-  - condition: state
-    entity_id: light.workstation
-    state: 'on'
-  - condition: state
-    entity_id: binary_sensor.workday_sensor
-    state: 'on'
-  action:
-  - data:
-      message: You're waking up in six hours!
-      entity_id: media_player.huawei_cam
-    service: tts.amazon_polly_say
-
-- alias: Speak - Waking up in 5 hours
-  description: ''
-  trigger:
-  - at: 04:00
-    platform: time
-  condition:
-  - condition: state
-    entity_id: light.workstation
-    state: 'on'
-  - condition: state
-    entity_id: binary_sensor.workday_sensor
-    state: 'on'
-  action:
-  - data:
-      message: You're waking up in five hours!
-      entity_id: media_player.huawei_cam
-    service: tts.amazon_polly_say
+    - service: tts.amazon_polly_say
+      data_template:
+        message: >
+          You're waking up in {{states('sensor.next_wakeup_in')}} hours

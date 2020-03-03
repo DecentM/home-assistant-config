@@ -1,0 +1,14 @@
+- platform: template
+  sensors:
+    next_wakeup_in:
+      unit_of_measurement: hours
+      value_template: >
+        {% set current = now().timestamp() %}
+        {% set today = as_timestamp(now().strftime("%Y-%m-%d") + " 00:00:00") %}
+        {% set wake_hours = as_timestamp("1970-01-01 " + states('input_datetime.wakeup_time') + "+02:00") %}
+        {% set next_wake_at = today + wake_hours %}
+        {% set next_wake_in = next_wake_at - current %}
+
+        {% set next_wake_in_hours = next_wake_in / 60 / 60 %}
+
+        {{next_wake_in_hours}}
