@@ -1,0 +1,4 @@
+name: Wakeup time
+icon: mdi:alarm
+has_date: false
+has_time: true

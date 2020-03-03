@@ -1,0 +1,6 @@
+type: entities
+title: Wakeup time
+show_header_toggle: false
+
+entities:
+  - input_datetime.wakeup_time
