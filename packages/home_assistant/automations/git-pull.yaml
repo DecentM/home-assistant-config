@@ -10,6 +10,7 @@
     - service: automation.reload
     - service: input_boolean.reload
     - service: input_select.reload
+    - service: input_datetime.reload
     - service: zone.reload
     - service: script.reload
     - service: scene.reload
