@@ -3,6 +3,7 @@ path: settings
 title: Settings
 
 cards:
+  - !include cards/settings/health/wakeup-time.yaml
   - !include cards/settings/health/pills-reminder.yaml
   - !include cards/settings/health/sleep-reminders.yaml
   - !include cards/settings/home-assistant/auto-git-pull.yaml
