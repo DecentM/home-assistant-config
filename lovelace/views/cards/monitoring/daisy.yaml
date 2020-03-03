@@ -1,5 +1,5 @@
 type: custom:vertical-stack-in-card
-title: !secret glances_1_name
+title: Daisy
 cards:
   - type: horizontal-stack
     cards: !include_dir_merge_list systems/daisy
