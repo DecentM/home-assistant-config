@@ -6,6 +6,7 @@ cards:
   - !include cards/settings/health/reminders.yaml
   - !include cards/settings/home-assistant/auto-git-pull.yaml
   - !include cards/settings/lights/all-controllers.yaml
+  - !include cards/settings/lights/wakeup-lights.yaml
   - !include cards/settings/loop/loops.yaml
   - !include cards/settings/notify/home-assistant.yaml
   - !include cards/settings/notify/weather.yaml

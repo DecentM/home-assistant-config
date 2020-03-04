@@ -1,0 +1,6 @@
+type: entities
+title: Gently wake me up with light
+show_header_toggle: false
+
+entities:
+  - automation.lights_turn_on_slowly_for_gentle_wakeup
