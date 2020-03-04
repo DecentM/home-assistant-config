@@ -1,0 +1,7 @@
+- alias: Update - Wake up sensor every minute
+  trigger:
+    - platform: time_pattern
+      minutes: "/1"
+  action:
+    - service: homeassistant.update_entity
+      entity_id: sensor.next_wakeup
