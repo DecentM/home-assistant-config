@@ -1,7 +1,7 @@
 - alias: Speak - Waking up soon warning
   trigger:
     - platform: time_pattern
-      minutes: 25
+      minutes: "/20"
   condition:
     - condition: template
       value_template: >
@@ -17,4 +17,8 @@
       data_template:
         entity_id: media_player.huawei_cam
         message: >
-          You're waking up in {{state_attr('sensor.next_wakeup', 'in_hours') | round(1)}} hours
+          {% set hours = state_attr('sensor.next_wakeup', 'in_hours') | int %}
+          {% set hourPercent = state_attr('sensor.next_wakeup', 'in_hours') | float - hours %}
+          {% set minutes = (hourPercent * 60) | round %}
+
+          You're waking up in {{hours}} hours and {{minutes}} minutes
