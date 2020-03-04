@@ -40,6 +40,7 @@ logbook:
     entities:
       - automation.loop_reply_to_loop_tick_event
       - script.loop_tick
+      - automation.update_wake_up_sensor_every_minute
 
 # Enables a map showing the location of tracked devices
 map:
