@@ -1,9 +1,11 @@
 - alias: Speak - Waking up soon warning
   trigger:
-    - platform: template
-      value_template: >
-        {{states('sensor.next_wakeup_in') < 10}}
+    - platform: time_pattern
+      minutes: 25
   condition:
+    - condition: template
+      value_template: >
+        {{state_attr('sensor.next_wakeup', 'in_hours') | float < 10}}
     - condition: state
       entity_id: light.workstation
       state: 'on'
@@ -13,5 +15,6 @@
   action:
     - service: tts.amazon_polly_say
       data_template:
+        entity_id: media_player.huawei_cam
         message: >
-          You're waking up in {{states('sensor.next_wakeup_in')}} hours
+          You're waking up in {{state_attr('sensor.next_wakeup', 'in_hours') | round(1)}} hours
