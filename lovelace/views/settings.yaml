@@ -3,19 +3,14 @@ path: settings
 title: Settings
 
 cards:
-  - !include cards/settings/health/wakeup-time.yaml
-  - !include cards/settings/health/pills-reminder.yaml
-  - !include cards/settings/health/sleep-reminders.yaml
+  - !include cards/settings/health/reminders.yaml
   - !include cards/settings/home-assistant/auto-git-pull.yaml
   - !include cards/settings/lights/all-controllers.yaml
-  - !include cards/settings/lights/bedroom-controllers.yaml
-  - !include cards/settings/lights/kitchen-controllers.yaml
-  - !include cards/settings/lights/bathroom-controllers.yaml
   - !include cards/settings/loop/loops.yaml
   - !include cards/settings/notify/home-assistant.yaml
-  - !include cards/settings/notify/roomba.yaml
   - !include cards/settings/notify/weather.yaml
   - !include cards/settings/phone/accept-notify-feedback.yaml
+  - !include cards/settings/roomba/notifications.yaml
   - !include cards/settings/roomba/prevent-many-dirty-runs.yaml
   - !include cards/settings/roomba/vacuum-schedule.yaml
   - !include cards/settings/sleep-detection/manage-lights.yaml

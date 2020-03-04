@@ -1,0 +1,7 @@
+type: entities
+title: Reminders
+
+entities:
+  - input_datetime.wakeup_time
+  - automation.notify_when_meds_have_not_been_taken
+  - automation.speak_waking_up_soon_warning

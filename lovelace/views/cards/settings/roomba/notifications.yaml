@@ -1,5 +1,5 @@
 type: entities
-title: Send notifications about the roomba
+title: Manage roomba cleanliness
 
 entities:
   - automation.notify_when_roomba_is_charging_after_being_shut_off
