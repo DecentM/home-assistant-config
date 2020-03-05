@@ -1,0 +1,20 @@
+type: 'custom:mini-graph-card'
+name: COVID-19 Cases (Home)
+animate: true
+
+show:
+  average: true
+
+entities:
+  - entity: !secret sensor_country1_coronavirus_current
+    name: Current cases
+    show_state: true
+  - entity: !secret sensor_country1_coronavirus_recovered
+    name: Recovered
+    show_state: true
+  - entity: !secret sensor_country1_coronavirus_confirmed
+    name: Confirmed cases
+    show_state: true
+  - entity: !secret sensor_country1_coronavirus_deaths
+    name: Deaths
+    show_state: true

@@ -10,3 +10,8 @@ sensor: !include_dir_merge_list sensors
 input_boolean: !include_dir_named input_booleans
 input_datetime: !include_dir_named input_datetimes
 script: !include_dir_named scripts
+
+logbook:
+  exclude:
+    entities:
+      - automation.update_wake_up_sensor_every_minute

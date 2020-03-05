@@ -4,6 +4,9 @@ path: health
 title: Health
 
 cards:
+  - !include cards/health/coronavirus_country1.yaml
+  - !include cards/health/coronavirus_country2.yaml
+
   - !include cards/health/meds-taken.yaml
   - !include cards/health/blood-pressure.yaml
   - !include cards/health/weight.yaml
