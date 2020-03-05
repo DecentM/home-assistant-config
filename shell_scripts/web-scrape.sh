@@ -24,9 +24,9 @@ scrape () {
   HTML=$(curl -s -A "$USER_AGENT" "$URL")
 
   local RESULT
-  RESULT=$(printf "%s\n" "$HTML" | pup "$QUERY")
+  RESULT=$(printf "%s\n" "$HTML" | pup "$QUERY" | xargs)
 
-  printf "%s\n" "$RESULT"
+  printf "{\"value\": \"%s\"}\n" "$RESULT"
 }
 
 scrape "$1" "$2"
