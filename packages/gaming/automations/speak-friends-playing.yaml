@@ -1,0 +1,18 @@
+- alias: Speak - When a Steam friend plays a game
+  trigger:
+    - platform: state
+      entity_id: !secret steam_account_sensors
+  action:
+    - service: tts.amazon_polly_say
+      data_template:
+        entity_id: media_player.huawei_cam
+        message: >
+          {% set game = trigger.to_state.attributes.game %}
+          {% set action = "came online" if trigger.to_state.state == "online" else "has gone offline" %}
+
+          {{state_attr(trigger.entity_id, 'friendly_name')}}
+          {% if game %}
+            started playing {{game}}
+          {% else %}
+            {{action}}
+          {% endif %}
