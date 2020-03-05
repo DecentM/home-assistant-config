@@ -1,0 +1,6 @@
+type: entities
+title: Speak Steam friend state changes
+show_header_toggle: false
+
+entities:
+  - automation.speak_when_a_steam_friend_plays_a_game
