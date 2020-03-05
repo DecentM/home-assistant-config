@@ -16,7 +16,7 @@ scrape () {
   if [ -z "$URL" ] || [ "$URL" == "help" ] || [ "$URL" == "--help" ] || [ -z "$QUERY" ]; then
     printf "Usage: %s %s %s %s\n\n" "$0" "<URL>" "<query>" "[debug]"
     printf "\tURL must be an accessible URL that return HTML.\n"
-    printf "\tQuery must be a pup query that return text.\n"
+    printf "\tQuery must be a pup query that returns text or json.\n"
     exit 1
   fi
 

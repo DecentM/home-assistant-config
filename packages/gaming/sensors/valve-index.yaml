@@ -1,6 +1,17 @@
 - platform: command_line
   name: Valve Index buy now button on Steam store
-  command: bash /config/shell_scripts/web-scrape.sh https://store.steampowered.com/valveindex '.game_purchase_action text{}'
+  command: bash /config/shell_scripts/web-scrape.sh https://store.steampowered.com/valveindex '.game_purchase_action span json{}'
   command_timeout: 30
   scan_interval: 150 # = 2.5 minutes
-  value_template: "{{value}}"
+  value_template: >
+    {% for node in value_json %}
+      {% if node.text %}
+        {{node.text}}
+      {% elif node.children %}
+          {% for node in node.children %}
+            {% if node.text %}
+              {{node.text}}
+            {% endif %}
+          {% endfor %}
+      {% endif %}
+    {% endfor %}
