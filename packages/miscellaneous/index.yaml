@@ -7,6 +7,10 @@ browser_mod:
 
 sensor: !include_dir_merge_list sensors
 
+shell_command:
+  web_scrape: >
+    bash /config/shell_scripts/web-scrape.sh {{url}} {{query}}
+
 tts:
 - platform: amazon_polly
   aws_access_key_id: !secret polly_key_id
