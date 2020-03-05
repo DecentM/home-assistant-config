@@ -1,0 +1,28 @@
+- alias: Notify - When COVID-19 data changes
+  trigger:
+    - platform: state
+      entity_id: !secret sensor_country1_coronavirus_current
+    - platform: state
+      entity_id: !secret sensor_country1_coronavirus_recovered
+    - platform: state
+      entity_id: !secret sensor_country1_coronavirus_confirmed
+    - platform: state
+      entity_id: !secret sensor_country1_coronavirus_deaths
+
+    - platform: state
+      entity_id: !secret sensor_country2_coronavirus_current
+    - platform: state
+      entity_id: !secret sensor_country2_coronavirus_recovered
+    - platform: state
+      entity_id: !secret sensor_country2_coronavirus_confirmed
+    - platform: state
+      entity_id: !secret sensor_country2_coronavirus_deaths
+  action:
+    - service: script.automate_notify
+      data_template:
+        title: COVID-19 data updated
+        message: >
+          {% set change = "up" if trigger.from_state.state < trigger.to_state.state else "down" %}
+
+          {{state_attr(trigger.entity_id, 'friendly_name')}} went {{change}} from
+          {{trigger.from_state.state}} to {{trigger.to_state.state}}
