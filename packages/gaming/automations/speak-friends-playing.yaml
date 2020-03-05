@@ -8,11 +8,18 @@
         entity_id: media_player.huawei_cam
         message: >
           {% set game = trigger.to_state.attributes.game %}
-          {% set action = "came online" if trigger.to_state.state == "online" else "has gone offline" %}
+
+          {% if trigger.to_state.state == "online" %}
+            {% set action = "came online" %}
+          {% elif trigger.to_state.state == "offline" %}
+            {% set action = "has gone offline" %}
+          {% endif %}
 
           {{state_attr(trigger.entity_id, 'friendly_name')}}
           {% if game %}
             started playing {{game}}
-          {% else %}
+          {% elif action %}
             {{action}}
+          {% else %}
+            changed from {{trigger.from_state.state}} to {{trigger.to_state.state}}
           {% endif %}
