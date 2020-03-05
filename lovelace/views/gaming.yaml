@@ -6,3 +6,5 @@ title: Gaming
 cards:
   - !include cards/gaming/revelation-players.yaml
   - !include cards/gaming/revelation-ping.yaml
+  - !include cards/gaming/online-steam-friends.yaml
+  - !include cards/gaming/offline-steam-friends.yaml

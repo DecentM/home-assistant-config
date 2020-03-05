@@ -1,0 +1,11 @@
+type: custom:auto-entities
+card:
+  type: entities
+  title: Online Steam friends
+  show_header_toggle: false
+
+filter:
+  include:
+    - entity_id: sensor.steam_*
+      not:
+        state: offline
