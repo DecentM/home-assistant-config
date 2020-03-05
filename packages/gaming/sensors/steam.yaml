@@ -1,4 +1,3 @@
-sensor:
-  - platform: steam_online
-    api_key: !secret steam_web_api_key
-    accounts: !secret steam_accounts
+- platform: steam_online
+  api_key: !secret steam_web_api_key
+  accounts: !secret steam_accounts
