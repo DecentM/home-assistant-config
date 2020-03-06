@@ -1,0 +1,11 @@
+- alias: Speak - When minecraft server player count changes
+  trigger:
+    - platform: state
+      entity_id: sensor.ftb_revelation_server_players_online
+  action:
+    - service: tts.amazon_polly_say
+      data_template:
+        entity_id: media_player.huawei_cam
+        message: >
+          FTB server player count changed from {{trigger.from_state.state}} to
+          {{trigger.to_state.state}}
