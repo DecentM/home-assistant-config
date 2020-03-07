@@ -11,7 +11,7 @@
       entity_id: >
         {{states('input_select.remote_binding_1')}}
 
-- alias: Light switches - Remote 1, up button
+- alias: Light switches - Remote 1, up button short press
   trigger:
     platform: event
     event_type: deconz_event
@@ -29,8 +29,24 @@
         {% else %}
           25
         {% endif %}
+      transition: 0.33333
 
-- alias: Light switches - Remote 1, down button
+- alias: Light switches - Remote 1, up button hold
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_1
+      event: 2001
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: >
+        {{states('input_select.remote_binding_1')}}
+      brightness: 254
+      transition: 0.66667
+
+- alias: Light switches - Remote 1, down button short press
   trigger:
     platform: event
     event_type: deconz_event
@@ -48,6 +64,22 @@
         {% else %}
           220
         {% endif %}
+      transition: 0.33333
+
+- alias: Light switches - Remote 1, down button hold
+  trigger:
+    platform: event
+    event_type: deconz_event
+    event_data:
+      id: remote_1
+      event: 3001
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: >
+        {{states('input_select.remote_binding_1')}}
+      brightness: 20
+      transition: 0.66667
 
 - alias: Light switches - Remote 1, left button
   trigger:
