@@ -48,3 +48,11 @@ google_assistant:
   project_id: !secret google_project_id
   service_account: !include ../../google-service-account.json
   report_state: true
+
+transmission:
+  name: Transmission
+  scan_interval: 60
+  host: !secret transmission_host
+  port: !secret transmission_port
+  username: !secret transmission_username
+  password: !secret transmission_password
