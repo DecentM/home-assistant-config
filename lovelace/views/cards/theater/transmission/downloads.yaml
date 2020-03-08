@@ -1,0 +1,21 @@
+type: custom:mini-graph-card
+name: Transmission downloads
+animate: true
+
+show:
+  average: true
+  extrema: true
+
+entities:
+  - entity: sensor.transmission_active_torrents
+    name: Active
+    show_state: true
+  - entity: sensor.transmission_completed_torrents
+    name: Completed
+    show_state: true
+  - entity: sensor.transmission_paused_torrents
+    name: Paused
+    show_state: true
+  - entity: sensor.transmission_started_torrents
+    name: started
+    show_state: true
