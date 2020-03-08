@@ -2,6 +2,10 @@
   trigger:
     - platform: state
       entity_id: sensor.ftb_revelation_server_players_online
+  condition:
+    - condition: template
+      value_template: >
+        {{trigger.from_state.state != trigger.to_state.state}}
   action:
     - service: tts.amazon_polly_say
       data_template:
