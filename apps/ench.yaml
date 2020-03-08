@@ -1,7 +1,0 @@
-module: ench
-class: EnCh
-notify: script.automate_notify
-battery:
-  min_level: 15
-stale:
-  max_stale_min: 60
