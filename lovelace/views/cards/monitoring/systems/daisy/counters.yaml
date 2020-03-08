@@ -1,8 +1,8 @@
 - type: custom:auto-entities
   card:
+    name: Container count
     type: custom:mini-graph-card
     style: !include ../../styles/mini-graph.yaml
-    name: Container count
     animate: true
     points_per_hour: 4
     hours_to_show: 6
@@ -15,16 +15,19 @@
     include:
       - entity_id: sensor.daisy_containers_active*
 
-- type: 'custom:mini-graph-card'
-  style: !include ../../styles/mini-graph.yaml
-  name: Thread count
-  animate: true
-  points_per_hour: 4
-  hours_to_show: 6
+- type: custom:auto-entities
+  card:
+    name: Thread count
+    type: custom:mini-graph-card
+    style: !include ../../styles/mini-graph.yaml
+    animate: true
+    points_per_hour: 4
+    hours_to_show: 6
 
-  show:
-    average: true
-    extrema: true
+    show:
+      average: true
+      extrema: true
 
-  entities:
-    - entity: sensor.daisy_thread
+  filter:
+    include:
+      - entity_id: sensor.daisy_thread*
