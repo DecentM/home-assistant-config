@@ -11,5 +11,17 @@
       data_template:
         entity_id: media_player.huawei_cam
         message: >
-          FTB server player count changed from {{trigger.from_state.state}} to
-          {{trigger.to_state.state}}
+          {% set from = trigger.from_state.attributes.players_list or [] %}
+          {% set to = trigger.to_state.attributes.players_list or [] %}
+
+          {% for player in to %}
+            {% if player not in from %}
+              {{player}} has joined FTB
+            {% endif %}
+          {% endfor %}
+
+          {% for player in from %}
+            {% if player not in to %}
+              {{player}} has left FTB
+            {% endif %}
+          {% endfor %}
