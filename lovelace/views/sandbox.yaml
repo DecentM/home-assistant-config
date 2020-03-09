@@ -1,17 +1,10 @@
 icon: 'mdi:shovel'
-panel: true
+panel: false
 path: sandbox
 title: Sandbox
 
 cards:
-  - type: horizontal-stack
-    cards:
-      - !include cards/picture/unsplash/dark_and_moody.yaml
-
-      - type: vertical-stack
-        cards:
-          - type: custom:gui-sandbox
-          - !include cards/dynamic/low-battery-devices.yaml
-          - !include cards/dynamic/any-battery-devices.yaml
-
-      - !include cards/dynamic/unknown-state.yaml
+  - type: custom:gui-sandbox
+  - !include cards/dynamic/low-battery-devices.yaml
+  - !include cards/dynamic/any-battery-devices.yaml
+  - !include cards/dynamic/unknown-state.yaml
