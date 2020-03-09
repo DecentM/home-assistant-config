@@ -1,4 +1,4 @@
-- alias: Slow down Transmission when someone's on the server
+- alias: QOS - Slow down Transmission when someone's on the server
   trigger:
     - platform: template
       value_template: >
@@ -7,9 +7,13 @@
     - service: switch.turn_on
       data:
         entity_id: switch.transmission_turtle_mode
-    - wait_template: >
+
+- alias: QOS - Speed transmission back up when no one's on the server
+  trigger:
+    - platform: template
+      value_template: >
         {{states('sensor.ftb_revelation_server_players_online') | int == 0}}
-      timeout: '12:00:00'
+  action:
     - service: switch.turn_off
       data:
         entity_id: switch.transmission_turtle_mode
