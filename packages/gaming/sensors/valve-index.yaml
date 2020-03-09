@@ -2,7 +2,7 @@
   name: Valve Index buy now button on Steam store
   command: bash /config/shell_scripts/web-scrape.sh https://store.steampowered.com/valveindex '.btn_addtocart span > span text{}'
   command_timeout: 30
-  scan_interval: 15 # seconds
+  scan_interval: 300 # seconds
   value_template: Use attribute "value"
   json_attributes:
     - value
