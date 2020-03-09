@@ -1,0 +1,15 @@
+- alias: Notify - When package shipment information changes
+  trigger:
+    - platform: state
+      entity_id: sensor.aftership
+  action:
+    - service: script.automate_notify
+      data_template:
+        title: Shipment tracking changed
+        message: >
+          {% for tracking in state_attr('sensor.aftership', 'trackings') %}
+            {{tracking.name}}
+            Location: {{tracking.last_checkpoint.location}}
+            Message: {{tracking.last_checkpoint.message}}
+
+          {% endfor %}
