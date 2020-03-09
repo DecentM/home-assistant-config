@@ -1,0 +1,4 @@
+type: custom:vertical-stack-in-card
+cards:
+  - !include weather-forecast.yaml
+  - !include simple-weather.yaml

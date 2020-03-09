@@ -20,5 +20,5 @@ cards:
   - !include cards/roomba/roomba-entity.yaml
   - !include cards/environment/outside.yaml
   - !include cards/lights/tiny-dashboard-screen.yaml
-  - !include cards/environment/weather-large.yaml
+  - !include cards/environment/weather-small.yaml
   - !include cards/environment/package-tracking.yaml

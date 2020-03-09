@@ -1,0 +1,6 @@
+type: custom:simple-weather-card
+entity: weather.dark_sky
+name: Weather
+
+backdrop:
+  fade: true
