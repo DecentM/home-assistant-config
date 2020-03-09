@@ -8,7 +8,9 @@ light:
 
 circadian_lighting:
   min_colortemp: 2500
-  max_colortemp: 4500
+  max_colortemp: 3500
+  transition: 5
+  interval: 60
 
 switch:
   - platform: circadian_lighting
