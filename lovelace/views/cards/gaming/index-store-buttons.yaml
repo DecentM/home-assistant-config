@@ -1,0 +1,6 @@
+type: markdown
+title: Valve Index store page - buttons
+content: >
+  **Buttons**: {{state_attr('sensor.valve_index_buy_now_button_on_steam_store', 'value')}}
+
+  **Last changed**: {{relative_time(states.sensor.valve_index_buy_now_button_on_steam_store.last_updated)}} ago

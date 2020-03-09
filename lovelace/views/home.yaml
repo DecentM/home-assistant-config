@@ -8,6 +8,8 @@ badges:
   - binary_sensor.updater
 
 cards:
+  - !include cards/gaming/index-store-buttons.yaml
+
   - !include cards/environment/weather-active-warnings.yaml
   - !include cards/environment/weather-banner.yaml
   - !include cards/lights/toggle-colourful.yaml
