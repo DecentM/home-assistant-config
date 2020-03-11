@@ -6,27 +6,6 @@ light:
       - light.kitchen_ceiling_b
       - light.kitchen_ceiling_c
 
-circadian_lighting:
-  min_colortemp: 2500
-  max_colortemp: 3500
-  transition: 5
-  interval: 60
-
-switch:
-  - platform: circadian_lighting
-    disable_brightness_adjust: true
-    lights_ct:
-      - light.kitchen_ceiling_a
-      - light.kitchen_ceiling_b
-      - light.kitchen_ceiling_c
-    lights_rgb:
-      - light.living_room_ceiling
-      - light.bedroom_ceiling
-    lights_brightness:
-      - light.kitchen_wall
-      - light.bathroom_ceiling
-      - light.hall_ceiling
-
 automation: !include_dir_merge_list automations
 input_select: !include_dir_named input_selects
 script: !include_dir_named scripts
