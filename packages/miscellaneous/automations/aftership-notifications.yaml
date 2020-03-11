@@ -8,7 +8,7 @@
         title: Shipment tracking changed
         message: >
           {% for tracking in state_attr('sensor.aftership', 'trackings') %}
-            {{tracking.name}}
+          {{tracking.name}}
             Location: {{tracking.last_checkpoint.location}}
             Message: {{tracking.last_checkpoint.message}}
 
