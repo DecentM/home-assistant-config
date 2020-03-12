@@ -40,3 +40,5 @@ mobile_app:
 
 lovelace:
   mode: yaml
+
+lovelace_gen:
