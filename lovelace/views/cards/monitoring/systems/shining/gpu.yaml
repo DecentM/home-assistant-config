@@ -1,55 +1,25 @@
-- type: 'custom:mini-graph-card'
-  style: !include ../../styles/mini-graph.yaml
-  name: GPU load
-  animate: true
-  points_per_hour: 4
-  hours_to_show: 6
+# lovelace_gen
 
-  show:
-    average: true
-    extrema: true
+- !include
+  - ../../../../macros/graph.yaml
+  - name: GPU load
+    include:
+      - sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_load_gpu_core
 
-  entities:
-    - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_load_gpu_core
+- !include
+  - ../../../../macros/graph.yaml
+  - name: GPU temperature
+    include:
+      - sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_temperatures_gpu_core
 
-- type: 'custom:mini-graph-card'
-  style: !include ../../styles/mini-graph.yaml
-  name: GPU temperature
-  animate: true
-  points_per_hour: 4
-  hours_to_show: 6
+- !include
+  - ../../../../macros/graph.yaml
+  - name: GPU memory used
+    include:
+      - sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_load_gpu_memory
 
-  show:
-    average: true
-    extrema: true
-
-  entities:
-    - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_temperatures_gpu_core
-
-- type: 'custom:mini-graph-card'
-  style: !include ../../styles/mini-graph.yaml
-  name: GPU memory used
-  animate: true
-  points_per_hour: 4
-  hours_to_show: 6
-
-  show:
-    average: true
-    extrema: true
-
-  entities:
-    - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_load_gpu_memory
-
-- type: 'custom:mini-graph-card'
-  style: !include ../../styles/mini-graph.yaml
-  name: GPU clock
-  animate: true
-  points_per_hour: 4
-  hours_to_show: 6
-
-  show:
-    average: true
-    extrema: true
-
-  entities:
-    - entity: sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_clocks_gpu_core
+- !include
+  - ../../../../macros/graph.yaml
+  - name: GPU clock
+    include:
+      - sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_clocks_gpu_core

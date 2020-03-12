@@ -1,67 +1,25 @@
-- type: custom:auto-entities
-  card:
-    name: System load
-    type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
-    animate: true
-    points_per_hour: 4
-    hours_to_show: 6
+# lovelace_gen
 
-    show:
-      average: true
-      extrema: true
-
-  filter:
+- !include
+  - ../../../../macros/graph.yaml
+  - name: System load
     include:
-      - entity_id: sensor.pinkie_cpu_load*
+      - sensor.pinkie_cpu_load*
 
-- type: custom:auto-entities
-  card:
-    name: Disk usage
-    type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
-    animate: true
-    points_per_hour: 4
-    hours_to_show: 6
-
-    show:
-      average: true
-      extrema: true
-
-  filter:
+- !include
+  - ../../../../macros/graph.yaml
+  - name: Disk usage
     include:
-      - entity_id: sensor.pinkie_etc_hostname_used_percent*
+      - sensor.pinkie_etc_hostname_used_percent*
 
-- type: custom:auto-entities
-  card:
-    name: CPU used
-    type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
-    animate: true
-    points_per_hour: 4
-    hours_to_show: 6
-
-    show:
-      average: true
-      extrema: true
-
-  filter:
+- !include
+  - ../../../../macros/graph.yaml
+  - name: CPU used
     include:
-      - entity_id: sensor.pinkie_cpu_used*
+      - sensor.pinkie_cpu_used*
 
-- type: custom:auto-entities
-  card:
-    name: RAM used
-    type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
-    animate: true
-    points_per_hour: 4
-    hours_to_show: 6
-
-    show:
-      average: true
-      extrema: true
-
-  filter:
+- !include
+  - ../../../../macros/graph.yaml
+  - name: RAM used
     include:
-      - entity_id: sensor.pinkie_ram_used_percent*
+      - sensor.pinkie_ram_used_percent*
