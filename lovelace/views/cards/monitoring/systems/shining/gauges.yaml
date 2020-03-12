@@ -3,18 +3,22 @@
 - !include
   - ../../../../macros/graph.yaml
   - name: System load
+    show_average: false
     include:
       - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_total
 
 - !include
   - ../../../../macros/graph.yaml
   - name: Disk usage
+    show_average: false
     include:
       - sensor.decentm_vm_wind_p_load_used_space
 
 - !include
   - ../../../../macros/graph.yaml
   - name: CPU used
+    show_legend: false
+    show_average: false
     include:
       - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_1
       - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_2
@@ -28,5 +32,6 @@
 - !include
   - ../../../../macros/graph.yaml
   - name: RAM used
+    show_average: false
     include:
       - sensor.decentm_vm_wind_generic_memory_load_memory

@@ -11,8 +11,9 @@ card:
 
   animate: true
   show:
-    average: true
+    average: {{show_average | default(true)}}
     extrema: true
+    legend: {{show_legend | default(true)}}
 
 {% if include %}
 filter:

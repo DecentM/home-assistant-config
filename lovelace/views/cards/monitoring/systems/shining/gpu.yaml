@@ -3,18 +3,21 @@
 - !include
   - ../../../../macros/graph.yaml
   - name: GPU load
+    show_average: false
     include:
       - sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_load_gpu_core
 
 - !include
   - ../../../../macros/graph.yaml
   - name: GPU temperature
+    show_average: false
     include:
       - sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_temperatures_gpu_core
 
 - !include
   - ../../../../macros/graph.yaml
   - name: GPU memory used
+    show_average: false
     include:
       - sensor.decentm_vm_wind_nvidia_geforce_rtx_2080_ti_load_gpu_memory
 
