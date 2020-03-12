@@ -1,66 +1,31 @@
-- type: 'custom:mini-graph-card'
-  style: !include ../../styles/mini-graph.yaml
-  name: System load
-  animate: true
-  points_per_hour: 4
-  hours_to_show: 6
+# lovelace_gen
 
-  show:
-    average: true
-    extrema: true
-
-  entities:
-    - entity: sensor.load_15m
-      name: 15m
-      show_state: true
-
-- type: custom:auto-entities
-  card:
-    name: Disk usage
-    type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
-    animate: true
-    points_per_hour: 4
-    hours_to_show: 6
-
-    show:
-      average: true
-      extrema: true
-
-  filter:
+- !include
+  - ../../../../macros/graph.yaml
+  - name: Container count
     include:
-      - entity_id: sensor.daisy_etc_hostname_used_percent*
+      - sensor.daisy_containers_active*
 
-- type: custom:auto-entities
-  card:
-    name: CPU used
-    type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
-    animate: true
-    points_per_hour: 4
-    hours_to_show: 6
-
-    show:
-      average: true
-      extrema: true
-
-  filter:
+- !include
+  - ../../../../macros/graph.yaml
+  - name: System load
     include:
-      - entity_id: sensor.daisy_cpu_used*
+      - sensor.daisy_cpu_load*
 
-- type: custom:auto-entities
-  card:
-    name: RAM used
-    type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
-    animate: true
-    points_per_hour: 4
-    hours_to_show: 6
-
-    show:
-      average: true
-      extrema: true
-
-  filter:
+- !include
+  - ../../../../macros/graph.yaml
+  - name: Disk usage
     include:
-      - entity_id: sensor.daisy_ram_used_percent*
+      - sensor.daisy_etc_hostname_used_percent*
+
+- !include
+  - ../../../../macros/graph.yaml
+  - name: CPU used
+    include:
+      - sensor.daisy_cpu_used*
+
+- !include
+  - ../../../../macros/graph.yaml
+  - name: RAM used
+    include:
+      - sensor.daisy_ram_used_percent*

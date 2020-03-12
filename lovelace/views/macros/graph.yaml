@@ -14,8 +14,17 @@ card:
     average: true
     extrema: true
 
+{% if include %}
 filter:
   include:
 {% for entity in include %}
     - entity_id: {{entity}}
 {% endfor %}
+{% endif %}
+
+{% if entities %}
+entities:
+{% for entity in entities %}
+  - {{entity}}
+{% endfor %}
+{% endif %}
