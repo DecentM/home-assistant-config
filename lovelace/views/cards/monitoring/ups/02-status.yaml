@@ -1,0 +1,32 @@
+- type: vertical-stack
+  cards:
+    - type: 'entities'
+      entities:
+        - entity: sensor.ups_beeper_status
+          name: Beeper
+        - entity: sensor.ups_status
+          name: Status
+
+    - type: horizontal-stack
+      cards:
+        - type: gauge
+          entity: sensor.ups_battery_charge
+          max: 100
+          min: 0
+          name: Charge
+          severity:
+            green: 100
+            red: 20
+            yellow: 35
+          theme: default
+
+        - type: gauge
+          entity: sensor.ups_battery_runtime_minutes
+          max: 50
+          min: 10 # Systems start shutting down at this mark
+          name: Battery runtime
+          severity:
+            green: 40
+            yellow: 20
+            red: 10
+          theme: default

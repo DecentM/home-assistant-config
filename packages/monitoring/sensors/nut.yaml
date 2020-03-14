@@ -25,6 +25,7 @@
     - ups.productid
     - ups.serial
     - ups.status
+    - ups.status.display
     - ups.timer.shutdown
     - ups.timer.start
     - ups.vendorid
