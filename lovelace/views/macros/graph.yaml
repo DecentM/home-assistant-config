@@ -22,10 +22,3 @@ filter:
     - entity_id: {{entity}}
 {% endfor %}
 {% endif %}
-
-{% if entities %}
-entities:
-{% for entity in entities %}
-  - {{entity}}
-{% endfor %}
-{% endif %}

@@ -1,0 +1,8 @@
+# lovelace_gen
+
+- !include
+  - ../../../macros/graph.yaml
+  - name: Charge
+    include:
+      - sensor.ups_battery_charge
+      - sensor.ups_battery_runtime_minutes

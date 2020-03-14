@@ -3,15 +3,10 @@ panel: true
 path: monitoring
 title: Monitoring
 
-badges:
-  - device_tracker.miner
-  - device_tracker.starlight
-  - device_tracker.cadance
-  - device_tracker.daisy
-
 cards:
   - type: vertical-stack
     cards:
+      - !include cards/monitoring/ups.yaml
       - !include cards/monitoring/cloud-services.yaml
       - !include cards/monitoring/daisy.yaml
       - !include cards/monitoring/pinkie.yaml

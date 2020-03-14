@@ -1,0 +1,8 @@
+# lovelace_gen
+
+- !include
+  - ../../../macros/graph.yaml
+  - name: Power transfer
+    include:
+      - sensor.ups_high_voltage_transfer
+      - sensor.ups_low_voltage_transfer

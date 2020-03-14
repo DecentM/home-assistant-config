@@ -28,3 +28,11 @@
     - ups.timer.shutdown
     - ups.timer.start
     - ups.vendorid
+
+- platform: template
+  sensors:
+    ups_battery_runtime_minutes:
+      friendly_name: UPS battery runtime
+      unit_of_measurement: m
+      value_template: >
+        {{(states('sensor.ups_battery_runtime') | int / 60) | round}}
