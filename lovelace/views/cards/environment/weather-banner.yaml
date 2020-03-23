@@ -11,6 +11,6 @@ conditions:
 card:
   type: markdown
   content: >
-    **{{states('sensor.accuweather_banner_top')}}** ({{relative_time(states.sensor.accuweather_banner_top.last_updated)}} ago)
+    **{{states('sensor.accuweather_banner_top')}}** ({{relative_time(state_attr('sensor.accuweather_banner_top', 'last_updated'))}} ago)
 
     {{states('sensor.accuweather_banner_middle')}}
