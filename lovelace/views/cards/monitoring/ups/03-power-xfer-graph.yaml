@@ -2,7 +2,7 @@
   card:
     name: Power transfer
     type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
+    style: !include ../styles/mini-graph.yaml
     animate: true
     points_per_hour: 4
     hours_to_show: 6
