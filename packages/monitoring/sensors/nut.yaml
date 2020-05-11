@@ -17,18 +17,12 @@
     - ups.beeper.status
     - ups.delay.shutdown
     - ups.delay.start
-    - ups.firmware
     - ups.load
-    - ups.mfr
-    - ups.model
     - ups.power.nominal
-    - ups.productid
-    - ups.serial
     - ups.status
     - ups.status.display
     - ups.timer.shutdown
     - ups.timer.start
-    - ups.vendorid
 
 - platform: template
   sensors:
