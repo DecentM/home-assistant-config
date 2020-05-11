@@ -1,8 +1,17 @@
-# lovelace_gen
+- type: custom:auto-entities
+  card:
+    name: Power transfer
+    type: custom:mini-graph-card
+    style: !include ../../styles/mini-graph.yaml
+    animate: true
+    points_per_hour: 4
+    hours_to_show: 6
 
-- !include
-  - ../../../macros/graph.yaml
-  - name: Power transfer
+    show:
+      average: true
+      extrema: true
+
+  filter:
     include:
-      - sensor.ups_high_voltage_transfer
-      - sensor.ups_low_voltage_transfer
+      - entity_id: sensor.ups_high_voltage_transfer
+      - entity_id: sensor.ups_low_voltage_transfer
