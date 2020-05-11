@@ -1,4 +1,0 @@
-|
-  ha-card {
-    border-radius: var(--ha-card-border-radius) !important;
-  }

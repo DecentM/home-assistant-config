@@ -1,13 +1,33 @@
-# lovelace_gen
+- type: custom:auto-entities
+  card:
+    name: Container count
+    type: custom:mini-graph-card
+    style: !include ../../styles/mini-graph.yaml
+    animate: true
+    points_per_hour: 4
+    hours_to_show: 6
 
-- !include
-  - ../../../../macros/graph.yaml
-  - name: Container count
-    include:
-      - sensor.daisy_containers_active*
+    show:
+      average: true
+      extrema: true
 
-- !include
-  - ../../../../macros/graph.yaml
-  - name: Thread count
+  filter:
     include:
-      - sensor.daisy_thread*
+      - entity_id: sensor.daisy_containers_active*
+
+- type: custom:auto-entities
+  card:
+    name: Thread count
+    type: custom:mini-graph-card
+    style: !include ../../styles/mini-graph.yaml
+    animate: true
+    points_per_hour: 4
+    hours_to_show: 6
+
+    show:
+      average: true
+      extrema: true
+
+  filter:
+    include:
+      - entity_id: sensor.daisy_thread*
