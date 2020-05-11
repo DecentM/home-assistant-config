@@ -1,37 +1,63 @@
-# lovelace_gen
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: System load
+  animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
-- !include
-  - ../../../../macros/graph.yaml
-  - name: System load
-    show_average: false
-    include:
-      - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_total
+  show:
+    average: true
+    extrema: true
 
-- !include
-  - ../../../../macros/graph.yaml
-  - name: Disk usage
-    show_average: false
-    include:
-      - sensor.decentm_vm_wind_p_load_used_space
+  entities:
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_total
 
-- !include
-  - ../../../../macros/graph.yaml
-  - name: CPU used
-    show_legend: false
-    show_average: false
-    include:
-      - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_1
-      - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_2
-      - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_3
-      - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_4
-      - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_5
-      - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_6
-      - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_7
-      - sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_8
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: Disk usage
+  animate: true
+  points_per_hour: 4
+  hours_to_show: 6
 
-- !include
-  - ../../../../macros/graph.yaml
-  - name: RAM used
-    show_average: false
-    include:
-      - sensor.decentm_vm_wind_generic_memory_load_memory
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.decentm_vm_wind_p_load_used_space
+
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: CPU used
+  animate: true
+  points_per_hour: 4
+  hours_to_show: 6
+
+  show:
+    average: true
+    extrema: true
+    legend: false
+
+  entities:
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_1
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_2
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_3
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_4
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_5
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_6
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_7
+    - entity: sensor.decentm_vm_wind_intel_core_i7_8700_load_cpu_core_8
+
+- type: 'custom:mini-graph-card'
+  style: !include ../../styles/mini-graph.yaml
+  name: RAM used
+  animate: true
+  points_per_hour: 4
+  hours_to_show: 6
+
+  show:
+    average: true
+    extrema: true
+
+  entities:
+    - entity: sensor.decentm_vm_wind_generic_memory_load_memory

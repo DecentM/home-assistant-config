@@ -2,6 +2,12 @@
 
 - !include
   - ../../../../macros/graph.yaml
+  - name: Container count
+    include:
+      - sensor.daisy_containers_active*
+
+- !include
+  - ../../../../macros/graph.yaml
   - name: System load
     include:
       - sensor.daisy_cpu_load*
