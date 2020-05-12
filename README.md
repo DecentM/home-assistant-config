@@ -28,27 +28,26 @@ useful!
 
 Description | value
 -- | --
-Automations | 47
-Binary sensors | 7
+Automations | 55
+Binary sensors | 9
 Cameras | 3
-Tracked devices | 17
+Tracked devices | 20
 Boolean inputs | 2
 Lights | 12
-Media players | 10
-Sensors | 222
+Media players | 9
+Sensors | 206
 Custom variables | 0
 
 
 ## Custom components I use:
 
-- [Healthchecks.io](https://github.com/custom-components/healthchecksio)
-- [Trakt](https://github.com/custom-components/sensor.trakt/blob/master/README.md)
-- [Unsplash](https://github.com/custom-components/unsplash)
 - [Generate readme](https://github.com/custom-components/readme)
+- [Unsplash](https://github.com/custom-components/unsplash)
 - [Browser mod]()
 - [Anniversaries](https://github.com/pinkywafer/Anniversaries)
-- [Circadian Lighting](https://github.com/claytonjn/hass-circadian_lighting)
-- [HACS (Home Assistant Community Store)](https://hacs.xyz)
+- [Healthchecks.io](https://github.com/custom-components/healthchecksio)
+- [HACS (Home Assistant Community Store)](https://hacs.xyz/docs/configuration/start)
+- [Trakt](https://github.com/custom-components/sensor.trakt/blob/master/README.md)
 
 ***
 
