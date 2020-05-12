@@ -40,5 +40,4 @@ mobile_app:
 
 lovelace:
   mode: yaml
-
-lovelace_gen:
+  resources: !include lovelace/resources.yaml
