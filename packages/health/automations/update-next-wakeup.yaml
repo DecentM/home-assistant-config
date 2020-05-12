@@ -1,4 +1,4 @@
-- alias: Update - Wake up sensor every minute
+- alias: Update - Wakeup sensor every minute
   trigger:
     - platform: time_pattern
       minutes: "/1"
