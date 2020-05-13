@@ -1,0 +1,44 @@
+description: >
+  Sends an SMS using your device.
+  Normal carrier rates apply, just like you'd send an SMS by hand.
+fields:
+  target:
+    description: >
+      A target to send the command to. This target will be used in
+      the service name, like this: myphone -> notify.automate_myphone
+    example: myphone
+  phone_number:
+    description: >
+      The phone number to send the SMS to
+    example: 01189998819991197253
+  subscription_id:
+    description: >
+      If given, use the given SIM card (starts at 1)
+    example: 1
+  message:
+    description: >
+      The body of the SMS message
+  hidden:
+    description: >
+      Whether or not to hide the outbound message from SMS applications (1/0,
+      default: 0)
+    example: 0
+  feedback_script:
+    description: >
+      Distinguisges this notification from others when the Automate fiber sends
+      feedback before stopping.
+    example: send_lock_status
+sequence:
+  - service_template: >
+      notify.automate_{{target | default(states('sensor.automate_phone_name'), true)}}
+    data_template:
+      message: >
+        {
+          "type": "sendSms",
+          "phoneNumber": "{{phone_number}}",
+          "subscriptionId": {{subscription_id | default(None) | tojson}},
+          "message": "{{message}}",
+          "hidden": {{hidden | default(0, true)}},
+          "feedbackScript": {{feedback_script | default(None) | tojson}},
+          "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
+        }

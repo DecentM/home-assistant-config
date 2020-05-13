@@ -1,4 +1,4 @@
-- alias: Automate - Receive feedback and route to service
+- alias: Automate - Receive feedback and route to script
   trigger:
     platform: webhook
     webhook_id: !secret automate_webhook_id

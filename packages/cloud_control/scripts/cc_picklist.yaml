@@ -1,0 +1,46 @@
+description: Show a list of options to choose from
+fields:
+  target:
+    description: >
+      A target to send the command to. This target will be used in
+      the service name, like this: myphone -> notify.automate_myphone
+    example: myphone
+  title:
+    description: The title of the notification
+    example: What to eat?
+  choices:
+    description: An array of strings the user can choose from (YAML or JSON format)
+    example: >
+      ["Apples", "Bananas", "Tomatoes"]
+  preselected:
+    description: An array of keys or indices that should be preselected (YAML or JSON format)
+    example: >
+      ["Apples", "Tomatoes"]
+  noselect:
+    description: >
+      Whether or not the dialog can be dismissed (1/0, default: 1)
+    example: 1
+  multiple:
+    description: >
+      Whether or not the user can select multiple items at once (1/0, default: 0)
+    example: 0
+  feedback_script:
+    description: >
+      Distinguisges this notification from others when the Automate fiber sends
+      feedback before stopping.
+    example: choose_roomba_response
+sequence:
+  - service_template: >
+      notify.automate_{{target | default(states('sensor.automate_phone_name'), true)}}
+    data_template:
+      message: >
+        {
+          "type": "picklist",
+          "title": "{{title | default('Choose an option...', true)}}",
+          "choices": {{choices | default('[]') | tojson}},
+          "noselect": {{noselect | default(1)}},
+          "multiple": {{multiple | default(0)}},
+          "preselected": {{preselected | default('[]') | tojson}},
+          "feedbackScript": {{feedback_script | default(None) | tojson}},
+          "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
+        }

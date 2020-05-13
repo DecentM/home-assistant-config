@@ -24,7 +24,7 @@ homeassistant:
     theater: !include packages/theater/index.yaml
     monitoring: !include packages/monitoring/index.yaml
     gaming: !include packages/gaming/index.yaml
-    phone: !include packages/phone/index.yaml
+    cloud_control: !include packages/cloud_control/index.yaml
     loop: !include packages/loop/index.yaml
 
   auth_mfa_modules:

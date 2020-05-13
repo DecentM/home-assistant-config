@@ -1,0 +1,22 @@
+description: Identify a device by playing the ringtone on max volume
+fields:
+  target:
+    description: >
+      A target to send the command to. This target will be used in
+      the service name, like this: myphone -> notify.automate_myphone
+    example: myphone
+  feedback_script:
+    description: >
+      Distinguisges this notification from others when the Automate fiber sends
+      feedback before stopping.
+    example: ring_before_area_leave
+sequence:
+  - service_template: >
+      notify.automate_{{target | default(states('sensor.automate_phone_name'), true)}}
+    data_template:
+      message: >
+        {
+          "type": "identify",
+          "feedbackScript": {{feedback_script | default(None) | tojson}},
+          "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
+        }

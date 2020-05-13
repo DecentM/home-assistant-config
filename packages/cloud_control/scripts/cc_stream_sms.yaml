@@ -1,22 +1,32 @@
-description: Lock a device
+description: Ask Cloud Control to upload the next SMS received to the webhook URL
 fields:
   target:
     description: >
       A target to send the command to. This target will be used in
       the service name, like this: myphone -> notify.automate_myphone
     example: myphone
+  phone_number:
+    description: >
+      If given, only upload the SMS if it arrives from this number
+  subscription_id:
+    description: >
+      If given, only upload the SMS if it arrives via the given SIM card index
+      (starts at 1)
+    example: 1
   feedback_script:
     description: >
       Distinguisges this notification from others when the Automate fiber sends
       feedback before stopping.
-    example: medication_reminder
+    example: read_sms_when_away
 sequence:
   - service_template: >
       notify.automate_{{target | default(states('sensor.automate_phone_name'), true)}}
     data_template:
       message: >
         {
-          "type": "lock",
-          "feedback_script": {{feedback_script | default(None) | tojson}},
+          "type": "streamSms",
+          "subscriptionId": {{subscription_id | default(None) | tojson}},
+          "phoneNumber": {{phone_number | default(None) | tojson}},
+          "feedbackScript": {{feedback_script | default(None) | tojson}},
           "webhookUrl": "{{states('sensor.automate_base_url')}}/api/webhook/{{states('sensor.automate_webhook_id')}}"
         }
