@@ -3,7 +3,7 @@
     - platform: state
       entity_id: sensor.aftership
   action:
-    - service: script.automate_notify
+    - service: script.cc_notification
       data_template:
         title: Shipment tracking changed
         message: >

@@ -11,7 +11,7 @@
     entity_id: input_number.roomba_dirty_runs
     above: 4
   action:
-  - service: script.automate_notify
+  - service: script.cc_notification
     data:
       icon: 61624
       title: Vacuuming
@@ -26,7 +26,7 @@
     to: 'on'
   condition: []
   action:
-  - service: script.automate_notify
+  - service: script.cc_notification
     data:
       icon: 61624
       title: Vacuuming
@@ -43,7 +43,7 @@
   action:
   - wait_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Charging'' }}'
     continue_on_timeout: false
-  - service: script.automate_notify
+  - service: script.cc_notification
     data:
       icon: 61624
       title: Vacuuming
@@ -60,7 +60,7 @@
   - condition: template
     value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''User Docking'' }}'
   action:
-  - service: script.automate_notify
+  - service: script.cc_notification
     data:
       icon: 61624
       title: Vacuuming
@@ -82,7 +82,7 @@
     - condition: template
       value_template: '{{ state_attr(''vacuum.roomba'', ''status'') == ''Stuck'' }}'
   action:
-  - service: script.automate_notify
+  - service: script.cc_notification
     data:
       icon: 61624
       title: Vacuuming

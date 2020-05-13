@@ -18,7 +18,7 @@
     - platform: state
       entity_id: !secret sensor_country2_coronavirus_deaths
   action:
-    - service: script.automate_notify
+    - service: script.cc_notification
       data_template:
         title: COVID-19 data updated
         message: >

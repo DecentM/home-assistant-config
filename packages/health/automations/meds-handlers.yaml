@@ -7,7 +7,7 @@
       entity_id: input_boolean.meds_taken
       state: 'off'
   action:
-    - service: script.automate_notify
+    - service: script.cc_notification
       data:
         feedback_script: ack_meds_taken
         title: Medication

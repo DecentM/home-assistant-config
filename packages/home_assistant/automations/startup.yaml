@@ -3,6 +3,6 @@
   - event: start
     platform: homeassistant
   action:
-  - service: script.automate_notify
+  - service: script.cc_notification
     data:
       message: Home Assistant startup complete

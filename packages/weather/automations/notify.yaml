@@ -11,7 +11,7 @@
     before: '10:30'
     condition: time
   action:
-  - service: script.automate_notify
+  - service: script.cc_notification
     data:
       message: "It is {{ state_attr(\"weather.dark_sky\", \"temperature\") }}C outside.\
         \  \n{% for  rainy_date in state_attr(\"weather.dark_sky\", \"forecast\")\
@@ -27,7 +27,7 @@
     to: 'on'
   condition: []
   action:
-  - service: script.automate_notify
+  - service: script.cc_notification
     data:
       title: Updater
       message: An update is available!
@@ -41,7 +41,7 @@
     - condition: template
       value_template: "{{states('sensor.accuweather_active_alert_left') != 'unknown'}}"
   action:
-    - service: script.automate_notify
+    - service: script.cc_notification
       data:
         message: >
           {{states.sensor.accuweather_active_alert_left.state}}
@@ -54,7 +54,7 @@
     - condition: template
       value_template: "{{states('sensor.accuweather_active_alert_right') != 'unknown'}}"
   action:
-    - service: script.automate_notify
+    - service: script.cc_notification
       data:
         message: >
           {{states.sensor.accuweather_active_alert_right.state}}
