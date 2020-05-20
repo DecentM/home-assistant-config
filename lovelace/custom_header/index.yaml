@@ -1,3 +1,0 @@
-hide_help: true
-hide_config: true
-exceptions: !include_dir_merge_list exceptions

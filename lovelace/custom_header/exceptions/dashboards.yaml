@@ -1,8 +1,0 @@
-- conditions:
-    user: Dashboards
-  config:
-    hide_header: true
-
-    default_tab: tiny-dashboard
-    show_tabs:
-      - tiny-dashboard

@@ -1,8 +1,0 @@
-- conditions:
-    user: Guest
-  config:
-    hide_header: true
-
-    default_tab: guest
-    show_tabs:
-      - guest

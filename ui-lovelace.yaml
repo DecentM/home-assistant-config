@@ -1,7 +1,5 @@
 title: Home
 
-custom_header: !include lovelace/custom_header/index.yaml
-
 views:
   - !include lovelace/views/home.yaml
   - !include lovelace/views/lights.yaml

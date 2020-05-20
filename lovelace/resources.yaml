@@ -4,8 +4,6 @@
   type: module
 - url: /hacsfiles/config-template-card/config-template-card.js
   type: module
-- url: /hacsfiles/custom-header/custom-header.js
-  type: module
 - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
   type: module
 - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
@@ -23,4 +21,6 @@
 - url: /hacsfiles/lovelace-gui-sandbox/gui-sandbox.js
   type: module
 - url: /hacsfiles/simple-weather-card/simple-weather-card-bundle.js
+  type: module
+- url: /hacsfiles/vacuum-card/vacuum-card.js
   type: module

@@ -1,5 +1,0 @@
-- conditions:
-    media_query: '(max-width: 1366px)'
-  config:
-    compact_mode: true
-    footer_mode: true
