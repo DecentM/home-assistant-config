@@ -1,0 +1,6 @@
+type: 'custom:vacuum-card'
+entity: vacuum.roomba
+image: default
+show_toolbar: true
+show_name: true
+compact_view: false

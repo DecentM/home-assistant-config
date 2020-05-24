@@ -10,6 +10,6 @@ cards:
       - !include cards/environment/weather-banner.yaml
       - !include cards/lights/toggle-colourful.yaml
       - !include cards/lights/toggle-fancy.yaml
-      - !include cards/roomba/roomba-entity.yaml
+      - !include cards/roomba/roomba-compact.yaml
       - !include cards/environment/weather-small.yaml
       - !include cards/picture/unsplash/winter.yaml
