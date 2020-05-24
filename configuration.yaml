@@ -47,9 +47,10 @@ lovelace:
   mode: yaml
   resources: !include lovelace/resources.yaml
   dashboards:
-    yaml-sandbox:
+    admin-view:
       mode: yaml
-      filename: ui-yaml-sandbox.yaml
-      title: YAML Sandbox
+      filename: ui-admin-view.yaml
+      title: Home (admin view)
       require_admin: true
       show_in_sidebar: true
+      icon: mdi:account-circle

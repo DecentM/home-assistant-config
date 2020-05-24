@@ -1,3 +1,0 @@
-title: Home (guest view)
-views:
-  - !include lovelace/views/guest.yaml
