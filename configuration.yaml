@@ -46,3 +46,10 @@ mobile_app:
 lovelace:
   mode: yaml
   resources: !include lovelace/resources.yaml
+  dashboards:
+    yaml-sandbox:
+      mode: yaml
+      filename: ui-yaml-sandbox.yaml
+      title: YAML Sandbox
+      require_admin: true
+      show_in_sidebar: true
