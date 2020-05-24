@@ -31,6 +31,11 @@ homeassistant:
     - type: totp
       name: Authenticator app
 
+hacs:
+  token: !secret hacs_github_token
+  appdaemon: true
+  netdaemon: true
+
 # Enables the frontend
 frontend:
   themes: !include_dir_merge_named themes
