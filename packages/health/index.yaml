@@ -15,3 +15,4 @@ logbook:
   exclude:
     entities:
       - automation.update_wake_up_sensor_every_minute
+      - sensor.next_wakeup
