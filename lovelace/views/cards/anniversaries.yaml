@@ -1,2 +1,13 @@
-type: entities
-entities: !secret anniversary_entities
+type: custom:auto-entities
+card:
+  type: entities
+
+filter:
+  include:
+    - entity_id: 'sensor.anniversary_*'
+
+sort:
+  method: state
+  reverse: true
+  ignore_case: true
+  count: 15
