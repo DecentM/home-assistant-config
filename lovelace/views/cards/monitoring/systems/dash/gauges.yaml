@@ -2,7 +2,7 @@
   card:
     name: System load
     type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
+    style: !include ../../styles/transparent.yaml
     animate: true
     points_per_hour: 4
     hours_to_show: 6
@@ -19,7 +19,7 @@
   card:
     name: Disk usage
     type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
+    style: !include ../../styles/transparent.yaml
     animate: true
     points_per_hour: 4
     hours_to_show: 6
@@ -36,7 +36,7 @@
   card:
     name: CPU used
     type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
+    style: !include ../../styles/transparent.yaml
     animate: true
     points_per_hour: 4
     hours_to_show: 6
@@ -53,7 +53,7 @@
   card:
     name: RAM used
     type: custom:mini-graph-card
-    style: !include ../../styles/mini-graph.yaml
+    style: !include ../../styles/transparent.yaml
     animate: true
     points_per_hour: 4
     hours_to_show: 6
