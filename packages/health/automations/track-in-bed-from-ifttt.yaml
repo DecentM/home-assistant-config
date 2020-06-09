@@ -1,0 +1,13 @@
+- alias: Switch - Update in-bed switch from IFTTT
+  trigger:
+  - event_data:
+      action: sleep_status_update
+    event_type: ifttt_webhook_received
+    platform: event
+  condition: []
+  action:
+  - service_template: >
+      switch.turn_{{ trigger.event.data.state }}
+    data:
+      entity_id: light.all_lights
+      transition: 5

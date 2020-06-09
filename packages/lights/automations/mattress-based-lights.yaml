@@ -1,9 +1,9 @@
 - alias: Lights - Turn all lights off when I get in bed
   trigger:
-  - event_data:
-      action: sleep_status_on
-    event_type: ifttt_webhook_received
-    platform: event
+    - platform: state
+      entity_id: switch.in_bed
+      from: off
+      to: on
   condition: []
   action:
   - service: light.turn_off
@@ -13,10 +13,10 @@
 
 - alias: Lights - Turn some lights on when I get ouf of bed in the dark
   trigger:
-  - event_data:
-      action: sleep_status_off
-    event_type: ifttt_webhook_received
-    platform: event
+  - platform: state
+    entity_id: switch.in_bed
+    from: on
+    to: off
   condition:
   - condition: state
     entity_id: sun.sun
