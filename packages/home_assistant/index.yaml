@@ -9,16 +9,11 @@ stream:
 
 system_health:
 
-# Enable generating a readme file
-readme:
-
 recorder:
   db_url: !secret postgres_url
   purge_keep_days: 7
 
 http:
-  # Need to define URL as HA is running behind a reverse proxy
-  base_url: !secret http_base_url
   trusted_proxies: !secret trusted_proxies
   use_x_forwarded_for: !secret use_x_forwarded_for
 

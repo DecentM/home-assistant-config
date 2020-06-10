@@ -22,3 +22,5 @@
   type: module
 - url: /hacsfiles/vacuum-card/vacuum-card.js
   type: module
+- url: /hacsfiles/config-template-card/config-template-card.js
+  type: module

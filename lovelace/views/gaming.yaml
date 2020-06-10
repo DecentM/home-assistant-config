@@ -4,6 +4,7 @@ path: gaming
 title: Gaming
 
 cards:
+  - !include cards/gaming/games-played.yaml
   - !include cards/gaming/revelation-players.yaml
   - !include cards/gaming/revelation-ping.yaml
   - !include cards/gaming/online-steam-friends.yaml

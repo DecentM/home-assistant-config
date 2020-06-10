@@ -1,0 +1,20 @@
+# auto-entities will pass an 'entities' prop to config-templates card, which
+# uses that 'entities' to watch for changes
+type: custom:auto-entities
+card:
+  type: custom:config-template-card
+  card:
+    type: picture
+    title: A currently played game
+    image: '${this.hass.states[this._config.entities[0].entity].attributes.game_image_header}'
+
+filter:
+  include:
+    - entity_id: sensor.steam_*
+      attributes:
+        game: "/.*/"
+      not:
+        state: offline
+
+sort:
+  method: last_changed
