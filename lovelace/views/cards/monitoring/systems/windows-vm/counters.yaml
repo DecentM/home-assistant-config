@@ -1,0 +1,84 @@
+- type: custom:auto-entities
+  card:
+    name: System load
+    type: custom:mini-graph-card
+    style: !include ../../styles/transparent.yaml
+    animate: true
+    points_per_hour: 4
+    hours_to_show: 6
+
+    show:
+      average: true
+      extrema: true
+
+  filter:
+    include:
+      - entity_id: sensor.windows_cpu_load*
+
+- type: custom:auto-entities
+  card:
+    name: Total
+    type: custom:mini-graph-card
+    style: !include ../../styles/transparent.yaml
+    animate: true
+    points_per_hour: 4
+    hours_to_show: 6
+
+    show:
+      average: true
+      extrema: true
+
+  filter:
+    include:
+      - entity_id: sensor.windows_total*
+
+- type: custom:auto-entities
+  card:
+    name: Running processes
+    type: custom:mini-graph-card
+    style: !include ../../styles/transparent.yaml
+    animate: true
+    points_per_hour: 4
+    hours_to_show: 6
+
+    show:
+      average: true
+      extrema: true
+
+  filter:
+    include:
+      - entity_id: sensor.windows_running*
+
+- type: custom:auto-entities
+  card:
+    name: Sleeping processes
+    type: custom:mini-graph-card
+    style: !include ../../styles/transparent.yaml
+    animate: true
+    points_per_hour: 4
+    hours_to_show: 6
+
+    show:
+      average: true
+      extrema: true
+
+  filter:
+    include:
+      - entity_id: sensor.windows_sleeping*
+
+- type: custom:auto-entities
+  card:
+    name: Thread count
+    type: custom:mini-graph-card
+    style: !include ../../styles/transparent.yaml
+    animate: true
+    points_per_hour: 4
+    hours_to_show: 6
+
+    show:
+      average: true
+      extrema: true
+
+  filter:
+    include:
+      - entity_id: sensor.windows_thread*
