@@ -1,0 +1,4 @@
+name: Hours to show
+min: 0.25
+max: 48
+step: 0.25

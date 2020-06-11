@@ -1,33 +1,113 @@
-- type: custom:auto-entities
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
   card:
     name: Container count
     type: custom:mini-graph-card
     style: !include ../../styles/transparent.yaml
     animate: true
-    points_per_hour: 4
-    hours_to_show: 6
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
 
     show:
       average: true
       extrema: true
 
-  filter:
-    include:
-      - entity_id: sensor.seabreeze_containers_active*
+    entities:
+      - sensor.seabreeze_containers_active
 
-- type: custom:auto-entities
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
   card:
     name: Thread count
     type: custom:mini-graph-card
     style: !include ../../styles/transparent.yaml
     animate: true
-    points_per_hour: 4
-    hours_to_show: 6
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
 
     show:
       average: true
       extrema: true
 
-  filter:
-    include:
-      - entity_id: sensor.seabreeze_thread*
+    entities:
+      - sensor.seabreeze_thread
+
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
+  card:
+    name: System load
+    type: custom:mini-graph-card
+    style: !include ../../styles/transparent.yaml
+    animate: true
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
+
+    show:
+      average: true
+      extrema: true
+
+    entities:
+      - sensor.seabreeze_cpu_load
+
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
+  card:
+    name: Disk usage
+    type: custom:mini-graph-card
+    style: !include ../../styles/transparent.yaml
+    animate: true
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
+
+    show:
+      average: true
+      extrema: true
+
+    entities:
+      - sensor.seabreeze_used_percent
+
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
+  card:
+    name: CPU used
+    type: custom:mini-graph-card
+    style: !include ../../styles/transparent.yaml
+    animate: true
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
+
+    show:
+      average: true
+      extrema: true
+
+    entities:
+      - sensor.seabreeze_cpu_used
+
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
+  card:
+    name: RAM used
+    type: custom:mini-graph-card
+    style: !include ../../styles/transparent.yaml
+    animate: true
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
+
+    show:
+      average: true
+      extrema: true
+
+    entities:
+      - sensor.seabreeze_ram_used_percent

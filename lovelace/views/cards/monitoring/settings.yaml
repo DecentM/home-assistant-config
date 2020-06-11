@@ -1,0 +1,6 @@
+type: horizontal-stack
+cards:
+  - type: entity
+    entity: input_number.monitoring_hours_to_show
+  - type: entity
+    entity: sensor.monitoring_points_per_hour

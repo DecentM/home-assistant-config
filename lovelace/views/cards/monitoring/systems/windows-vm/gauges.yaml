@@ -1,86 +1,97 @@
-- type: custom:auto-entities
+
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
   card:
     name: >
       Disk usage - C:
     type: custom:mini-graph-card
     style: !include ../../styles/transparent.yaml
     animate: true
-    points_per_hour: 4
-    hours_to_show: 6
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
 
     show:
       average: true
       extrema: true
 
-  filter:
-    include:
-      - entity_id: sensor.windows_c_used_percent*
+    entities:
+      - sensor.windows_c_used_percent
 
-- type: custom:auto-entities
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
   card:
     name: >
       Disk usage - E:
     type: custom:mini-graph-card
     style: !include ../../styles/transparent.yaml
     animate: true
-    points_per_hour: 4
-    hours_to_show: 6
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
 
     show:
       average: true
       extrema: true
 
-  filter:
-    include:
-      - entity_id: sensor.windows_e_used_percent*
+    entities:
+      - sensor.windows_e_used_percent
 
-- type: custom:auto-entities
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
   card:
     name: CPU used
     type: custom:mini-graph-card
     style: !include ../../styles/transparent.yaml
     animate: true
-    points_per_hour: 4
-    hours_to_show: 6
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
 
     show:
       average: true
       extrema: true
 
-  filter:
-    include:
-      - entity_id: sensor.windows_cpu_used*
+    entities:
+      - sensor.windows_cpu_used
 
-- type: custom:auto-entities
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
   card:
     name: RAM used
     type: custom:mini-graph-card
     style: !include ../../styles/transparent.yaml
     animate: true
-    points_per_hour: 4
-    hours_to_show: 6
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
 
     show:
       average: true
       extrema: true
 
-  filter:
-    include:
-      - entity_id: sensor.windows_ram_used_percent*
+    entities:
+      - sensor.windows_ram_used_percent
 
-- type: custom:auto-entities
+- type: 'custom:config-template-card'
+  entities:
+    - input_number.monitoring_hours_to_show
+    - sensor.monitoring_points_per_hour
   card:
     name: Swap used
     type: custom:mini-graph-card
     style: !include ../../styles/transparent.yaml
     animate: true
-    points_per_hour: 4
-    hours_to_show: 6
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
 
     show:
       average: true
       extrema: true
 
-  filter:
-    include:
-      - entity_id: sensor.windows_swap_used_percent*
+    entities:
+      - sensor.windows_swap_used_percent

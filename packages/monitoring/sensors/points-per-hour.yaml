@@ -1,0 +1,7 @@
+- platform: template
+  sensors:
+    monitoring_points_per_hour:
+      friendly_name: Points per hour
+      # Should be 24 points in total so that the graph looks nice
+      value_template: >
+        {{ 24 / (states('input_number.monitoring_hours_to_show') | float) }}

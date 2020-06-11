@@ -7,6 +7,7 @@ cards:
   - type: vertical-stack
     cards:
       # - !include cards/monitoring/ups.yaml
+      - !include cards/monitoring/settings.yaml
       - !include cards/monitoring/cloud-services.yaml
       - !include cards/monitoring/daisy.yaml
       - !include cards/monitoring/pinkie.yaml

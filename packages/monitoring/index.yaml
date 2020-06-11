@@ -1,1 +1,2 @@
 sensor: !include_dir_merge_list sensors
+input_number: !include_dir_named input_numbers

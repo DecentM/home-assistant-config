@@ -4,8 +4,8 @@
     type: custom:mini-graph-card
     style: !include ../styles/mini-graph.yaml
     animate: true
-    points_per_hour: 4
-    hours_to_show: 6
+    points_per_hour: '${this.hass.states[this._config.entities[1]].state}'
+    hours_to_show: '${this.hass.states[this._config.entities[0]].state}'
 
     show:
       average: true
