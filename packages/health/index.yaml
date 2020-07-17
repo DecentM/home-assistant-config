@@ -1,8 +1,7 @@
 withings:
   client_id: !secret withings_client_id
   client_secret: !secret withings_client_secret
-  profiles:
-    - !secret withings_user_profile
+  use_webhook: true
 
 automation: !include_dir_merge_list automations
 sensor: !include_dir_merge_list sensors
