@@ -40,7 +40,7 @@ cards:
     color_type: card
     color: rgb(255, 182, 109)
     show_name: false
-    entity: light.hall_ceiling
+    entity: light.entry_ceiling
     icon: mdi:coat-rack
     aspect_ratio: 1/1
     tap_action:

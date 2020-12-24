@@ -5,4 +5,5 @@ options:
   - light.bedroom_ceiling
   - light.kitchen_ceiling
   - light.living_room_ceiling
-  - light.hall_ceiling
+  - light.entry_ceiling
+  - light.kitchen_wall

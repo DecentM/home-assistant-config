@@ -17,7 +17,7 @@ entities:
   - entity: light.bathroom_ceiling
     tap_action:
       action: toggle
-  - entity: light.hall_ceiling
+  - entity: light.entry_ceiling
     tap_action:
       action: toggle
   - entity: light.kitchen
