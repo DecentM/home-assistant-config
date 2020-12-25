@@ -1,5 +1,5 @@
 type: custom:simple-weather-card
-entity: weather.dark_sky
+entity: weather.openweathermap
 name: Weather
 
 backdrop:
