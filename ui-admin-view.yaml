@@ -5,7 +5,6 @@ views:
   - !include lovelace/views/lights.yaml
   - !include lovelace/views/monitoring.yaml
   - !include lovelace/views/gaming.yaml
-  - !include lovelace/views/time.yaml
   - !include lovelace/views/health.yaml
   - !include lovelace/views/entertainment.yaml
   - !include lovelace/views/guest.yaml

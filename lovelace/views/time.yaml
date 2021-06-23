@@ -1,7 +1,0 @@
-icon: 'mdi:alarm'
-panel: false
-path: time
-title: Time
-
-cards:
-  - !include cards/anniversaries.yaml
