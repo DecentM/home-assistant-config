@@ -18,4 +18,3 @@ cards:
   - !include cards/settings/sleep-detection/manage-lights.yaml
   - !include cards/settings/theme/switch-themes-for-sun.yaml
   - !include cards/settings/time/timezone.yaml
-  - !include cards/settings/youtube/record-liked-video.yaml

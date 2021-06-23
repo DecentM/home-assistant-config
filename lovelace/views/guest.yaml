@@ -12,4 +12,3 @@ cards:
       - !include cards/lights/toggle-fancy.yaml
       - !include cards/roomba/roomba-compact.yaml
       - !include cards/environment/weather-small.yaml
-      - !include cards/picture/unsplash/winter.yaml

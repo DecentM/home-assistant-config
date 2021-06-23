@@ -6,5 +6,4 @@ title: Entertainment
 cards:
   - !include cards/theater/transmission/total.yaml
   - !include cards/theater/transmission/downloads.yaml
-  - !include cards/youtube-last-liked.yaml
   - !include cards/upcoming-media/trakt.yaml

@@ -1,5 +1,2 @@
-weather.dark_sky:
-  friendly_name: Weather
-
 sensor.hacs:
   unit_of_measurement: Updates

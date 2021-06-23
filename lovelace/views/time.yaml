@@ -4,5 +4,4 @@ path: time
 title: Time
 
 cards:
-  - !include cards/picture/unsplash/winter.yaml
   - !include cards/anniversaries.yaml

@@ -9,8 +9,3 @@ cards:
       # - !include cards/monitoring/ups.yaml
       - !include cards/monitoring/settings.yaml
       - !include cards/monitoring/cloud-services.yaml
-      - !include cards/monitoring/daisy.yaml
-      - !include cards/monitoring/pinkie.yaml
-      - !include cards/monitoring/windows-vm.yaml
-      - !include cards/monitoring/dash.yaml
-      - !include cards/monitoring/seabreeze.yaml

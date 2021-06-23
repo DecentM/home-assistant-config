@@ -1,9 +1,0 @@
-automation: !include_dir_merge_list automations
-script: !include_dir_named scripts
-input_text: !include_dir_named input_texts
-
-logbook:
-  exclude:
-      entities:
-        - automation.loop_reply_to_loop_tick_event
-        - script.loop_tick

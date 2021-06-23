@@ -1,9 +1,0 @@
-type: 'custom:config-template-card'
-variables:
-  - 'states[''input_text.last_liked_video''].state'
-entities:
-  - input_text.last_liked_video
-card:
-  aspect_ratio: 50%
-  type: iframe
-  url: '${vars[0].split("youtu.be").join("www.youtube.com/embed")}'

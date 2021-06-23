@@ -1,5 +1,0 @@
-type: vertical-stack
-title: Pinkie
-cards:
-  - type: horizontal-stack
-    cards: !include_dir_merge_list systems/pinkie

@@ -1,7 +1,0 @@
-type: vertical-stack
-title: Windows
-cards:
-  - type: horizontal-stack
-    cards: !include systems/windows-vm/gauges.yaml
-  - type: horizontal-stack
-    cards: !include systems/windows-vm/counters.yaml
